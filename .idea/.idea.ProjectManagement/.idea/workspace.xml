@@ -8,7 +8,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bf9bc920-d33b-431b-a24c-09a2feb1005c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjectManagement/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjectManagement/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectManagement.API/PMLocalDatabase.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjectManagement/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjectManagement/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagement.API/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.API/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagement.API/ProjectManagement.API.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.API/ProjectManagement.API.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagement.BAL/ProjectManagement.BAL.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.BAL/ProjectManagement.BAL.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagement.DAL/Data/ApplicationContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.BAL/Data/ApplicationContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagement.DAL/Migrations/20230305105450_Initial.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.BAL/Migrations/20230305152736_Initial.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagement.DAL/Migrations/20230305105450_Initial.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.BAL/Migrations/20230305152736_Initial.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagement.DAL/Migrations/ApplicationContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.BAL/Migrations/ApplicationContextModelSnapshot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagement.DAL/Repositories/BaseRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.BAL/Repositories/BaseRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagement.DAL/Repositories/EmployeeRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.BAL/Repositories/EmployeeRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagement.DAL/Repositories/ProjectRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.BAL/Repositories/ProjectRepository.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +33,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="SWEA" />
+  </component>
   <component name="ProjectId" id="2MXpxxhSJoQoUwEqMJ8ScdDFnL7" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -30,17 +44,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected=".NET Launch Settings Profile.Test">
     <configuration name="ProjectManagement.API" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/ProjectManagement.API/ProjectManagement.API.csproj" />
@@ -113,7 +127,7 @@
       <updated>1677924032064</updated>
       <workItem from="1677924037464" duration="1000" />
       <workItem from="1677924049519" duration="11243000" />
-      <workItem from="1678010996682" duration="3291000" />
+      <workItem from="1678010996682" duration="5603000" />
     </task>
     <task id="LOCAL-00001" summary="Add .gitignore">
       <created>1677924192878</created>
@@ -143,7 +157,35 @@
       <option name="project" value="LOCAL" />
       <updated>1677929612339</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Create n-tier project hierarchy">
+      <created>1678014481927</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1678014481927</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Create entities: employee, project and base">
+      <created>1678014521451</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1678014521451</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Create repositories for existing entities">
+      <created>1678014567984</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1678014567984</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Create Context file and add Initial migration">
+      <created>1678014601498</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1678014601498</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -169,6 +211,10 @@
     <MESSAGE value="Create project hierarchy" />
     <MESSAGE value="Delete unused directories and files" />
     <MESSAGE value="Create Project, Employee and base models" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create Project, Employee and base models" />
+    <MESSAGE value="Create n-tier project hierarchy" />
+    <MESSAGE value="Create entities: employee, project and base" />
+    <MESSAGE value="Create repositories for existing entities" />
+    <MESSAGE value="Create Context file and add Initial migration" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create Context file and add Initial migration" />
   </component>
 </project>

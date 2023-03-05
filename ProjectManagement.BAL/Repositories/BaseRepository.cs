@@ -1,10 +1,10 @@
 using System.Linq.Expressions;
 using Microsoft.EntityFrameworkCore;
+using ProjectManagement.BAL.Data;
 using ProjectManagement.DAL.Contracts;
-using ProjectManagement.DAL.Data;
 using ProjectManagement.DAL.Models.Common;
 
-namespace ProjectManagement.DAL.Repositories;
+namespace ProjectManagement.BAL.Repositories;
 
 public class BaseRepository<TEntity> : IBaseRepository<TEntity> where TEntity : BaseEntity
 {

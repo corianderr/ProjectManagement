@@ -4,14 +4,14 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using ProjectManagement.DAL.Data;
+using ProjectManagement.BAL.Data;
 
 #nullable disable
 
-namespace ProjectManagement.DAL.Migrations
+namespace ProjectManagement.BAL.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    [Migration("20230305105450_Initial")]
+    [Migration("20230305152736_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

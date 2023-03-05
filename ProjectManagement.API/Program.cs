@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using ProjectManagement.DAL.Data;
+using ProjectManagement.BAL.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,8 +9,8 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");;
-builder.Services.AddDbContext<ApplicationContext>(x => x.UseSqlite(connectionString, b => b.MigrationsAssembly("ProjectManagement.DAL")));
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+builder.Services.AddDbContext<ApplicationContext>(x => x.UseSqlite(connectionString));
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

@@ -3,11 +3,11 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using ProjectManagement.DAL.Data;
+using ProjectManagement.BAL.Data;
 
 #nullable disable
 
-namespace ProjectManagement.DAL.Migrations
+namespace ProjectManagement.BAL.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
     partial class ApplicationContextModelSnapshot : ModelSnapshot

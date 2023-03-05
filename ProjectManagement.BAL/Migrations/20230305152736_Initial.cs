@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace ProjectManagement.DAL.Migrations
+namespace ProjectManagement.BAL.Migrations
 {
     public partial class Initial : Migration
     {

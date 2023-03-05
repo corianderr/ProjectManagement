@@ -1,11 +1,14 @@
 using Microsoft.EntityFrameworkCore;
 using ProjectManagement.DAL.Models;
 
-namespace ProjectManagement.DAL.Data;
+namespace ProjectManagement.BAL.Data;
 
 public class ApplicationContext : DbContext
 {
+    public ApplicationContext(DbContextOptions<ApplicationContext> options) : base(options)
+    {
+    }
+
     public DbSet<Project>? Projects { get; set; }
     public DbSet<Project>? Employees { get; set; }
-    public ApplicationContext(DbContextOptions<ApplicationContext> options) : base(options) { }
 }

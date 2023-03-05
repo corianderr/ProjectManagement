@@ -1,7 +1,7 @@
-using ProjectManagement.DAL.Data;
+using ProjectManagement.BAL.Data;
 using ProjectManagement.DAL.Models;
 
-namespace ProjectManagement.DAL.Repositories;
+namespace ProjectManagement.BAL.Repositories;
 
 public class EmployeeRepository : BaseRepository<Employee>
 {

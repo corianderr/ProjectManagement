@@ -7,11 +7,19 @@
     <projectFile profileName="Test">Test/Test.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bf9bc920-d33b-431b-a24c-09a2feb1005c" name="Changes" comment="Distribute folder locations across projects">
+    <list default="true" id="bf9bc920-d33b-431b-a24c-09a2feb1005c" name="Changes" comment="Add new connection between entities: project -&gt; manager">
+      <change afterPath="$PROJECT_DIR$/ProjectManagement.BAL/Models/BaseResponseModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectManagement.BAL/Models/Employee/CreateEmployeeModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectManagement.BAL/Models/Employee/EmployeeResponseModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectManagement.BAL/Models/Employee/UpdateEmployeeModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectManagement.BAL/Models/Project/CreateProjectModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectManagement.BAL/Models/Project/ProjectResponseModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectManagement.BAL/Models/Project/UpdateProjectModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectManagement.BAL/Services/Interfaces/IEmployeeService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectManagement.BAL/Services/Interfaces/IProjectService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjectManagement/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjectManagement/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectManagement.BAL/ProjectManagement.BAL.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.BAL/ProjectManagement.BAL.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagement.DAL/Models/Employee.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.DAL/Models/Employee.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagement.DAL/Models/Project.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.DAL/Models/Project.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagement.DAL/ProjectManagement.DAL.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.DAL/ProjectManagement.DAL.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,7 +128,7 @@
       <workItem from="1677924037464" duration="1000" />
       <workItem from="1677924049519" duration="11243000" />
       <workItem from="1678010996682" duration="5603000" />
-      <workItem from="1678030072380" duration="3013000" />
+      <workItem from="1678030072380" duration="5880000" />
     </task>
     <task id="LOCAL-00001" summary="Add .gitignore">
       <created>1677924192878</created>
@@ -185,7 +193,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678030655728</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Add new connection between entities: project -&gt; manager">
+      <created>1678083307012</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1678083307012</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -216,6 +231,7 @@
     <MESSAGE value="Create repositories for existing entities" />
     <MESSAGE value="Create Context file and add Initial migration" />
     <MESSAGE value="Distribute folder locations across projects" />
-    <option name="LAST_COMMIT_MESSAGE" value="Distribute folder locations across projects" />
+    <MESSAGE value="Add new connection between entities: project -&gt; manager" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add new connection between entities: project -&gt; manager" />
   </component>
 </project>

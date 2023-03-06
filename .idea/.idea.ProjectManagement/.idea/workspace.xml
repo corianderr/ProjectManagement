@@ -7,13 +7,13 @@
     <projectFile profileName="Test">Test/Test.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bf9bc920-d33b-431b-a24c-09a2feb1005c" name="Changes" comment="Add parameterless method GetAll">
+    <list default="true" id="bf9bc920-d33b-431b-a24c-09a2feb1005c" name="Changes" comment="Update SaveChangesMethod of context class">
       <change afterPath="$PROJECT_DIR$/ProjectManagement.BAL/MappingProfiles/EmployeeProfile.cs" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/ProjectManagement.BAL/MappingProfiles/ProjectProfile.cs" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/ProjectManagement.BAL/Services/EmployeeService.cs" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/ProjectManagement.BAL/Services/ProjectService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjectManagement/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjectManagement/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagement.BAL/Data/ApplicationContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.BAL/Data/ApplicationContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagement.BAL/Services/Interfaces/IEmployeeService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.BAL/Services/Interfaces/IEmployeeService.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +22,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/ProjectManagement.API/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Users/cariander/RiderProjects/ProjectManagement/src/ProjectManagement.BAL/Data/ApplicationContext.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/cariander/RiderProjects/ProjectManagement/src/ProjectManagement.BAL/Repositories/BaseRepository.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/cariander/RiderProjects/ProjectManagement/src/ProjectManagement.DAL/Contracts/IBaseRepository.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ProjectManagement.DAL/obj/Debug/net6.0/.NETCoreApp,Version=v6.0.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
@@ -125,7 +126,7 @@
       <workItem from="1677924049519" duration="11243000" />
       <workItem from="1678010996682" duration="5603000" />
       <workItem from="1678030072380" duration="8186000" />
-      <workItem from="1678105130161" duration="1882000" />
+      <workItem from="1678105130161" duration="5247000" />
     </task>
     <task id="LOCAL-00001" summary="Add .gitignore">
       <created>1677924192878</created>
@@ -225,7 +226,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678106564681</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Update SaveChangesMethod of context class">
+      <created>1678107062535</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1678107062535</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -262,6 +270,7 @@
     <MESSAGE value="Create EmployeeService" />
     <MESSAGE value="Add dependency injection and automapping" />
     <MESSAGE value="Add parameterless method GetAll" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add parameterless method GetAll" />
+    <MESSAGE value="Update SaveChangesMethod of context class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update SaveChangesMethod of context class" />
   </component>
 </project>

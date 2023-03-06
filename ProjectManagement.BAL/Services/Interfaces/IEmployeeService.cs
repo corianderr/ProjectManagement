@@ -10,7 +10,7 @@ public interface IEmployeeService
     Task<IEnumerable<EmployeeResponseModel>>
         GetAllAsync(CancellationToken cancellationToken = default);
 
-    Task<IEnumerable<EmployeeResponseModel>>
+    Task<EmployeeResponseModel>
         GetByIdAsync(int id, CancellationToken cancellationToken = default);
 
     Task<CreateEmployeeModel> CreateAsync(CreateEmployeeModel createEmployeeModel,

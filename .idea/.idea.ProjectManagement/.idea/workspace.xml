@@ -7,18 +7,13 @@
     <projectFile profileName="Test">Test/Test.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bf9bc920-d33b-431b-a24c-09a2feb1005c" name="Changes" comment="Create EmployeeService">
-      <change afterPath="$PROJECT_DIR$/ProjectManagement.BAL/ApplicationDependencyInjection.cs" afterDir="false" />
+    <list default="true" id="bf9bc920-d33b-431b-a24c-09a2feb1005c" name="Changes" comment="Add parameterless method GetAll">
       <change afterPath="$PROJECT_DIR$/ProjectManagement.BAL/MappingProfiles/EmployeeProfile.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectManagement.BAL/MappingProfiles/IMappingProfilesMarker.cs" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/ProjectManagement.BAL/MappingProfiles/ProjectProfile.cs" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/ProjectManagement.BAL/Services/EmployeeService.cs" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/ProjectManagement.BAL/Services/ProjectService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/global.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjectManagement/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjectManagement/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagement.BAL/ProjectManagement.BAL.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.BAL/ProjectManagement.BAL.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagement.BAL/Repositories/BaseRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.BAL/Repositories/BaseRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagement.DAL/Contracts/IBaseRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.DAL/Contracts/IBaseRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagement.BAL/Data/ApplicationContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.BAL/Data/ApplicationContext.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +22,8 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/ProjectManagement.API/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Users/cariander/RiderProjects/ProjectManagement/src/ProjectManagement.BAL/Repositories/BaseRepository.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/cariander/RiderProjects/ProjectManagement/src/ProjectManagement.DAL/Contracts/IBaseRepository.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ProjectManagement.DAL/obj/Debug/net6.0/.NETCoreApp,Version=v6.0.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -128,7 +125,7 @@
       <workItem from="1677924049519" duration="11243000" />
       <workItem from="1678010996682" duration="5603000" />
       <workItem from="1678030072380" duration="8186000" />
-      <workItem from="1678105130161" duration="1083000" />
+      <workItem from="1678105130161" duration="1882000" />
     </task>
     <task id="LOCAL-00001" summary="Add .gitignore">
       <created>1677924192878</created>
@@ -214,7 +211,21 @@
       <option name="project" value="LOCAL" />
       <updated>1678086554929</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Add dependency injection and automapping">
+      <created>1678106527718</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1678106527718</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Add parameterless method GetAll">
+      <created>1678106564681</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1678106564681</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -249,6 +260,8 @@
     <MESSAGE value="Add employee and project services, and dto models" />
     <MESSAGE value="Add missing contracts" />
     <MESSAGE value="Create EmployeeService" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create EmployeeService" />
+    <MESSAGE value="Add dependency injection and automapping" />
+    <MESSAGE value="Add parameterless method GetAll" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add parameterless method GetAll" />
   </component>
 </project>

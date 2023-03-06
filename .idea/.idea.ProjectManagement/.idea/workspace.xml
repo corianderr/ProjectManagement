@@ -7,19 +7,11 @@
     <projectFile profileName="Test">Test/Test.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bf9bc920-d33b-431b-a24c-09a2feb1005c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/ProjectManagement.API/PMLocalDatabase.db" afterDir="false" />
+    <list default="true" id="bf9bc920-d33b-431b-a24c-09a2feb1005c" name="Changes" comment="Distribute folder locations across projects">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjectManagement/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjectManagement/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagement.API/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.API/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagement.API/ProjectManagement.API.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.API/ProjectManagement.API.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectManagement.BAL/ProjectManagement.BAL.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.BAL/ProjectManagement.BAL.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagement.DAL/Data/ApplicationContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.BAL/Data/ApplicationContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagement.DAL/Migrations/20230305105450_Initial.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.BAL/Migrations/20230305152736_Initial.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagement.DAL/Migrations/20230305105450_Initial.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.BAL/Migrations/20230305152736_Initial.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagement.DAL/Migrations/ApplicationContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.BAL/Migrations/ApplicationContextModelSnapshot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagement.DAL/Repositories/BaseRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.BAL/Repositories/BaseRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagement.DAL/Repositories/EmployeeRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.BAL/Repositories/EmployeeRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagement.DAL/Repositories/ProjectRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.BAL/Repositories/ProjectRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagement.DAL/Models/Employee.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.DAL/Models/Employee.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagement.DAL/Models/Project.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.DAL/Models/Project.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +47,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected=".NET Launch Settings Profile.Test">
+  <component name="RunManager" selected=".NET Launch Settings Profile.ProjectManagement.API">
     <configuration name="ProjectManagement.API" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/ProjectManagement.API/ProjectManagement.API.csproj" />
       <option name="LAUNCH_PROFILE_TFM" value="net6.0" />
@@ -128,6 +120,7 @@
       <workItem from="1677924037464" duration="1000" />
       <workItem from="1677924049519" duration="11243000" />
       <workItem from="1678010996682" duration="5603000" />
+      <workItem from="1678030072380" duration="3013000" />
     </task>
     <task id="LOCAL-00001" summary="Add .gitignore">
       <created>1677924192878</created>
@@ -185,7 +178,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678014601498</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Distribute folder locations across projects">
+      <created>1678030655728</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1678030655728</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -215,6 +215,7 @@
     <MESSAGE value="Create entities: employee, project and base" />
     <MESSAGE value="Create repositories for existing entities" />
     <MESSAGE value="Create Context file and add Initial migration" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create Context file and add Initial migration" />
+    <MESSAGE value="Distribute folder locations across projects" />
+    <option name="LAST_COMMIT_MESSAGE" value="Distribute folder locations across projects" />
   </component>
 </project>

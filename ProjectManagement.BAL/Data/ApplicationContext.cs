@@ -11,4 +11,14 @@ public class ApplicationContext : DbContext
 
     public DbSet<Project>? Projects { get; set; }
     public DbSet<Project>? Employees { get; set; }
+    
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        modelBuilder.Entity<Project>()
+            .HasOne(p => p.Manager)
+            .WithMany(b => b.ManagedProjects);
+        modelBuilder.Entity<Employee>()
+            .HasMany(e => e.WorkedOnProjects)
+            .WithMany(p => p.ExecutiveEmployees);
+    }
 }

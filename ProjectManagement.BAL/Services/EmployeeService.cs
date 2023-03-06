@@ -53,20 +53,18 @@ public class EmployeeService : IEmployeeService
 
     public async Task<IEnumerable<EmployeeResponseModel>> GetAllByProjectIdAsync(int id, CancellationToken cancellationToken = default)
     {
-        var project = await _projectRepository.GetFirstAsync(p => p.Id == id);
-        return _mapper.Map<IEnumerable<EmployeeResponseModel>>(project.ExecutiveEmployees);
+        return _mapper.Map<IEnumerable<EmployeeResponseModel>>(await _employeeRepository.GetAllAsync(e => e.WorkedOnProjects.Any(p => p.Id == id)));
     }
 
     public async Task<EmployeeResponseModel> GetManagerByProjectIdAsync(int id, CancellationToken cancellationToken = default)
     {
-        var project = await _projectRepository.GetFirstAsync(p => p.Id == id);
-        return _mapper.Map<EmployeeResponseModel>(project.Manager);
+        return _mapper.Map<EmployeeResponseModel>(await _employeeRepository.GetFirstAsync(e => e.ManagedProjects.Exists(p => p.Id == id)));
     }
 
     public async Task<UpdateEmployeeModel> UpdateAsync(int id, UpdateEmployeeModel updateEmployeeModel, CancellationToken cancellationToken = default)
     {
         var employee = await _employeeRepository.GetFirstAsync(e => e.Id == id);
-        _mapper.Map<UpdateEmployeeModel, Employee>(updateEmployeeModel, employee);
+        _mapper.Map(updateEmployeeModel, employee);
         return new UpdateEmployeeModel()
         {
             Id = (await _employeeRepository.UpdateAsync(employee)).Id

@@ -7,13 +7,14 @@
     <projectFile profileName="Test">Test/Test.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bf9bc920-d33b-431b-a24c-09a2feb1005c" name="Changes" comment="Update SaveChangesMethod of context class">
-      <change afterPath="$PROJECT_DIR$/ProjectManagement.BAL/MappingProfiles/EmployeeProfile.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectManagement.BAL/MappingProfiles/ProjectProfile.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectManagement.BAL/Services/EmployeeService.cs" afterDir="false" />
+    <list default="true" id="bf9bc920-d33b-431b-a24c-09a2feb1005c" name="Changes" comment="Add employee and project profiles for automapping">
       <change afterPath="$PROJECT_DIR$/ProjectManagement.BAL/Services/ProjectService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjectManagement/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjectManagement/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagement.BAL/Services/Interfaces/IEmployeeService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.BAL/Services/Interfaces/IEmployeeService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagement.BAL/Models/Project/CreateProjectModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.BAL/Models/Project/CreateProjectModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagement.BAL/Repositories/ProjectRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.BAL/Repositories/ProjectRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagement.BAL/Services/EmployeeService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.BAL/Services/EmployeeService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagement.BAL/Services/Interfaces/IProjectService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.BAL/Services/Interfaces/IProjectService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagement.DAL/Contracts/IProjectRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.DAL/Contracts/IProjectRepository.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,7 +127,7 @@
       <workItem from="1677924049519" duration="11243000" />
       <workItem from="1678010996682" duration="5603000" />
       <workItem from="1678030072380" duration="8186000" />
-      <workItem from="1678105130161" duration="5247000" />
+      <workItem from="1678105130161" duration="7782000" />
     </task>
     <task id="LOCAL-00001" summary="Add .gitignore">
       <created>1677924192878</created>
@@ -233,7 +234,21 @@
       <option name="project" value="LOCAL" />
       <updated>1678107062535</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Implement logic to all EmployeeService methods">
+      <created>1678111262321</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1678111262321</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Add employee and project profiles for automapping">
+      <created>1678111287849</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1678111287849</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -271,6 +286,8 @@
     <MESSAGE value="Add dependency injection and automapping" />
     <MESSAGE value="Add parameterless method GetAll" />
     <MESSAGE value="Update SaveChangesMethod of context class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update SaveChangesMethod of context class" />
+    <MESSAGE value="Implement logic to all EmployeeService methods" />
+    <MESSAGE value="Add employee and project profiles for automapping" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add employee and project profiles for automapping" />
   </component>
 </project>

@@ -9,13 +9,13 @@ public interface IProjectService
     Task<IEnumerable<ProjectResponseModel>>
         GetAllAsync(CancellationToken cancellationToken = default);
 
-    Task<IEnumerable<ProjectResponseModel>>
+    Task<ProjectResponseModel>
         GetByIdAsync(int id, CancellationToken cancellationToken = default);
 
     Task<CreateProjectModel> CreateAsync(CreateProjectModel createProjectModel,
         CancellationToken cancellationToken = default);
     
-    Task<ProjectResponseModel> AddEmployeeByProjectIdAsync(int employeeId, int projectId,
+    Task<BaseResponseModel> AddEmployeeToProjectByIdAsync(int employeeId, int projectId,
         CancellationToken cancellationToken = default);
 
     Task<BaseResponseModel> DeleteAsync(int id, CancellationToken cancellationToken = default);

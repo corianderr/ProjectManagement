@@ -7,14 +7,16 @@
     <projectFile profileName="Test">Test/Test.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bf9bc920-d33b-431b-a24c-09a2feb1005c" name="Changes" comment="Add employee and project profiles for automapping">
-      <change afterPath="$PROJECT_DIR$/ProjectManagement.BAL/Services/ProjectService.cs" afterDir="false" />
+    <list default="true" id="bf9bc920-d33b-431b-a24c-09a2feb1005c" name="Changes" comment="Implement logic to all ProjectService methods&#10;Add AddEmployeeToProject method to ProjectRepository&#10;Change some little inconsistencies">
+      <change afterPath="$PROJECT_DIR$/ProjectManagement.API/Controllers/ProjectsController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectManagement.API/Filters/ValidateModelAttribute.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectManagement.API/Middleware/ExceptionHandlingMiddleware.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectManagement.BAL/Models/ApiResult.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectManagement.DAL/Exceptions/ResourceNotFoundException.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjectManagement/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjectManagement/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagement.BAL/Models/Project/CreateProjectModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.BAL/Models/Project/CreateProjectModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagement.BAL/Repositories/ProjectRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.BAL/Repositories/ProjectRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagement.API/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.API/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagement.API/ProjectManagement.API.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.API/ProjectManagement.API.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectManagement.BAL/Services/EmployeeService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.BAL/Services/EmployeeService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagement.BAL/Services/Interfaces/IProjectService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.BAL/Services/Interfaces/IProjectService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagement.DAL/Contracts/IProjectRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.DAL/Contracts/IProjectRepository.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,9 +24,14 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///Users/cariander/RiderProjects/ProjectManagement/src/ProjectManagement.API/Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ProjectManagement.API/Program.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///Users/cariander/RiderProjects/ProjectManagement/src/ProjectManagement.BAL/Data/ApplicationContext.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/cariander/RiderProjects/ProjectManagement/src/ProjectManagement.BAL/Models/Project/CreateProjectModel.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/cariander/RiderProjects/ProjectManagement/src/ProjectManagement.BAL/Repositories/BaseRepository.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/cariander/RiderProjects/ProjectManagement/src/ProjectManagement.BAL/Repositories/ProjectRepository.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/cariander/RiderProjects/ProjectManagement/src/ProjectManagement.BAL/Services/EmployeeService.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/cariander/RiderProjects/ProjectManagement/src/ProjectManagement.BAL/Services/Interfaces/IProjectService.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/cariander/RiderProjects/ProjectManagement/src/ProjectManagement.DAL/Contracts/IBaseRepository.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ProjectManagement.DAL/obj/Debug/net6.0/.NETCoreApp,Version=v6.0.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -127,7 +134,7 @@
       <workItem from="1677924049519" duration="11243000" />
       <workItem from="1678010996682" duration="5603000" />
       <workItem from="1678030072380" duration="8186000" />
-      <workItem from="1678105130161" duration="7782000" />
+      <workItem from="1678105130161" duration="14139000" />
     </task>
     <task id="LOCAL-00001" summary="Add .gitignore">
       <created>1677924192878</created>
@@ -248,7 +255,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678111287849</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Implement logic to all ProjectService methods&#10;Add AddEmployeeToProject method to ProjectRepository&#10;Change some little inconsistencies">
+      <created>1678113675179</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1678113675179</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -288,6 +302,7 @@
     <MESSAGE value="Update SaveChangesMethod of context class" />
     <MESSAGE value="Implement logic to all EmployeeService methods" />
     <MESSAGE value="Add employee and project profiles for automapping" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add employee and project profiles for automapping" />
+    <MESSAGE value="Implement logic to all ProjectService methods&#10;Add AddEmployeeToProject method to ProjectRepository&#10;Change some little inconsistencies" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement logic to all ProjectService methods&#10;Add AddEmployeeToProject method to ProjectRepository&#10;Change some little inconsistencies" />
   </component>
 </project>

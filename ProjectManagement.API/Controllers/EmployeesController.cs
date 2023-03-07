@@ -54,7 +54,7 @@ public class EmployeesController : ApiController
     [HttpPut("{id:int}")]
     public async Task<IActionResult> PutAsync(int id, UpdateEmployeeModel updateEmployeeModel)
     {
-        return Ok(ApiResult<UpdateEmployeeModel>.Success(await _employeeService.UpdateAsync(id, updateEmployeeModel)));
+        return Ok(ApiResult<BaseResponseModel>.Success(await _employeeService.UpdateAsync(id, updateEmployeeModel)));
     }
 
     // DELETE: api/Employees/5

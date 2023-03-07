@@ -1,6 +1,6 @@
 namespace ProjectManagement.BAL.Models.Project;
 
-public class UpdateProjectModel : BaseResponseModel
+public class UpdateProjectModel
 {
     public string Name { get; set; }
     public string ClientCompanyName { get; set; }

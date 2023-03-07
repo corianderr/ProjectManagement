@@ -60,15 +60,15 @@ public class EmployeeService : IEmployeeService
         CancellationToken cancellationToken = default)
     {
         return _mapper.Map<EmployeeResponseModel>(
-            await _employeeRepository.GetFirstAsync(e => e.ManagedProjects.Exists(p => p.Id == id)));
+            await _employeeRepository.GetFirstAsync(e => e.ManagedProjects.Any(p => p.Id == id)));
     }
 
-    public async Task<UpdateEmployeeModel> UpdateAsync(int id, UpdateEmployeeModel updateEmployeeModel,
+    public async Task<BaseResponseModel> UpdateAsync(int id, UpdateEmployeeModel updateEmployeeModel,
         CancellationToken cancellationToken = default)
     {
         var employee = await _employeeRepository.GetFirstAsync(e => e.Id == id);
         _mapper.Map(updateEmployeeModel, employee);
-        return new UpdateEmployeeModel
+        return new BaseResponseModel()
         {
             Id = (await _employeeRepository.UpdateAsync(employee)).Id
         };

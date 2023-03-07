@@ -9,7 +9,6 @@ public class ProjectResponseModel : BaseResponseModel
     public string ExecutorCompanyName { get; set; }
     public int Priority { get; set; }
     public int ManagerId { get; set; }
-    public List<EmployeeResponseModel> ExecutiveEmployees { get; } = new();
     public DateTime StartDate { get; set; }
     public DateTime EndDate { get; set; }
 }

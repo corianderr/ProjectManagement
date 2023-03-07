@@ -7,12 +7,25 @@
     <projectFile profileName="Test">Test/Test.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bf9bc920-d33b-431b-a24c-09a2feb1005c" name="Changes" comment="Implement logic for CRUD operations in ProjectsController&#10;Add base controller ApiController">
-      <change afterPath="$PROJECT_DIR$/ProjectManagement.API/Controllers/EmployeesController.cs" afterDir="false" />
+    <list default="true" id="bf9bc920-d33b-431b-a24c-09a2feb1005c" name="Changes" comment="">
       <change afterPath="$PROJECT_DIR$/ProjectManagement.API/Middleware/PerformanceMiddleware.cs" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/ProjectManagement.API/Middleware/TransactionMiddleware.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectManagement.API/PMLocalDatabase.db-shm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectManagement.API/PMLocalDatabase.db-wal" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjectManagement/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjectManagement/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagement.API/Controllers/EmployeesController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.API/Controllers/EmployeesController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectManagement.API/Controllers/ProjectsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.API/Controllers/ProjectsController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagement.API/PMLocalDatabase.db" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.API/PMLocalDatabase.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagement.BAL/Models/Employee/EmployeeResponseModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.BAL/Models/Employee/EmployeeResponseModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagement.BAL/Models/Employee/UpdateEmployeeModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.BAL/Models/Employee/UpdateEmployeeModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagement.BAL/Models/Project/ProjectResponseModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.BAL/Models/Project/ProjectResponseModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagement.BAL/Models/Project/UpdateProjectModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.BAL/Models/Project/UpdateProjectModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagement.BAL/Services/EmployeeService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.BAL/Services/EmployeeService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagement.BAL/Services/Interfaces/IEmployeeService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.BAL/Services/Interfaces/IEmployeeService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagement.BAL/Services/Interfaces/IProjectService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.BAL/Services/Interfaces/IProjectService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagement.BAL/Services/ProjectService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.BAL/Services/ProjectService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagement.DAL/Contracts/IProjectRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.DAL/Contracts/IProjectRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagement.DAL/Repositories/ProjectRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.DAL/Repositories/ProjectRepository.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +33,8 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///Users/cariander/RiderProjects/ProjectManagement/src/ProjectManagement.API/Controllers/EmployeesController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/cariander/RiderProjects/ProjectManagement/src/ProjectManagement.API/Controllers/ProjectsController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ProjectManagement.API/Program.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///Users/cariander/RiderProjects/ProjectManagement/src/ProjectManagement.API/Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/cariander/RiderProjects/ProjectManagement/src/ProjectManagement.BAL/Data/ApplicationContext.cs" root0="SKIP_HIGHLIGHTING" />
@@ -135,7 +150,7 @@
       <workItem from="1677924049519" duration="11243000" />
       <workItem from="1678010996682" duration="5603000" />
       <workItem from="1678030072380" duration="8186000" />
-      <workItem from="1678105130161" duration="21714000" />
+      <workItem from="1678105130161" duration="27988000" />
     </task>
     <task id="LOCAL-00001" summary="Add .gitignore">
       <created>1677924192878</created>
@@ -305,7 +320,21 @@
       <option name="project" value="LOCAL" />
       <updated>1678194131058</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Implement logic for CRUD operations in EmployeesController&#10;Change names of methods to &quot;...Async&quot;">
+      <created>1678194972790</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1678194972790</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Delete &quot;Name&quot; prop value of httpGet attributes">
+      <created>1678195236365</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1678195236365</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -327,8 +356,6 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Add .gitignore" />
-    <MESSAGE value="Create project hierarchy" />
     <MESSAGE value="Delete unused directories and files" />
     <MESSAGE value="Create Project, Employee and base models" />
     <MESSAGE value="Create n-tier project hierarchy" />
@@ -352,6 +379,8 @@
     <MESSAGE value="Disable nullable reference types in projects' properties" />
     <MESSAGE value="Add DataAccessDependencyInjection class" />
     <MESSAGE value="Implement logic for CRUD operations in ProjectsController&#10;Add base controller ApiController" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implement logic for CRUD operations in ProjectsController&#10;Add base controller ApiController" />
+    <MESSAGE value="Implement logic for CRUD operations in EmployeesController&#10;Change names of methods to &quot;...Async&quot;" />
+    <MESSAGE value="Delete &quot;Name&quot; prop value of httpGet attributes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Delete &quot;Name&quot; prop value of httpGet attributes" />
   </component>
 </project>

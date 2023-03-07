@@ -5,11 +5,9 @@ namespace ProjectManagement.BAL.Services.Interfaces;
 
 public interface IProjectService
 {
-    Task<IEnumerable<ProjectResponseModel>>
-        GetAllAsync(CancellationToken cancellationToken = default);
-
-    Task<ProjectResponseModel>
-        GetByIdAsync(int id, CancellationToken cancellationToken = default);
+    Task<IEnumerable<ProjectResponseModel>> GetAllFilteredAndSortedAsync(int id, string name, int priority,
+        DateTime startDateFrom, DateTime startDateTo, string orderBy = "nameAsc",
+        CancellationToken cancellationToken = default);
 
     Task<CreateProjectModel> CreateAsync(CreateProjectModel createProjectModel,
         CancellationToken cancellationToken = default);
@@ -25,6 +23,6 @@ public interface IProjectService
     Task<IEnumerable<ProjectResponseModel>>
         GetAllByEmployeeIdAsync(int id, CancellationToken cancellationToken = default);
 
-    Task<UpdateProjectModel> UpdateAsync(int id, UpdateProjectModel updateProjectModel,
+    Task<BaseResponseModel> UpdateAsync(int id, UpdateProjectModel updateProjectModel,
         CancellationToken cancellationToken = default);
 }

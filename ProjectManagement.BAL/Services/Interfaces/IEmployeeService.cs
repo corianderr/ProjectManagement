@@ -22,6 +22,6 @@ public interface IEmployeeService
     Task<EmployeeResponseModel>
         GetManagerByProjectIdAsync(int id, CancellationToken cancellationToken = default);
 
-    Task<UpdateEmployeeModel> UpdateAsync(int id, UpdateEmployeeModel updateEmployeeModel,
+    Task<BaseResponseModel> UpdateAsync(int id, UpdateEmployeeModel updateEmployeeModel,
         CancellationToken cancellationToken = default);
 }

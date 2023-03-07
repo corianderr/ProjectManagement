@@ -1,10 +1,10 @@
 using System.Linq.Expressions;
 using Microsoft.EntityFrameworkCore;
-using ProjectManagement.BAL.Data;
 using ProjectManagement.DAL.Contracts;
+using ProjectManagement.DAL.Data;
 using ProjectManagement.DAL.Models.Common;
 
-namespace ProjectManagement.BAL.Repositories;
+namespace ProjectManagement.DAL.Repositories;
 
 public class BaseRepository<TEntity> : IBaseRepository<TEntity> where TEntity : BaseEntity
 {
@@ -43,7 +43,7 @@ public class BaseRepository<TEntity> : IBaseRepository<TEntity> where TEntity : 
         return await DbSet.Where(predicate).ToListAsync();
     }
 
-    public async Task<TEntity?> GetFirstAsync(Expression<Func<TEntity, bool>> predicate)
+    public async Task<TEntity> GetFirstAsync(Expression<Func<TEntity, bool>> predicate)
     {
         var entity = await DbSet.Where(predicate).FirstOrDefaultAsync();
 

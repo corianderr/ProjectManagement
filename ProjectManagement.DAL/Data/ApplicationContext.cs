@@ -2,7 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using ProjectManagement.DAL.Models;
 using ProjectManagement.DAL.Models.Common;
 
-namespace ProjectManagement.BAL.Data;
+namespace ProjectManagement.DAL.Data;
 
 public class ApplicationContext : DbContext
 {
@@ -10,8 +10,8 @@ public class ApplicationContext : DbContext
     {
     }
 
-    public DbSet<Project>? Projects { get; set; }
-    public DbSet<Project>? Employees { get; set; }
+    public DbSet<Project> Projects { get; set; }
+    public DbSet<Project> Employees { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

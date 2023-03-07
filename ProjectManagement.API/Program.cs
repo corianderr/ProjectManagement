@@ -1,6 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 using ProjectManagement.API.Middleware;
-using ProjectManagement.BAL.Data;
+using ProjectManagement.BAL;
+using ProjectManagement.DAL;
+using ProjectManagement.DAL.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,6 +14,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<ApplicationContext>(x => x.UseSqlite(connectionString));
+builder.Services.AddDataAccessRepos().AddApplication(builder.Environment);
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

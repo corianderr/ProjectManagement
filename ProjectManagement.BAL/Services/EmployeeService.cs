@@ -11,13 +11,10 @@ public class EmployeeService : IEmployeeService
 {
     private readonly IMapper _mapper;
     private readonly IEmployeeRepository _employeeRepository;
-    private readonly IProjectRepository _projectRepository;
     
-
-    public EmployeeService(IEmployeeRepository employeeRepository, IProjectRepository projectRepository, IMapper maper)
+    public EmployeeService(IEmployeeRepository employeeRepository, IMapper maper)
     {
         _employeeRepository = employeeRepository;
-        _projectRepository = projectRepository;
         _mapper = maper;
     }
     

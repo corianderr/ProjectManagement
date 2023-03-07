@@ -23,21 +23,21 @@ public class EmployeesController : ApiController
     }
 
     // GET: api/Employees/GetById/5
-    [HttpGet("GetById/{id:int}", Name = "Get")]
+    [HttpGet("GetById/{id:int}")]
     public async Task<IActionResult> GetById(int id)
     {
         return Ok(ApiResult<EmployeeResponseModel>.Success(await _employeeService.GetByIdAsync(id)));
     }
     
     // GET: api/Employees/GetExecutorsByProjectId/5
-    [HttpGet("GetExecutorsByProjectId/{id:int}", Name = "Get")]
+    [HttpGet("GetExecutorsByProjectId/{id:int}")]
     public async Task<IActionResult> GetAllByProjectIdAsync(int id)
     {
         return Ok(ApiResult<IEnumerable<EmployeeResponseModel>>.Success(await _employeeService.GetAllByProjectIdAsync(id)));
     }
     
     // GET: api/Employees/GetManagerByProjectId/5
-    [HttpGet("GetManagerByProjectId/{id:int}", Name = "Get")]
+    [HttpGet("GetManagerByProjectId/{id:int}")]
     public async Task<IActionResult> GetManagerByProjectIdAsync(int id)
     {
         return Ok(ApiResult<EmployeeResponseModel>.Success(await _employeeService.GetManagerByProjectIdAsync(id)));

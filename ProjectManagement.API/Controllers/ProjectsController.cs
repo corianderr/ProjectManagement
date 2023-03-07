@@ -22,7 +22,7 @@ public class ProjectsController : ApiController
     }
 
     // GET: api/Projects/GetById/5
-    [HttpGet("GetById/{id:int}", Name = "Get")]
+    [HttpGet("GetById/{id:int}")]
     public async Task<IActionResult> GetByIdAsync(int id)
     {
         return Ok(ApiResult<ProjectResponseModel>.Success(await _projectService.GetByIdAsync(id)));

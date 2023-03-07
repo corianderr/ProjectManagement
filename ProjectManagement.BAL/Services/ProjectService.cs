@@ -9,8 +9,8 @@ namespace ProjectManagement.BAL.Services;
 
 public class ProjectService : IProjectService
 {
-    private readonly IMapper _mapper;
     private readonly IEmployeeRepository _employeeRepository;
+    private readonly IMapper _mapper;
     private readonly IProjectRepository _projectRepository;
 
     public ProjectService(IEmployeeRepository employeeRepository, IProjectRepository projectRepository, IMapper mapper)
@@ -36,7 +36,7 @@ public class ProjectService : IProjectService
         CancellationToken cancellationToken = default)
     {
         var project = _mapper.Map<Project>(createProjectModel);
-        return new CreateProjectModel()
+        return new CreateProjectModel
         {
             Id = (await _projectRepository.AddAsync(project)).Id
         };
@@ -48,7 +48,7 @@ public class ProjectService : IProjectService
         var employee = await _employeeRepository.GetFirstAsync(e => e.Id == employeeId);
         var project = await _projectRepository.GetFirstAsync(p => p.Id == projectId);
         await _projectRepository.AddEmployeeToProject(employee, project);
-        return new BaseResponseModel()
+        return new BaseResponseModel
         {
             Id = projectId
         };
@@ -57,7 +57,7 @@ public class ProjectService : IProjectService
     public async Task<BaseResponseModel> DeleteAsync(int id, CancellationToken cancellationToken = default)
     {
         var project = await _projectRepository.GetFirstAsync(p => p.Id == id);
-        return new BaseResponseModel()
+        return new BaseResponseModel
         {
             Id = (await _projectRepository.DeleteAsync(project)).Id
         };
@@ -82,7 +82,7 @@ public class ProjectService : IProjectService
     {
         var project = await _projectRepository.GetFirstAsync(e => e.Id == id);
         _mapper.Map(updateProjectModel, project);
-        return new UpdateProjectModel()
+        return new UpdateProjectModel
         {
             Id = (await _projectRepository.UpdateAsync(project)).Id
         };

@@ -12,7 +12,7 @@ public class ApplicationContext : DbContext
 
     public DbSet<Project>? Projects { get; set; }
     public DbSet<Project>? Employees { get; set; }
-    
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Project>()
@@ -22,7 +22,7 @@ public class ApplicationContext : DbContext
             .HasMany(e => e.WorkedOnProjects)
             .WithMany(p => p.ExecutiveEmployees);
     }
-    
+
     public new async Task<int> SaveChangesAsync(CancellationToken cancellationToken = new())
     {
         foreach (var entry in ChangeTracker.Entries<IDateFixEntity>())

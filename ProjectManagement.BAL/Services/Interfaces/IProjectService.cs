@@ -1,6 +1,5 @@
 using ProjectManagement.BAL.Models;
 using ProjectManagement.BAL.Models.Project;
-using ProjectManagement.DAL.Models;
 
 namespace ProjectManagement.BAL.Services.Interfaces;
 
@@ -14,7 +13,7 @@ public interface IProjectService
 
     Task<CreateProjectModel> CreateAsync(CreateProjectModel createProjectModel,
         CancellationToken cancellationToken = default);
-    
+
     Task<BaseResponseModel> AddEmployeeToProjectByIdAsync(int employeeId, int projectId,
         CancellationToken cancellationToken = default);
 
@@ -22,7 +21,7 @@ public interface IProjectService
 
     Task<IEnumerable<ProjectResponseModel>>
         GetAllByManagerIdAsync(int id, CancellationToken cancellationToken = default);
-    
+
     Task<IEnumerable<ProjectResponseModel>>
         GetAllByEmployeeIdAsync(int id, CancellationToken cancellationToken = default);
 

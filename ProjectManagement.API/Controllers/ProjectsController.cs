@@ -15,7 +15,7 @@ public class ProjectsController : ApiController
     }
 
     // GET: api/Projects
-    [HttpGet("{id:int}")]
+    [HttpGet]
     public async Task<IActionResult> GetAllFilteredAndSortedAsync(int id, string name, int priority,
         DateTime startDateFrom, DateTime startDateTo, string orderBy)
     {
@@ -24,10 +24,9 @@ public class ProjectsController : ApiController
 
     // GET: api/Projects/GetById/5
     [HttpGet("GetById/{id:int}")]
-    public async Task<IActionResult> GetFilteredAndSorted(int id, string name, int priority,
-        DateTime startDateFrom, DateTime startDateTo, string orderBy = "nameAsc")
+    public async Task<IActionResult> GetByIdAsync(int id)
     {
-        return Ok(ApiResult<IEnumerable<ProjectResponseModel>>.Success(await _projectService.GetAllFilteredAndSortedAsync(id, name, priority, startDateFrom, startDateTo, orderBy)));
+        return Ok(ApiResult<ProjectResponseModel>.Success(await _projectService.GetByIdAsync(id)));
     }
 
     // POST: api/Projects
@@ -38,7 +37,7 @@ public class ProjectsController : ApiController
     }
 
     // PUT: api/Projects/AddEmployeeByProjectId/3
-    [HttpPut("AddEmployee/{projectId:int}")]
+    [HttpPut("AddEmployee/{projectId:int}/{employeeId:int}")]
     public async Task<IActionResult> AddEmployeeToProjectByIdAsync(int projectId, int employeeId)
     {
         return Ok(ApiResult<BaseResponseModel>.Success(

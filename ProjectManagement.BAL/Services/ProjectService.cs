@@ -1,3 +1,4 @@
+using System.Linq.Expressions;
 using AutoMapper;
 using ProjectManagement.BAL.Models;
 using ProjectManagement.BAL.Models.Project;
@@ -19,6 +20,11 @@ public class ProjectService : IProjectService
         _projectRepository = projectRepository;
         _mapper = mapper;
     }
+    public async Task<IEnumerable<ProjectResponseModel>> GetAllAsync(Expression<Func<Project, bool>> predicate)
+    {
+        var projects = await _projectRepository.GetAllAsync(predicate);
+        return _mapper.Map<IEnumerable<ProjectResponseModel>>(projects);
+    }
     
     public async Task<IEnumerable<ProjectResponseModel>> GetAllFilteredAndSortedAsync(int id, string name, int priority,
         DateTime startDateFrom, DateTime startDateTo, string orderBy, CancellationToken cancellationToken = default)
@@ -26,6 +32,12 @@ public class ProjectService : IProjectService
         var projects = await _projectRepository.GetAllFilteredBy(id, name, priority, startDateFrom, startDateTo);
         _projectRepository.SortBy(orderBy, projects);
         return _mapper.Map<IEnumerable<ProjectResponseModel>>(projects);
+    }
+
+    public async Task<ProjectResponseModel> GetByIdAsync(int id, CancellationToken cancellationToken = default)
+    {
+        var project = await _projectRepository.GetFirstAsync(p => p.Id == id);
+        return _mapper.Map<ProjectResponseModel>(project);
     }
 
     public async Task<CreateProjectModel> CreateAsync(CreateProjectModel createProjectModel,

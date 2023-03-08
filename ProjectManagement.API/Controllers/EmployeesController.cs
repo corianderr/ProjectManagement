@@ -17,9 +17,10 @@ public class EmployeesController : ApiController
 
     // GET: api/Employees
     [HttpGet]
-    public async Task<IActionResult> GetAllAsync()
+    public async Task<IActionResult> GetAllFilteredAndSortedAsync(int id, string name,
+        string surname, string email, string orderBy)
     {
-        return Ok(ApiResult<IEnumerable<EmployeeResponseModel>>.Success(await _employeeService.GetAllAsync()));
+        return Ok(ApiResult<IEnumerable<EmployeeResponseModel>>.Success(await _employeeService.GetAllFilteredAndSortedAsync(id, name, surname, email, orderBy)));
     }
 
     // GET: api/Employees/GetById/5

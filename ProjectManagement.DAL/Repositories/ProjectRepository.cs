@@ -18,7 +18,7 @@ public class ProjectRepository : BaseRepository<Project>, IProjectRepository
             "nameAsc" => projects.OrderBy(p => p.Name).ToList(),
             "nameDesc" => projects.OrderByDescending(p => p.Name).ToList(),
             "priorityAsc" => projects.OrderBy(p => p.Priority).ToList(),
-            "priorityDesc" => projects.OrderByDescending(p => p.Name).ToList(),
+            "priorityDesc" => projects.OrderByDescending(p => p.Priority).ToList(),
             "startDateAsc" => projects.OrderBy(p => p.StartDate).ToList(),
             "startDateDesc" => projects.OrderByDescending(p => p.StartDate).ToList(),
             _ => projects

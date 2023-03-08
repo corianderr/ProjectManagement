@@ -1,3 +1,4 @@
+using System.Linq.Expressions;
 using AutoMapper;
 using ProjectManagement.BAL.Models;
 using ProjectManagement.BAL.Models.Employee;
@@ -18,9 +19,17 @@ public class EmployeeService : IEmployeeService
         _mapper = maper;
     }
 
-    public async Task<IEnumerable<EmployeeResponseModel>> GetAllAsync(CancellationToken cancellationToken = default)
+    public async Task<IEnumerable<EmployeeResponseModel>> GetAllAsync(Expression<Func<Employee, bool>> predicate)
     {
-        var employees = await _employeeRepository.GetAllAsync();
+        var employees = await _employeeRepository.GetAllAsync(predicate);
+        return _mapper.Map<IEnumerable<EmployeeResponseModel>>(employees);
+    }
+
+    public async Task<IEnumerable<EmployeeResponseModel>> GetAllFilteredAndSortedAsync(int id, string name,
+        string surname, string email, string orderBy, CancellationToken cancellationToken = default)
+    {
+        var employees = await _employeeRepository.GetAllFilteredBy(id, name, surname, email);
+        _employeeRepository.SortBy(orderBy, employees);
         return _mapper.Map<IEnumerable<EmployeeResponseModel>>(employees);
     }
 

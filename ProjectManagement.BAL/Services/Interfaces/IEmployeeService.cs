@@ -1,12 +1,15 @@
+using System.Linq.Expressions;
 using ProjectManagement.BAL.Models;
 using ProjectManagement.BAL.Models.Employee;
+using ProjectManagement.DAL.Models;
 
 namespace ProjectManagement.BAL.Services.Interfaces;
 
 public interface IEmployeeService
 {
-    Task<IEnumerable<EmployeeResponseModel>>
-        GetAllAsync(CancellationToken cancellationToken = default);
+    Task<IEnumerable<EmployeeResponseModel>> GetAllAsync(Expression<Func<Employee, bool>> predicate);
+    Task<IEnumerable<EmployeeResponseModel>> GetAllFilteredAndSortedAsync(int id, string name,
+        string surname, string email, string orderBy, CancellationToken cancellationToken = default);
 
     Task<EmployeeResponseModel>
         GetByIdAsync(int id, CancellationToken cancellationToken = default);

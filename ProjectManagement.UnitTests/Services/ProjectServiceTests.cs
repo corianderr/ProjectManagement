@@ -22,9 +22,9 @@ public class ProjectServiceTests : BaseServiceTestConfiguration
     public async Task GetAllAsync_Should_Return_All_Todo_Lists()
     {
         //Arrange
-        var todoLists = Builder<Project>.CreateListOfSize(10).Build().ToList();
+        var projects = Builder<Project>.CreateListOfSize(10).Build().ToList();
 
-        ProjectRepository.GetAllAsync(Arg.Any<Expression<Func<Project, bool>>>()).Returns(todoLists);
+        ProjectRepository.GetAllAsync(Arg.Any<Expression<Func<Project, bool>>>()).Returns(projects);
 
         //Act
         var result = await _sut.GetAllAsync(p => true);
@@ -38,14 +38,14 @@ public class ProjectServiceTests : BaseServiceTestConfiguration
     public async Task CreateAsync_Should_Add_New_Entity_To_Database()
     {
         //Arrange
-        var createTodoListModel = Builder<CreateProjectModel>.CreateNew().Build();
-        var todoList = Mapper.Map<Project>(createTodoListModel);
+        var createProjectModel = Builder<CreateProjectModel>.CreateNew().Build();
+        var todoList = Mapper.Map<Project>(createProjectModel);
         todoList.Id = 1;
 
         ProjectRepository.AddAsync(Arg.Any<Project>()).Returns(todoList);
 
         //Act
-        var result = await _sut.CreateAsync(createTodoListModel);
+        var result = await _sut.CreateAsync(createProjectModel);
 
         //Assert
         result.Id.Should().Be(todoList.Id);

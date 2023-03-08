@@ -39,16 +39,16 @@ public class ProjectServiceTests : BaseServiceTestConfiguration
     {
         //Arrange
         var createProjectModel = Builder<CreateProjectModel>.CreateNew().Build();
-        var todoList = Mapper.Map<Project>(createProjectModel);
-        todoList.Id = 1;
+        var project = Mapper.Map<Project>(createProjectModel);
+        project.Id = 1;
 
-        ProjectRepository.AddAsync(Arg.Any<Project>()).Returns(todoList);
+        ProjectRepository.AddAsync(Arg.Any<Project>()).Returns(project);
 
         //Act
         var result = await _sut.CreateAsync(createProjectModel);
 
         //Assert
-        result.Id.Should().Be(todoList.Id);
+        result.Id.Should().Be(project.Id);
         await ProjectRepository
             .Received().AddAsync(Arg.Any<Project>());
     }

@@ -7,22 +7,8 @@
     <projectFile profileName="Test">Test/Test.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bf9bc920-d33b-431b-a24c-09a2feb1005c" name="Changes" comment="Add filter and sorting options for project entities&#10;Reformat code">
-      <change afterPath="$PROJECT_DIR$/ProjectManagement.API/Middleware/PerformanceMiddleware.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectManagement.API/Middleware/TransactionMiddleware.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjectManagement/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjectManagement/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagement.API/Controllers/EmployeesController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.API/Controllers/EmployeesController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagement.API/Controllers/ProjectsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.API/Controllers/ProjectsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagement.API/Controllers/WeatherForecastController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagement.API/PMLocalDatabase.db" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.API/PMLocalDatabase.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagement.API/WeatherForecast.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagement.BAL/Services/EmployeeService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.BAL/Services/EmployeeService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagement.BAL/Services/Interfaces/IEmployeeService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.BAL/Services/Interfaces/IEmployeeService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagement.BAL/Services/Interfaces/IProjectService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.BAL/Services/Interfaces/IProjectService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagement.BAL/Services/ProjectService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.BAL/Services/ProjectService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagement.DAL/Contracts/IEmployeeRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.DAL/Contracts/IEmployeeRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagement.DAL/Repositories/EmployeeRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.DAL/Repositories/EmployeeRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagement.DAL/Repositories/ProjectRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.DAL/Repositories/ProjectRepository.cs" afterDir="false" />
+    <list default="true" id="bf9bc920-d33b-431b-a24c-09a2feb1005c" name="Changes" comment="Refactor repository and service classes and add missing method: 'GetAllAsync'&#10;Delete WeatherForecast class and controller">
+      <change beforePath="$PROJECT_DIR$/ProjectManagement.API/PMLocalDatabase.db" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,7 +136,7 @@
       <workItem from="1677924049519" duration="11243000" />
       <workItem from="1678010996682" duration="5603000" />
       <workItem from="1678030072380" duration="8186000" />
-      <workItem from="1678105130161" duration="33327000" />
+      <workItem from="1678105130161" duration="33640000" />
     </task>
     <task id="LOCAL-00001" summary="Add .gitignore">
       <created>1677924192878</created>
@@ -341,7 +327,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678211818562</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Refactor repository and service classes and add missing method: 'GetAllAsync'&#10;Delete WeatherForecast class and controller">
+      <created>1678273362214</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1678273362214</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -363,7 +356,6 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Create Project, Employee and base models" />
     <MESSAGE value="Create n-tier project hierarchy" />
     <MESSAGE value="Create entities: employee, project and base" />
     <MESSAGE value="Create repositories for existing entities" />
@@ -388,6 +380,7 @@
     <MESSAGE value="Implement logic for CRUD operations in EmployeesController&#10;Change names of methods to &quot;...Async&quot;" />
     <MESSAGE value="Delete &quot;Name&quot; prop value of httpGet attributes" />
     <MESSAGE value="Add filter and sorting options for project entities&#10;Reformat code" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add filter and sorting options for project entities&#10;Reformat code" />
+    <MESSAGE value="Refactor repository and service classes and add missing method: 'GetAllAsync'&#10;Delete WeatherForecast class and controller" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor repository and service classes and add missing method: 'GetAllAsync'&#10;Delete WeatherForecast class and controller" />
   </component>
 </project>

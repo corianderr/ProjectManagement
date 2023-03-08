@@ -7,12 +7,10 @@
     <projectFile profileName="Test">Test/Test.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bf9bc920-d33b-431b-a24c-09a2feb1005c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/ProjectManagement.UnitTests/ProjectManagement.UnitTests.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectManagement.UnitTests/Services/BaseServiceTestConfiguration.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectManagement.UnitTests/Usings.cs" afterDir="false" />
+    <list default="true" id="bf9bc920-d33b-431b-a24c-09a2feb1005c" name="Changes" comment="Create BaseServiceTestConfiguration">
+      <change afterPath="$PROJECT_DIR$/ProjectManagement.UnitTests/Services/ProjectServiceTests.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjectManagement/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjectManagement/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagement.sln" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagement.UnitTests/ProjectManagement.UnitTests.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.UnitTests/ProjectManagement.UnitTests.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,7 +121,7 @@
       <workItem from="1678010996682" duration="5603000" />
       <workItem from="1678030072380" duration="8186000" />
       <workItem from="1678105130161" duration="33864000" />
-      <workItem from="1678273963622" duration="852000" />
+      <workItem from="1678273963622" duration="3703000" />
     </task>
     <task id="LOCAL-00001" summary="Add .gitignore">
       <created>1677924192878</created>
@@ -328,7 +326,21 @@
       <option name="project" value="LOCAL" />
       <updated>1678273588350</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Add unit test project">
+      <created>1678274931703</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1678274931703</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Create BaseServiceTestConfiguration">
+      <created>1678274950635</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1678274950635</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -350,8 +362,6 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Create entities: employee, project and base" />
-    <MESSAGE value="Create repositories for existing entities" />
     <MESSAGE value="Create Context file and add Initial migration" />
     <MESSAGE value="Distribute folder locations across projects" />
     <MESSAGE value="Add new connection between entities: project -&gt; manager" />
@@ -375,6 +385,8 @@
     <MESSAGE value="Add filter and sorting options for project entities&#10;Reformat code" />
     <MESSAGE value="Refactor repository and service classes and add missing method: 'GetAllAsync'&#10;Delete WeatherForecast class and controller" />
     <MESSAGE value="Create .db file" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create .db file" />
+    <MESSAGE value="Add unit test project" />
+    <MESSAGE value="Create BaseServiceTestConfiguration" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create BaseServiceTestConfiguration" />
   </component>
 </project>

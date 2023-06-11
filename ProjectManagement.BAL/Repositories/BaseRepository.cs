@@ -4,7 +4,7 @@ using ProjectManagement.DAL.Contracts;
 using ProjectManagement.DAL.Data;
 using ProjectManagement.DAL.Models.Common;
 
-namespace ProjectManagement.DAL.Repositories;
+namespace ProjectManagement.BAL.Repositories;
 
 public class BaseRepository<TEntity> : IBaseRepository<TEntity> where TEntity : BaseEntity
 {
@@ -33,12 +33,12 @@ public class BaseRepository<TEntity> : IBaseRepository<TEntity> where TEntity : 
         return removedEntity;
     }
 
-    public async Task<List<TEntity>> GetAllAsync()
+    public IQueryable<TEntity> GetAll()
     {
-        return await DbSet.ToListAsync();
+        return DbSet.AsQueryable();
     }
 
-    public async Task<List<TEntity>> GetAllAsync(Expression<Func<TEntity, bool>> predicate)
+    public async Task<List<TEntity>> GetAll(Expression<Func<TEntity, bool>> predicate)
     {
         return await DbSet.Where(predicate).ToListAsync();
     }

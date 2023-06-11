@@ -2,7 +2,7 @@ using ProjectManagement.DAL.Contracts;
 using ProjectManagement.DAL.Data;
 using ProjectManagement.DAL.Models;
 
-namespace ProjectManagement.DAL.Repositories;
+namespace ProjectManagement.BAL.Repositories;
 
 public class EmployeeRepository : BaseRepository<Employee>, IEmployeeRepository
 {
@@ -25,9 +25,9 @@ public class EmployeeRepository : BaseRepository<Employee>, IEmployeeRepository
         return employees;
     }
 
-    public async Task<IEnumerable<Employee>> GetAllFilteredBy(int id, string name, string surname, string email)
+    public IQueryable<Employee> GetAllFilteredBy(int id, string name, string surname, string email)
     {
-        IEnumerable<Employee> employees = await GetAllAsync();
+        var employees = GetAll();
         if (!string.IsNullOrWhiteSpace(name)) employees = employees.Where(p => p.Name == name);
         if (!string.IsNullOrWhiteSpace(surname)) employees = employees.Where(p => p.Surname == surname);
         if (!string.IsNullOrWhiteSpace(email)) employees = employees.Where(p => p.Email == email);

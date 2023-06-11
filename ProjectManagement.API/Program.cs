@@ -14,7 +14,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<ApplicationContext>(x => x.UseSqlite(connectionString));
-builder.Services.AddDataAccessRepos().AddApplication(builder.Environment);
+builder.Services.AddApplication(builder.Environment);
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

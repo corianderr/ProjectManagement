@@ -2,7 +2,7 @@ using ProjectManagement.DAL.Contracts;
 using ProjectManagement.DAL.Data;
 using ProjectManagement.DAL.Models;
 
-namespace ProjectManagement.DAL.Repositories;
+namespace ProjectManagement.BAL.Repositories;
 
 public class ProjectRepository : BaseRepository<Project>, IProjectRepository
 {
@@ -26,10 +26,10 @@ public class ProjectRepository : BaseRepository<Project>, IProjectRepository
         return projects;
     }
 
-    public async Task<IEnumerable<Project>> GetAllFilteredBy(int id, string name, int priority, DateTime startDateFrom,
+    public IQueryable<Project> GetAllFilteredBy(int id, string name, int priority, DateTime startDateFrom,
         DateTime startDateTo)
     {
-        IEnumerable<Project> projects = await GetAllAsync();
+        var projects = GetAll();
         if (!string.IsNullOrWhiteSpace(name)) projects = projects.Where(p => p.Name == name);
         if (id != 0) projects = projects.Where(p => p.Id == id);
         if (priority != 0) projects = projects.Where(p => p.Priority == priority);

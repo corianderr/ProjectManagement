@@ -24,14 +24,14 @@ public class ProjectServiceTests : BaseServiceTestConfiguration
         //Arrange
         var projects = Builder<Project>.CreateListOfSize(10).Build().ToList();
 
-        ProjectRepository.GetAllAsync(Arg.Any<Expression<Func<Project, bool>>>()).Returns(projects);
+        ProjectRepository.GetAll(Arg.Any<Expression<Func<Project, bool>>>()).Returns(projects);
 
         //Act
         var result = await _sut.GetAllAsync(p => true);
 
         //Assert
         result.Should().HaveCount(10);
-        await ProjectRepository.Received().GetAllAsync(Arg.Any<Expression<Func<Project, bool>>>());
+        await ProjectRepository.Received().GetAll(Arg.Any<Expression<Func<Project, bool>>>());
     }
     
     [Fact]

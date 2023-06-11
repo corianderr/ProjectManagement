@@ -21,16 +21,16 @@ public class EmployeeService : IEmployeeService
 
     public async Task<IEnumerable<EmployeeResponseModel>> GetAllAsync(Expression<Func<Employee, bool>> predicate)
     {
-        var employees = await _employeeRepository.GetAllAsync(predicate);
+        var employees = await _employeeRepository.GetAll(predicate);
         return _mapper.Map<IEnumerable<EmployeeResponseModel>>(employees);
     }
 
-    public async Task<IEnumerable<EmployeeResponseModel>> GetAllFilteredAndSortedAsync(int id, string name,
+    public IEnumerable<EmployeeResponseModel> GetAllFilteredAndSorted(int id, string name,
         string surname, string email, string orderBy, CancellationToken cancellationToken = default)
     {
-        var employees = await _employeeRepository.GetAllFilteredBy(id, name, surname, email);
+        var employees = _employeeRepository.GetAllFilteredBy(id, name, surname, email);
         _employeeRepository.SortBy(orderBy, employees);
-        return _mapper.Map<IEnumerable<EmployeeResponseModel>>(employees);
+        return _mapper.Map<IEnumerable<EmployeeResponseModel>>(employees.ToList());
     }
 
     public async Task<EmployeeResponseModel> GetByIdAsync(int id, CancellationToken cancellationToken = default)
@@ -39,11 +39,11 @@ public class EmployeeService : IEmployeeService
         return _mapper.Map<EmployeeResponseModel>(employee);
     }
 
-    public async Task<CreateEmployeeModel> CreateAsync(CreateEmployeeModel createEmployeeModel,
+    public async Task<BaseResponseModel> CreateAsync(CreateEmployeeModel createEmployeeModel,
         CancellationToken cancellationToken = default)
     {
         var employee = _mapper.Map<Employee>(createEmployeeModel);
-        return new CreateEmployeeModel
+        return new BaseResponseModel
         {
             Id = (await _employeeRepository.AddAsync(employee)).Id
         };
@@ -62,7 +62,7 @@ public class EmployeeService : IEmployeeService
         CancellationToken cancellationToken = default)
     {
         return _mapper.Map<IEnumerable<EmployeeResponseModel>>(
-            await _employeeRepository.GetAllAsync(e => e.WorkedOnProjects.Any(p => p.Id == id)));
+            await _employeeRepository.GetAll(e => e.WorkedOnProjects.Any(p => p.Id == id)));
     }
 
     public async Task<EmployeeResponseModel> GetManagerByProjectIdAsync(int id,

@@ -8,13 +8,13 @@ namespace ProjectManagement.BAL.Services.Interfaces;
 public interface IEmployeeService
 {
     Task<IEnumerable<EmployeeResponseModel>> GetAllAsync(Expression<Func<Employee, bool>> predicate);
-    Task<IEnumerable<EmployeeResponseModel>> GetAllFilteredAndSortedAsync(int id, string name,
+    IEnumerable<EmployeeResponseModel> GetAllFilteredAndSorted(int id, string name,
         string surname, string email, string orderBy, CancellationToken cancellationToken = default);
 
     Task<EmployeeResponseModel>
         GetByIdAsync(int id, CancellationToken cancellationToken = default);
 
-    Task<CreateEmployeeModel> CreateAsync(CreateEmployeeModel createEmployeeModel,
+    Task<BaseResponseModel> CreateAsync(CreateEmployeeModel createEmployeeModel,
         CancellationToken cancellationToken = default);
 
     Task<BaseResponseModel> DeleteAsync(int id, CancellationToken cancellationToken = default);

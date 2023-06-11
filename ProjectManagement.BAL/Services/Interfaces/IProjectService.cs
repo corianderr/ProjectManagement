@@ -9,14 +9,14 @@ public interface IProjectService
 {
     Task<IEnumerable<ProjectResponseModel>> GetAllAsync(Expression<Func<Project, bool>> predicate);
 
-    Task<IEnumerable<ProjectResponseModel>> GetAllFilteredAndSortedAsync(int id, string name = "", int priority = 0,
+    IEnumerable<ProjectResponseModel> GetAllFilteredAndSorted(int id, string name = "", int priority = 0,
         DateTime startDateFrom = default, DateTime startDateTo = default, string orderBy = "nameAsc",
         CancellationToken cancellationToken = default);
     
     Task<ProjectResponseModel>
         GetByIdAsync(int id, CancellationToken cancellationToken = default);
 
-    Task<CreateProjectModel> CreateAsync(CreateProjectModel createProjectModel,
+    Task<BaseResponseModel> CreateAsync(CreateProjectModel createProjectModel,
         CancellationToken cancellationToken = default);
 
     Task<BaseResponseModel> AddEmployeeToProjectByIdAsync(int employeeId, int projectId,

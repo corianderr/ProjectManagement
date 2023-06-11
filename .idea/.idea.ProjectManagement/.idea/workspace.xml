@@ -7,8 +7,19 @@
     <projectFile profileName="Test">Test/Test.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bf9bc920-d33b-431b-a24c-09a2feb1005c" name="Changes" comment="Change variable names to more appropriate ones">
-      <change afterPath="$PROJECT_DIR$/ProjectManagement.UnitTests/Services/EmployeeServiceTests.cs" afterDir="false" />
+    <list default="true" id="bf9bc920-d33b-431b-a24c-09a2feb1005c" name="Changes" comment="Move Repositories implementation and dependency injection file to BAL project.">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjectManagement/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjectManagement/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagement.API/Controllers/EmployeesController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.API/Controllers/EmployeesController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagement.API/Controllers/ProjectsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.API/Controllers/ProjectsController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagement.API/PMLocalDatabase.db" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.API/PMLocalDatabase.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagement.BAL/Services/EmployeeService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.BAL/Services/EmployeeService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagement.BAL/Services/Interfaces/IEmployeeService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.BAL/Services/Interfaces/IEmployeeService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagement.BAL/Services/Interfaces/IProjectService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.BAL/Services/Interfaces/IProjectService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagement.BAL/Services/ProjectService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.BAL/Services/ProjectService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagement.DAL/Contracts/IBaseRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.DAL/Contracts/IBaseRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagement.DAL/Contracts/IEmployeeRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.DAL/Contracts/IEmployeeRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagement.DAL/Contracts/IProjectRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.DAL/Contracts/IProjectRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagement.UnitTests/Services/EmployeeServiceTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.UnitTests/Services/EmployeeServiceTests.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectManagement.UnitTests/Services/ProjectServiceTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.UnitTests/Services/ProjectServiceTests.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -17,8 +28,22 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/6f2c3a317ee06bc1b0766b94d4e6a045ea25c9a3da49cb9075bcee751250d4/ControllerActionInvoker.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/7262732eee179af215faab36a7f3c3cfac93ba12af52a3888d839fe7e53420/ActionMethodExecutor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/cariander/RiderProjects/ProjectManagement-master/ProjectManagement.API/Controllers/EmployeesController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ProjectManagement.API/Program.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/ProjectManagement.DAL/obj/Debug/net6.0/.NETCoreApp,Version=v6.0.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/cariander/RiderProjects/ProjectManagement-master/ProjectManagement.API/Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/cariander/RiderProjects/ProjectManagement-master/ProjectManagement.BAL/ApplicationDependencyInjection.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/cariander/RiderProjects/ProjectManagement-master/ProjectManagement.BAL/Services/EmployeeService.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/cariander/RiderProjects/ProjectManagement-master/ProjectManagement.BAL/Services/Interfaces/IEmployeeService.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/cariander/RiderProjects/ProjectManagement-master/ProjectManagement.BAL/Services/Interfaces/IProjectService.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/cariander/RiderProjects/ProjectManagement-master/ProjectManagement.DAL/Contracts/IBaseRepository.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/cariander/RiderProjects/ProjectManagement-master/ProjectManagement.DAL/Contracts/IBaseRepository.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/cariander/RiderProjects/ProjectManagement-master/ProjectManagement.DAL/Contracts/IEmployeeRepository.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/cariander/RiderProjects/ProjectManagement-master/ProjectManagement.DAL/Contracts/IProjectRepository.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/cariander/RiderProjects/ProjectManagement-master/ProjectManagement.DAL/Contracts/IProjectRepository.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/cariander/RiderProjects/ProjectManagement-master/ProjectManagement.UnitTests/Services/EmployeeServiceTests.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/cariander/RiderProjects/ProjectManagement-master/ProjectManagement.UnitTests/Services/ProjectServiceTests.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -41,7 +66,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;RiderNuGetOptionsPageId&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -121,6 +146,9 @@
       <workItem from="1678030072380" duration="8186000" />
       <workItem from="1678105130161" duration="33864000" />
       <workItem from="1678273963622" duration="4166000" />
+      <workItem from="1686455887292" duration="4428000" />
+      <workItem from="1686460334710" duration="307000" />
+      <workItem from="1686460648672" duration="895000" />
     </task>
     <task id="LOCAL-00001" summary="Add .gitignore">
       <created>1677924192878</created>
@@ -353,7 +381,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678277932897</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="Move Repositories implementation and dependency injection file to BAL project.">
+      <created>1686461464540</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1686461464540</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -375,7 +410,6 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Add new connection between entities: project -&gt; manager" />
     <MESSAGE value="Add employee and project services, and dto models" />
     <MESSAGE value="Add missing contracts" />
     <MESSAGE value="Create EmployeeService" />
@@ -400,6 +434,45 @@
     <MESSAGE value="Create BaseServiceTestConfiguration" />
     <MESSAGE value="Add project service unit tests" />
     <MESSAGE value="Change variable names to more appropriate ones" />
-    <option name="LAST_COMMIT_MESSAGE" value="Change variable names to more appropriate ones" />
+    <MESSAGE value="Move Repositories implementation and dependency injection file to BAL project." />
+    <option name="LAST_COMMIT_MESSAGE" value="Move Repositories implementation and dependency injection file to BAL project." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/ProjectManagement.API/Controllers/ProjectsController.cs</url>
+          <line>21</line>
+          <properties documentPath="$PROJECT_DIR$/ProjectManagement.API/Controllers/ProjectsController.cs" initialLine="21" containingFunctionPresentation="method 'GetAllFilteredAndSorted'">
+            <startOffsets>
+              <option value="637" />
+            </startOffsets>
+            <endOffsets>
+              <option value="799" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/ProjectManagement.BAL/Services/ProjectService.cs</url>
+          <line>31</line>
+          <properties documentPath="$PROJECT_DIR$/ProjectManagement.BAL/Services/ProjectService.cs" initialLine="31" containingFunctionPresentation="method 'GetAllFilteredAndSorted'">
+            <startOffsets>
+              <option value="1266" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1365" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/ProjectManagement.BAL/Repositories/ProjectRepository.cs</url>
+          <line>31</line>
+          <properties documentPath="$PROJECT_DIR$/ProjectManagement.DAL/Repositories/ProjectRepository.cs" initialLine="31" containingFunctionPresentation="method 'GetAllFilteredBy'" />
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

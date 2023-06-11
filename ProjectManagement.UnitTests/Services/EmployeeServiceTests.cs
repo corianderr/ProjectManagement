@@ -25,14 +25,14 @@ public class EmployeeServiceTests : BaseServiceTestConfiguration
         //Arrange
         var employees = Builder<Employee>.CreateListOfSize(10).Build().ToList();
 
-        EmployeeRepository.GetAllAsync(Arg.Any<Expression<Func<Employee, bool>>>()).Returns(employees);
+        EmployeeRepository.GetAll(Arg.Any<Expression<Func<Employee, bool>>>()).Returns(employees);
 
         //Act
         var result = await _sut.GetAllAsync(p => true);
 
         //Assert
         result.Should().HaveCount(10);
-        await EmployeeRepository.Received().GetAllAsync(Arg.Any<Expression<Func<Employee, bool>>>());
+        await EmployeeRepository.Received().GetAll(Arg.Any<Expression<Func<Employee, bool>>>());
     }
     
     [Fact]

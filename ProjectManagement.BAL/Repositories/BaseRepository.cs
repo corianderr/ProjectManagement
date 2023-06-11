@@ -45,10 +45,6 @@ public class BaseRepository<TEntity> : IBaseRepository<TEntity> where TEntity : 
 
     public async Task<TEntity> GetFirstAsync(Expression<Func<TEntity, bool>> predicate)
     {
-        var entity = await DbSet.Where(predicate).FirstOrDefaultAsync();
-
-        if (entity == null) throw new NullReferenceException($"{typeof(TEntity)} is missing.");
-
         return await DbSet.Where(predicate).FirstOrDefaultAsync();
     }
 

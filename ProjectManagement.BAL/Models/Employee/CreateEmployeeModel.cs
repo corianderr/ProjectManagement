@@ -2,7 +2,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace ProjectManagement.BAL.Models.Employee;
 
-public class CreateEmployeeModel
+public class CreateEmployeeModel : BaseResponseModel
 {
     [Required(ErrorMessage = "Please enter your name using less than 50 characters."), StringLength(50)]
     public string Name { get; set; }

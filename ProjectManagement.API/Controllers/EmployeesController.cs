@@ -48,7 +48,17 @@ public class EmployeesController : ApiController
     [HttpPost]
     public async Task<IActionResult> PostAsync(CreateEmployeeModel createEmployeeModel)
     {
-        return Ok(ApiResult<BaseResponseModel>.Success(await _employeeService.CreateAsync(createEmployeeModel)));
+        CreateEmployeeModel employee;
+        try
+        {
+            employee = await _employeeService.CreateAsync(createEmployeeModel);
+        }
+        catch (ArgumentException ex)
+        {
+            ModelState.AddModelError("Email", ex.Message);
+            return StatusCode(404, ModelState);
+        }
+        return Ok(ApiResult<CreateEmployeeModel>.Success(employee));
     }
 
     // PUT: api/Employees/5

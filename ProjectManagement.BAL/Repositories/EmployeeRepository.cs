@@ -34,5 +34,4 @@ public class EmployeeRepository : BaseRepository<Employee>, IEmployeeRepository
         if (id != 0) employees = employees.Where(p => p.Id == id);
         return employees;
     }
-
 }

@@ -39,11 +39,13 @@ public class EmployeeService : IEmployeeService
         return _mapper.Map<EmployeeResponseModel>(employee);
     }
 
-    public async Task<BaseResponseModel> CreateAsync(CreateEmployeeModel createEmployeeModel,
+    public async Task<CreateEmployeeModel> CreateAsync(CreateEmployeeModel createEmployeeModel,
         CancellationToken cancellationToken = default)
     {
+        if (_employeeRepository.GetFirstAsync(e => e.Email.Equals(createEmployeeModel.Email)) != null)
+            throw new ArgumentException("The email is already in use, please select another one.");
         var employee = _mapper.Map<Employee>(createEmployeeModel);
-        return new BaseResponseModel
+        return new CreateEmployeeModel
         {
             Id = (await _employeeRepository.AddAsync(employee)).Id
         };

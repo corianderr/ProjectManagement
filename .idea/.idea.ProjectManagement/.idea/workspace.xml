@@ -7,10 +7,18 @@
     <projectFile profileName="Test">Test/Test.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bf9bc920-d33b-431b-a24c-09a2feb1005c" name="Changes" comment="Remove Id field in create models and implement validation attributes in Employee model">
+    <list default="true" id="bf9bc920-d33b-431b-a24c-09a2feb1005c" name="Changes" comment="Add update project's model validation">
+      <change afterPath="$PROJECT_DIR$/ProjectManagement.API/PMLocalDatabase.db-shm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectManagement.API/PMLocalDatabase.db-wal" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjectManagement/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjectManagement/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagement.API/Controllers/EmployeesController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.API/Controllers/EmployeesController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectManagement.API/PMLocalDatabase.db" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.API/PMLocalDatabase.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagement.BAL/Models/Project/CreateProjectModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.BAL/Models/Project/CreateProjectModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagement.BAL/Models/Employee/CreateEmployeeModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.BAL/Models/Employee/CreateEmployeeModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagement.BAL/Models/Employee/EmployeeResponseModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.BAL/Models/Employee/EmployeeResponseModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagement.BAL/Repositories/BaseRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.BAL/Repositories/BaseRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagement.BAL/Repositories/EmployeeRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.BAL/Repositories/EmployeeRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagement.BAL/Services/EmployeeService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.BAL/Services/EmployeeService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagement.BAL/Services/Interfaces/IEmployeeService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.BAL/Services/Interfaces/IEmployeeService.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +39,7 @@
     <setting file="mock:///Users/cariander/RiderProjects/ProjectManagement-master/ProjectManagement.BAL/Models/Project/CreateProjectModel.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/cariander/RiderProjects/ProjectManagement-master/ProjectManagement.BAL/Models/Project/ProjectResponseModel.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/cariander/RiderProjects/ProjectManagement-master/ProjectManagement.BAL/Models/Project/ProjectResponseModel.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/cariander/RiderProjects/ProjectManagement-master/ProjectManagement.BAL/Models/Project/UpdateProjectModel.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/cariander/RiderProjects/ProjectManagement-master/ProjectManagement.BAL/Services/EmployeeService.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/cariander/RiderProjects/ProjectManagement-master/ProjectManagement.BAL/Services/Interfaces/IEmployeeService.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/cariander/RiderProjects/ProjectManagement-master/ProjectManagement.BAL/Services/Interfaces/IProjectService.cs" root0="SKIP_HIGHLIGHTING" />
@@ -145,7 +154,7 @@
       <workItem from="1678273963622" duration="4166000" />
       <workItem from="1686455887292" duration="4428000" />
       <workItem from="1686460334710" duration="307000" />
-      <workItem from="1686460648672" duration="6366000" />
+      <workItem from="1686460648672" duration="7965000" />
     </task>
     <task id="LOCAL-00001" summary="Add .gitignore">
       <created>1677924192878</created>
@@ -406,7 +415,21 @@
       <option name="project" value="LOCAL" />
       <updated>1686474477128</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="Add project's model validation">
+      <created>1686485691680</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1686485691680</updated>
+    </task>
+    <task id="LOCAL-00039" summary="Add update project's model validation">
+      <created>1686485743292</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1686485743292</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -428,8 +451,6 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Add dependency injection and automapping" />
-    <MESSAGE value="Add parameterless method GetAll" />
     <MESSAGE value="Update SaveChangesMethod of context class" />
     <MESSAGE value="Implement logic to all EmployeeService methods" />
     <MESSAGE value="Add employee and project profiles for automapping" />
@@ -453,7 +474,9 @@
     <MESSAGE value="Change GetAll, GetAllFilteredBy and GetAllFilteredAndSorted methods' return types to IQueryable" />
     <MESSAGE value="Change return type in post methods to BaseResponseModel" />
     <MESSAGE value="Remove Id field in create models and implement validation attributes in Employee model" />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove Id field in create models and implement validation attributes in Employee model" />
+    <MESSAGE value="Add project's model validation" />
+    <MESSAGE value="Add update project's model validation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add update project's model validation" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -483,12 +506,6 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/ProjectManagement.BAL/Repositories/ProjectRepository.cs</url>
-          <line>31</line>
-          <properties documentPath="$PROJECT_DIR$/ProjectManagement.DAL/Repositories/ProjectRepository.cs" initialLine="31" containingFunctionPresentation="method 'GetAllFilteredBy'" />
-          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

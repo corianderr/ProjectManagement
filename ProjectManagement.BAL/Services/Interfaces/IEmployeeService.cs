@@ -14,7 +14,7 @@ public interface IEmployeeService
     Task<EmployeeResponseModel>
         GetByIdAsync(int id, CancellationToken cancellationToken = default);
 
-    Task<BaseResponseModel> CreateAsync(CreateEmployeeModel createEmployeeModel,
+    Task<CreateEmployeeModel> CreateAsync(CreateEmployeeModel createEmployeeModel,
         CancellationToken cancellationToken = default);
 
     Task<BaseResponseModel> DeleteAsync(int id, CancellationToken cancellationToken = default);

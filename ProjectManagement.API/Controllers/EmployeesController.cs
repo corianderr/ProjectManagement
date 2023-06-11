@@ -17,10 +17,10 @@ public class EmployeesController : ApiController
 
     // GET: api/Employees
     [HttpGet]
-    public async Task<IActionResult> GetAllFilteredAndSortedAsync(int id, string name,
+    public IActionResult GetAllFilteredAndSortedAsync(int id, string name,
         string surname, string email, string orderBy)
     {
-        return Ok(ApiResult<IEnumerable<EmployeeResponseModel>>.Success(await _employeeService.GetAllFilteredAndSortedAsync(id, name, surname, email, orderBy)));
+        return Ok(ApiResult<IEnumerable<EmployeeResponseModel>>.Success(_employeeService.GetAllFilteredAndSorted(id, name, surname, email, orderBy)));
     }
 
     // GET: api/Employees/GetById/5
@@ -48,7 +48,7 @@ public class EmployeesController : ApiController
     [HttpPost]
     public async Task<IActionResult> PostAsync(CreateEmployeeModel createEmployeeModel)
     {
-        return Ok(ApiResult<CreateEmployeeModel>.Success(await _employeeService.CreateAsync(createEmployeeModel)));
+        return Ok(ApiResult<BaseResponseModel>.Success(await _employeeService.CreateAsync(createEmployeeModel)));
     }
 
     // PUT: api/Employees/5

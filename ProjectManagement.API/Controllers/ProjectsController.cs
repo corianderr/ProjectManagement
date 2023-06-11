@@ -16,10 +16,10 @@ public class ProjectsController : ApiController
 
     // GET: api/Projects
     [HttpGet]
-    public async Task<IActionResult> GetAllFilteredAndSortedAsync(int id, string name, int priority,
+    public IActionResult GetAllFilteredAndSorted(int id, string name, int priority,
         DateTime startDateFrom, DateTime startDateTo, string orderBy)
     {
-        return Ok(ApiResult<IEnumerable<ProjectResponseModel>>.Success(await _projectService.GetAllFilteredAndSortedAsync(id, name, priority, startDateFrom, startDateTo, orderBy)));
+        return Ok(ApiResult<IEnumerable<ProjectResponseModel>>.Success(_projectService.GetAllFilteredAndSorted(id, name, priority, startDateFrom, startDateTo, orderBy)));
     }
 
     // GET: api/Projects/GetById/5
@@ -33,7 +33,7 @@ public class ProjectsController : ApiController
     [HttpPost]
     public async Task<IActionResult> PostAsync(CreateProjectModel createProjectModel)
     {
-        return Ok(ApiResult<CreateProjectModel>.Success(await _projectService.CreateAsync(createProjectModel)));
+        return Ok(ApiResult<BaseResponseModel>.Success(await _projectService.CreateAsync(createProjectModel)));
     }
 
     // PUT: api/Projects/AddEmployeeByProjectId/3

@@ -7,18 +7,30 @@
     <projectFile profileName="Test">Test/Test.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bf9bc920-d33b-431b-a24c-09a2feb1005c" name="Changes" comment="Add update project's model validation">
-      <change afterPath="$PROJECT_DIR$/ProjectManagement.API/PMLocalDatabase.db-shm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectManagement.API/PMLocalDatabase.db-wal" afterDir="false" />
+    <list default="true" id="bf9bc920-d33b-431b-a24c-09a2feb1005c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/fetch-app/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fetch-app/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fetch-app/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fetch-app/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fetch-app/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fetch-app/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fetch-app/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fetch-app/public/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fetch-app/public/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fetch-app/public/logo192.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fetch-app/public/logo512.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fetch-app/public/manifest.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fetch-app/public/robots.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fetch-app/src/App.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fetch-app/src/App.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fetch-app/src/App.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fetch-app/src/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fetch-app/src/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fetch-app/src/logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fetch-app/src/reportWebVitals.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fetch-app/src/setupTests.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjectManagement/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjectManagement/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagement.API/Controllers/EmployeesController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.API/Controllers/EmployeesController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectManagement.API/PMLocalDatabase.db" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.API/PMLocalDatabase.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagement.BAL/Models/Employee/CreateEmployeeModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.BAL/Models/Employee/CreateEmployeeModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagement.BAL/Models/Employee/EmployeeResponseModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.BAL/Models/Employee/EmployeeResponseModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagement.BAL/Repositories/BaseRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.BAL/Repositories/BaseRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagement.BAL/Repositories/EmployeeRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.BAL/Repositories/EmployeeRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagement.BAL/Services/EmployeeService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.BAL/Services/EmployeeService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagement.BAL/Services/Interfaces/IEmployeeService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.BAL/Services/Interfaces/IEmployeeService.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +44,7 @@
     <setting file="mock:///Users/cariander/RiderProjects/ProjectManagement-master/ProjectManagement.API/Controllers/EmployeesController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/cariander/RiderProjects/ProjectManagement-master/ProjectManagement.API/Controllers/ProjectsController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ProjectManagement.API/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Users/cariander/RiderProjects/ProjectManagement-master/ProjectManagement.API/Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/cariander/RiderProjects/ProjectManagement-master/ProjectManagement.API/Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/cariander/RiderProjects/ProjectManagement-master/ProjectManagement.BAL/ApplicationDependencyInjection.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/cariander/RiderProjects/ProjectManagement-master/ProjectManagement.BAL/Models/Employee/CreateEmployeeModel.cs" root0="SKIP_HIGHLIGHTING" />
@@ -154,7 +167,7 @@
       <workItem from="1678273963622" duration="4166000" />
       <workItem from="1686455887292" duration="4428000" />
       <workItem from="1686460334710" duration="307000" />
-      <workItem from="1686460648672" duration="7965000" />
+      <workItem from="1686460648672" duration="9333000" />
     </task>
     <task id="LOCAL-00001" summary="Add .gitignore">
       <created>1677924192878</created>
@@ -429,7 +442,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686485743292</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="Add duplicated email validation">
+      <created>1686487458030</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1686487458030</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -451,7 +471,6 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Update SaveChangesMethod of context class" />
     <MESSAGE value="Implement logic to all EmployeeService methods" />
     <MESSAGE value="Add employee and project profiles for automapping" />
     <MESSAGE value="Implement logic to all ProjectService methods&#10;Add AddEmployeeToProject method to ProjectRepository&#10;Change some little inconsistencies" />
@@ -476,7 +495,8 @@
     <MESSAGE value="Remove Id field in create models and implement validation attributes in Employee model" />
     <MESSAGE value="Add project's model validation" />
     <MESSAGE value="Add update project's model validation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add update project's model validation" />
+    <MESSAGE value="Add duplicated email validation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add duplicated email validation" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

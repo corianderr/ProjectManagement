@@ -1,6 +1,6 @@
 namespace ProjectManagement.BAL.Models.Project;
 
-public class CreateProjectModel : BaseResponseModel
+public class CreateProjectModel
 {
     public string Name { get; set; }
     public string ClientCompanyName { get; set; }

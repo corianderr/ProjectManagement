@@ -13,15 +13,15 @@ public class ProjectsController : ApiController
     {
         _projectService = projectService;
     }
-
-    // GET: api/Projects
+    
+    // // GET: api/Projects
     [HttpGet]
-    public IActionResult GetAllFilteredAndSorted(int id, string name, int priority,
-        DateTime startDateFrom, DateTime startDateTo, string orderBy)
+    public IActionResult GetAllFilteredAndSorted(int id, string? name, int priority,
+        DateTime startDateFrom, DateTime startDateTo, string? orderBy)
     {
         return Ok(ApiResult<IEnumerable<ProjectResponseModel>>.Success(_projectService.GetAllFilteredAndSorted(id, name, priority, startDateFrom, startDateTo, orderBy)));
     }
-
+    
     // GET: api/Projects/GetById/5
     [HttpGet("GetById/{id:int}")]
     public async Task<IActionResult> GetByIdAsync(int id)

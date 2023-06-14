@@ -9,46 +9,11 @@
     <projectFile profileName="fetch_app">fetch-app/fetch-app.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bf9bc920-d33b-431b-a24c-09a2feb1005c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/.env.development" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/aspnetcore-https.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/aspnetcore-react.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/public/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/public/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/public/manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/src/App.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/src/App.test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/src/AppRoutes.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/src/components/Counter.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/src/components/Home.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/src/components/Layout.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/src/components/NavMenu.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/src/components/NavMenu.js" afterDir="false" />
+    <list default="true" id="bf9bc920-d33b-431b-a24c-09a2feb1005c" name="Changes" comment="Add default React project files and import axios">
       <change afterPath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/src/components/ProjectDetails.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/src/components/ProjectsCRUD.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/src/custom.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/src/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/src/reportWebVitals.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/src/service-worker.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/src/serviceWorkerRegistration.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/src/setupProxy.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectManagement.API/Pages/Error.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectManagement.API/Pages/Error.cshtml.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectManagement.API/Pages/_ViewImports.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjectManagement/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjectManagement/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagement.API/Controllers/ProjectsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.API/Controllers/ProjectsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagement.API/PMLocalDatabase.db" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.API/PMLocalDatabase.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagement.API/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.API/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagement.API/ProjectManagement.API.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.API/ProjectManagement.API.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagement.API/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.API/Properties/launchSettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagement.API/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.API/appsettings.Development.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagement.BAL/Repositories/EmployeeRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.BAL/Repositories/EmployeeRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagement.BAL/Repositories/ProjectRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.BAL/Repositories/ProjectRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagement.sln" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/src/AppRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/src/AppRoutes.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -211,7 +176,7 @@
       <workItem from="1686556612913" duration="7317000" />
       <workItem from="1686567774969" duration="197000" />
       <workItem from="1686567977332" duration="10256000" />
-      <workItem from="1686748041257" duration="492000" />
+      <workItem from="1686748041257" duration="1610000" />
     </task>
     <task id="LOCAL-00001" summary="Add .gitignore">
       <created>1677924192878</created>
@@ -500,7 +465,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686568359426</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="Add default React project files and import axios">
+      <created>1686748821983</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1686748821983</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -522,7 +494,6 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Add employee and project profiles for automapping" />
     <MESSAGE value="Implement logic to all ProjectService methods&#10;Add AddEmployeeToProject method to ProjectRepository&#10;Change some little inconsistencies" />
     <MESSAGE value="Add ResourceNotFoundException, ValidateModelAttribute and ApiResult classes" />
     <MESSAGE value="Got rid of projectRepository dependencies in employeeService and add ExceptionHandlingMiddleware" />
@@ -547,6 +518,7 @@
     <MESSAGE value="Add update project's model validation" />
     <MESSAGE value="Add duplicated email validation" />
     <MESSAGE value="Delete fetch-app and create API project with Client side on React" />
-    <option name="LAST_COMMIT_MESSAGE" value="Delete fetch-app and create API project with Client side on React" />
+    <MESSAGE value="Add default React project files and import axios" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add default React project files and import axios" />
   </component>
 </project>

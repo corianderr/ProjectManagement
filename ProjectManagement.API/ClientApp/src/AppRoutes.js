@@ -1,7 +1,7 @@
 import { Counter } from "./components/Counter";
 import { Home } from "./components/Home";
 import ProjectDetails from "./components/ProjectDetails";
-import {ProjectsCRUD} from "./components/ProjectsCRUD";
+import ProjectsCRUD from "./components/ProjectsCRUD";
 
 const AppRoutes = [
   {

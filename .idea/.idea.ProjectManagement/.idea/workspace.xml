@@ -9,11 +9,8 @@
     <projectFile profileName="fetch_app">fetch-app/fetch-app.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bf9bc920-d33b-431b-a24c-09a2feb1005c" name="Changes" comment="Add default React project files and import axios">
+    <list default="true" id="bf9bc920-d33b-431b-a24c-09a2feb1005c" name="Changes" comment="Rewrite App.js from class based to hook based component">
       <change afterPath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/src/components/ProjectDetails.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/src/components/ProjectsCRUD.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjectManagement/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjectManagement/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/src/AppRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/src/AppRoutes.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -176,7 +173,7 @@
       <workItem from="1686556612913" duration="7317000" />
       <workItem from="1686567774969" duration="197000" />
       <workItem from="1686567977332" duration="10256000" />
-      <workItem from="1686748041257" duration="1610000" />
+      <workItem from="1686748041257" duration="1916000" />
     </task>
     <task id="LOCAL-00001" summary="Add .gitignore">
       <created>1677924192878</created>
@@ -472,7 +469,21 @@
       <option name="project" value="LOCAL" />
       <updated>1686748821983</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="Create a ProjectsCRUD js file and implement logic for displaying projects data based on hooks">
+      <created>1686749666847</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1686749666847</updated>
+    </task>
+    <task id="LOCAL-00044" summary="Rewrite App.js from class based to hook based component">
+      <created>1686749955466</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1686749955466</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -494,8 +505,6 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Implement logic to all ProjectService methods&#10;Add AddEmployeeToProject method to ProjectRepository&#10;Change some little inconsistencies" />
-    <MESSAGE value="Add ResourceNotFoundException, ValidateModelAttribute and ApiResult classes" />
     <MESSAGE value="Got rid of projectRepository dependencies in employeeService and add ExceptionHandlingMiddleware" />
     <MESSAGE value="Reformat and clean up solution" />
     <MESSAGE value="Disable nullable reference types in projects' properties" />
@@ -519,6 +528,8 @@
     <MESSAGE value="Add duplicated email validation" />
     <MESSAGE value="Delete fetch-app and create API project with Client side on React" />
     <MESSAGE value="Add default React project files and import axios" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add default React project files and import axios" />
+    <MESSAGE value="Create a ProjectsCRUD js file and implement logic for displaying projects data based on hooks" />
+    <MESSAGE value="Rewrite App.js from class based to hook based component" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rewrite App.js from class based to hook based component" />
   </component>
 </project>

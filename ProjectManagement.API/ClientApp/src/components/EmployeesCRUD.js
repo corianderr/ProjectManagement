@@ -13,6 +13,18 @@ const EmployeesCrud = () => {
     const [loading, setLoading] = useState(true)
     const [data, setData] = useState([]);
     const [isVisible, setIsVisible] = useState(false);
+    const [filter, setFilter] = useState({
+        name: "",
+        surname: "",
+        email: "",
+        orderBy: ""
+    });
+    const [sort, setSort] = useState({
+        name: true,
+        surname: true,
+        email: true,
+    });
+
 
     useEffect(() => {
         try {
@@ -29,6 +41,23 @@ const EmployeesCrud = () => {
         setLoading(false)
     }
 
+    const onChangeFilter = e => {
+        const {name, value} = e.target;
+        setFilter(prev => ({...prev, [name]: value}));
+    };
+
+    const handleFilter = async (e) => {
+        e.preventDefault();
+        const url = `api/employees?name=${filter.name}&surname=${filter.surname}&email=${filter.email}&orderBy=${filter.orderBy}`;
+        await axios(url)
+            .then((result) => {
+                setData(result.data.result);
+            }).catch((error) => {
+                toast.error(error)
+            })
+    }
+    
+
     return (
         <div>
             <ToastContainer/>
@@ -38,20 +67,21 @@ const EmployeesCrud = () => {
                         <Row>
                             <Col>
                                 <Form.Label>Name</Form.Label>
-                                <Form.Control name="name" type="text"/>
+                                <Form.Control name="name" type="text" onChange={onChangeFilter}/>
                             </Col>
                             <Col>
                                 <Form.Label>Surname</Form.Label>
-                                <Form.Control name="surname" type="text"/>
+                                <Form.Control name="surname" type="text" onChange={onChangeFilter}/>
                             </Col>
                             <Col>
                                 <Form.Label>Email</Form.Label>
-                                <Form.Control name="email" type="text"/>
+                                <Form.Control name="email" type="text" onChange={onChangeFilter}/>
                                 {isVisible && <Confetti/>}
                             </Col>
                             <Col>
                                 <div className="h-100 d-flex">
-                                    <Button className="mt-auto px-4" variant="secondary">Filter</Button>
+                                    <Button className="mt-auto px-4" variant="secondary"
+                                            onClick={(e) => handleFilter(e)}>Filter</Button>
                                 </div>
                             </Col>
                         </Row>
@@ -59,8 +89,7 @@ const EmployeesCrud = () => {
                             <thead>
                             <tr>
                                 <th>Id</th>
-                                <th>Name</th>
-                                <th>Surname</th>
+                                <th>Full Name</th>
                                 <th>Email</th>
                                 <th>Actions</th>
                             </tr>
@@ -68,9 +97,7 @@ const EmployeesCrud = () => {
                             <tbody>
                             {data.map((employee, index) => <tr key={index}>
                                 <td>{employee.id}</td>
-                                <td><Link tag={Link} className="text-dark"
-                                          to={`/getById/${employee.id}`}>{employee.name}</Link></td>
-                                <td>{employee.surname}</td>
+                                <td>{employee.name} {employee.surname} {employee.patronymic}</td>
                                 <td>{employee.email}</td>
                                 <td>
                                     <button className="btn btn-primary px-4 me-2">Edit

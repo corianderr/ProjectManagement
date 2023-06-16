@@ -9,11 +9,14 @@
     <projectFile profileName="fetch_app">fetch-app/fetch-app.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bf9bc920-d33b-431b-a24c-09a2feb1005c" name="Changes" comment="Add confetti package">
-      <change afterPath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/src/components/Confetti.js" afterDir="false" />
+    <list default="true" id="bf9bc920-d33b-431b-a24c-09a2feb1005c" name="Changes" comment="Delete counter page">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjectManagement/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjectManagement/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/src/AppRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/src/AppRoutes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/src/components/Counter.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/src/components/EmployeesCRUD.js" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/src/components/EmployeesCRUD.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/src/components/ProjectsCRUD.js" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/src/components/ProjectsCRUD.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagement.API/PMLocalDatabase.db" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.API/PMLocalDatabase.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagement.API/PMLocalDatabase.db-shm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagement.API/PMLocalDatabase.db-wal" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -181,21 +184,7 @@
       <workItem from="1686567774969" duration="197000" />
       <workItem from="1686567977332" duration="10256000" />
       <workItem from="1686748041257" duration="6249000" />
-      <workItem from="1686843846517" duration="29140000" />
-    </task>
-    <task id="LOCAL-00010" summary="Add new connection between entities: project -&gt; manager">
-      <created>1678083307012</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1678083307012</updated>
-    </task>
-    <task id="LOCAL-00011" summary="Add employee and project services, and dto models">
-      <created>1678085946588</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1678085946588</updated>
+      <workItem from="1686843846517" duration="30355000" />
     </task>
     <task id="LOCAL-00012" summary="Add missing contracts">
       <created>1678086554929</created>
@@ -526,7 +515,21 @@
       <option name="project" value="LOCAL" />
       <updated>1686924308765</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="Add confetti after successful project addition">
+      <created>1686924841681</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1686924841681</updated>
+    </task>
+    <task id="LOCAL-00060" summary="Delete counter page">
+      <created>1686924853512</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1686924853512</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -548,8 +551,6 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Move Repositories implementation and dependency injection file to BAL project." />
-    <MESSAGE value="Change GetAll, GetAllFilteredBy and GetAllFilteredAndSorted methods' return types to IQueryable" />
     <MESSAGE value="Change return type in post methods to BaseResponseModel" />
     <MESSAGE value="Remove Id field in create models and implement validation attributes in Employee model" />
     <MESSAGE value="Add project's model validation" />
@@ -573,7 +574,9 @@
     <MESSAGE value="Implement Ui to sort projects" />
     <MESSAGE value="Delete unnecessary links and add link to EmployeeCRUD" />
     <MESSAGE value="Add confetti package" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add confetti package" />
+    <MESSAGE value="Add confetti after successful project addition" />
+    <MESSAGE value="Delete counter page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Delete counter page" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

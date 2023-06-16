@@ -13,7 +13,7 @@ const AppRoutes = [
     element: <ProjectsCRUD />
   },
   {
-    path: '/getById/:id',
+    path: '/projects/getById/:id',
     element: <ProjectDetails/>
   },
   {

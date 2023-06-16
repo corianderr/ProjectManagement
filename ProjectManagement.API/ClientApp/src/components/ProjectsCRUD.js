@@ -136,7 +136,7 @@ const ProjectsCRUD = () => {
                 toast.success('Project has been added');
                 setIsVisible(true)
             }).catch(error => {
-            console.log(error)
+            toast.error(error)
         })
     }
 
@@ -165,9 +165,7 @@ const ProjectsCRUD = () => {
     const clear = () => {
         setForm({name: "", clientCompanyName: "", executorCompanyName: "", priority: 0, managerId: 0})
     }
-
-    console.log(isVisible)
-
+    
     return (
         <div>
             <ToastContainer/>
@@ -224,7 +222,7 @@ const ProjectsCRUD = () => {
                             {data.map((project, index) => <tr key={index}>
                                 <td>{project.id}</td>
                                 <td><Link tag={Link} className="text-dark"
-                                          to={`/getById/${project.id}`}>{project.name}</Link></td>
+                                          to={`/projects/getById/${project.id}`}>{project.name}</Link></td>
                                 <td>{project.priority}</td>
                                 <td>{project.startDate}</td>
                                 <td>

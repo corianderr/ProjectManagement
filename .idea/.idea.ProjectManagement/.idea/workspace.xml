@@ -9,13 +9,10 @@
     <projectFile profileName="fetch_app">fetch-app/fetch-app.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bf9bc920-d33b-431b-a24c-09a2feb1005c" name="Changes" comment="Implement Ui to sort projects">
-      <change afterPath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/src/components/EmployeesCRUD.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjectManagement/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjectManagement/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/package.json" afterDir="false" />
+    <list default="true" id="bf9bc920-d33b-431b-a24c-09a2feb1005c" name="Changes" comment="Add confetti package">
+      <change afterPath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/src/components/Confetti.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/src/AppRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/src/AppRoutes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/src/components/NavMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/src/components/NavMenu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/src/components/Counter.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/src/components/ProjectsCRUD.js" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/src/components/ProjectsCRUD.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -184,21 +181,7 @@
       <workItem from="1686567774969" duration="197000" />
       <workItem from="1686567977332" duration="10256000" />
       <workItem from="1686748041257" duration="6249000" />
-      <workItem from="1686843846517" duration="28839000" />
-    </task>
-    <task id="LOCAL-00008" summary="Create Context file and add Initial migration">
-      <created>1678014601498</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1678014601498</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Distribute folder locations across projects">
-      <created>1678030655728</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1678030655728</updated>
+      <workItem from="1686843846517" duration="29140000" />
     </task>
     <task id="LOCAL-00010" summary="Add new connection between entities: project -&gt; manager">
       <created>1678083307012</created>
@@ -529,7 +512,21 @@
       <option name="project" value="LOCAL" />
       <updated>1686922935542</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="Delete unnecessary links and add link to EmployeeCRUD">
+      <created>1686924292162</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1686924292162</updated>
+    </task>
+    <task id="LOCAL-00058" summary="Add confetti package">
+      <created>1686924308765</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1686924308765</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -551,8 +548,6 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Add project service unit tests" />
-    <MESSAGE value="Change variable names to more appropriate ones" />
     <MESSAGE value="Move Repositories implementation and dependency injection file to BAL project." />
     <MESSAGE value="Change GetAll, GetAllFilteredBy and GetAllFilteredAndSorted methods' return types to IQueryable" />
     <MESSAGE value="Change return type in post methods to BaseResponseModel" />
@@ -576,7 +571,9 @@
     <MESSAGE value="Improve project GetAllFilteredAndSorted method by immediate return after sort" />
     <MESSAGE value="Improve employee GetAllFilteredAndSorted method by immediate return after sort" />
     <MESSAGE value="Implement Ui to sort projects" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implement Ui to sort projects" />
+    <MESSAGE value="Delete unnecessary links and add link to EmployeeCRUD" />
+    <MESSAGE value="Add confetti package" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add confetti package" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

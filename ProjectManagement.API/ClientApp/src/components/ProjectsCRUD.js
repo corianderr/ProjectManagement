@@ -8,7 +8,7 @@ import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
 import {ToastContainer, toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'
-import {NavLink} from "reactstrap";
+import Confetti from './Confetti';
 
 const ProjectsCRUD = () => {
     const [loading, setLoading] = useState(true)
@@ -35,6 +35,7 @@ const ProjectsCRUD = () => {
         startDate: true,
     });
     const [employees, setEmployees] = useState(null);
+    const [isVisible, setIsVisible] = useState(false);
 
     const handleClose = () => setShow(false);
 
@@ -52,6 +53,7 @@ const ProjectsCRUD = () => {
 
     const handleShow = () => {
         setShow(true)
+        setIsVisible(false)
         getEmployees().catch((e) => console.log());
     }
 
@@ -132,8 +134,9 @@ const ProjectsCRUD = () => {
                 handleClose()
                 clear()
                 toast.success('Project has been added');
+                setIsVisible(true)
             }).catch(error => {
-            console.log(error.response.data.errors)
+            console.log(error)
         })
     }
 
@@ -163,7 +166,7 @@ const ProjectsCRUD = () => {
         setForm({name: "", clientCompanyName: "", executorCompanyName: "", priority: 0, managerId: 0})
     }
 
-    console.log(filter)
+    console.log(isVisible)
 
     return (
         <div>
@@ -185,6 +188,7 @@ const ProjectsCRUD = () => {
                                 <Form.Label>Start Date From</Form.Label>
                                 <Form.Control name="startDateFrom" type="date"
                                               onChange={onChangeFilter}/>
+                                {isVisible && <Confetti />}
                             </Col>
                             <Col>
                                 <Form.Label>Start Date To</Form.Label>

@@ -9,8 +9,12 @@
     <projectFile profileName="fetch_app">fetch-app/fetch-app.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bf9bc920-d33b-431b-a24c-09a2feb1005c" name="Changes" comment="Rewrite App.js from class based to hook based component">
-      <change afterPath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/src/components/ProjectDetails.js" afterDir="false" />
+    <list default="true" id="bf9bc920-d33b-431b-a24c-09a2feb1005c" name="Changes" comment="Change acceptable priority range">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjectManagement/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjectManagement/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/src/components/ProjectsCRUD.js" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/src/components/ProjectsCRUD.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagement.API/PMLocalDatabase.db" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.API/PMLocalDatabase.db" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +32,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/6f2c3a317ee06bc1b0766b94d4e6a045ea25c9a3da49cb9075bcee751250d4/ControllerActionInvoker.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/7262732eee179af215faab36a7f3c3cfac93ba12af52a3888d839fe7e53420/ActionMethodExecutor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ProjectManagement.API/ClientApp/package-lock.json" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/cariander/RiderProjects/ProjectManagement-master/ProjectManagement.BAL/Models/Project/CreateProjectModel.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -173,7 +178,8 @@
       <workItem from="1686556612913" duration="7317000" />
       <workItem from="1686567774969" duration="197000" />
       <workItem from="1686567977332" duration="10256000" />
-      <workItem from="1686748041257" duration="1916000" />
+      <workItem from="1686748041257" duration="6249000" />
+      <workItem from="1686843846517" duration="9610000" />
     </task>
     <task id="LOCAL-00001" summary="Add .gitignore">
       <created>1677924192878</created>
@@ -483,7 +489,28 @@
       <option name="project" value="LOCAL" />
       <updated>1686749955466</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="Add ProjectDetails component and implement logic for displaying one project by id">
+      <created>1686750051145</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1686750051145</updated>
+    </task>
+    <task id="LOCAL-00046" summary="Add react-bootstrap package">
+      <created>1686754510670</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1686754510670</updated>
+    </task>
+    <task id="LOCAL-00047" summary="Change acceptable priority range">
+      <created>1686900212383</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1686900212383</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -505,9 +532,6 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Got rid of projectRepository dependencies in employeeService and add ExceptionHandlingMiddleware" />
-    <MESSAGE value="Reformat and clean up solution" />
-    <MESSAGE value="Disable nullable reference types in projects' properties" />
     <MESSAGE value="Add DataAccessDependencyInjection class" />
     <MESSAGE value="Implement logic for CRUD operations in ProjectsController&#10;Add base controller ApiController" />
     <MESSAGE value="Implement logic for CRUD operations in EmployeesController&#10;Change names of methods to &quot;...Async&quot;" />
@@ -530,6 +554,41 @@
     <MESSAGE value="Add default React project files and import axios" />
     <MESSAGE value="Create a ProjectsCRUD js file and implement logic for displaying projects data based on hooks" />
     <MESSAGE value="Rewrite App.js from class based to hook based component" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rewrite App.js from class based to hook based component" />
+    <MESSAGE value="Add ProjectDetails component and implement logic for displaying one project by id" />
+    <MESSAGE value="Add react-bootstrap package" />
+    <MESSAGE value="Change acceptable priority range" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change acceptable priority range" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/ProjectManagement.API/Controllers/ProjectsController.cs</url>
+          <line>34</line>
+          <properties documentPath="$PROJECT_DIR$/ProjectManagement.API/Controllers/ProjectsController.cs" initialLine="34" containingFunctionPresentation="method 'PostAsync'">
+            <startOffsets>
+              <option value="1191" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1192" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/ProjectManagement.API/Controllers/ProjectsController.cs</url>
+          <line>35</line>
+          <properties documentPath="$PROJECT_DIR$/ProjectManagement.API/Controllers/ProjectsController.cs" initialLine="35" containingFunctionPresentation="method 'PostAsync'">
+            <startOffsets>
+              <option value="1201" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1304" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

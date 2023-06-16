@@ -20,11 +20,7 @@ const ProjectsCRUD = () => {
     const minPriority = 0;
     const maxPriority = 3;
     
-    const [name, setName] = useState('');
-    const [clientCompanyName, setClientCompanyName] = useState('');
-    const [executorCompanyName, setExecutorCompanyName] = useState('');
-    const [priority, setPriority] = useState(0);
-    const [managerId, setManagerId] = useState(0);
+    const [form, setForm] = useState({name: "", clientCompanyName: "", executorCompanyName: "", priority: 0, managerId: 0});
     
     
     useEffect(() => {
@@ -61,22 +57,18 @@ const ProjectsCRUD = () => {
         }
     }
 
+    const onChange = e => {
+        const {name, value} = e.target;
+        setForm(prev => ({...prev, [name]: value}));
+    };
+
     const handleAdd = (e) => {
         e.preventDefault()
-        const url = 'api/projects';
-        const createModel = {
-            "name": name,
-            "clientCompanyName": clientCompanyName,
-            "executorCompanyName": executorCompanyName,
-            "priority": priority,
-            "managerId": managerId
-        }
-        console.log(createModel)
-        
-        axios.post(url, createModel)
+        console.log(form)
+        axios.post('api/projects', form)
             .then((result) => {
                 console.log(result)
-                fetchData().catch((e) => console.log())
+                fetchData().catch(() => console.log())
                 handleClose()
                 clear()
                 toast.success('Project has been added');
@@ -86,13 +78,9 @@ const ProjectsCRUD = () => {
     }
     
     const clear = () => {
-        setName('')
-        setClientCompanyName('')
-        setExecutorCompanyName('')
-        setPriority(0)
-        setManagerId(0)
+        setForm({name: "", clientCompanyName: "", executorCompanyName: "", priority: 0, managerId: 0})
     }
-
+    
     return (
         <div>
             <ToastContainer/>
@@ -156,24 +144,24 @@ const ProjectsCRUD = () => {
                 <Modal.Body>
                     <form onSubmit={(e) => handleAdd(e)}>
                         <div className="pb-3">
-                            <input type="text" className="form-control" placeholder="Enter name" 
-                                   onChange={(e) => setName(e.target.value)} required/>
+                            <input value={form.name} name="name" type="text" className="form-control" 
+                                   placeholder="Enter name" onChange={onChange} required/>
                         </div>
                         <div className="pb-3">
-                            <input type="text" className="form-control" placeholder="Enter client's company name" 
-                                   onChange={(e) => setClientCompanyName(e.target.value)} required/>
+                            <input value={form.clientCompanyName} name="clientCompanyName" type="text" className="form-control" 
+                                   placeholder="Enter client's company name" onChange={onChange} required/>
                         </div>
                         <div className="pb-3">
-                            <input type="text" className="form-control" placeholder="Enter executor's company name"
-                                   onChange={(e) => setExecutorCompanyName(e.target.value)} required/>
+                            <input value={form.executorCompanyName} name="executorCompanyName" type="text" 
+                                   className="form-control" placeholder="Enter executor's company name" onChange={onChange} required/>
                         </div>
                         <div className="pb-3">
-                            <input type="number" min={0} max={3} className="form-control" placeholder="Enter priority"
-                                   onChange={(e) => setPriority(parseInt(e.target.value))} required/>
+                            <input value={form.priority} name="priority" type="number" min={0} max={3} 
+                                   className="form-control" placeholder="Enter priority" onChange={onChange} required/>
                         </div>
                         <div className="pb-3">
-                            <input type="number" min={0} max={3} className="form-control" placeholder="Choose manager id"
-                                   onChange={(e) => setManagerId(parseInt(e.target.value))} required/>
+                            <input value={form.managerId} name="managerId" type="number" min={0} max={3} 
+                                   className="form-control" placeholder="Choose manager id" onChange={onChange} required/>
                         </div>
                         <button type="submit" className="btn btn-primary">Submit</button>
                     </form>

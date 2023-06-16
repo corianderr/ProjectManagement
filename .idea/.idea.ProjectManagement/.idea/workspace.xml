@@ -9,15 +9,12 @@
     <projectFile profileName="fetch_app">fetch-app/fetch-app.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bf9bc920-d33b-431b-a24c-09a2feb1005c" name="Changes" comment="Change Show functions so that employees state is filled after call">
+    <list default="true" id="bf9bc920-d33b-431b-a24c-09a2feb1005c" name="Changes" comment="Improve employee GetAllFilteredAndSorted method by immediate return after sort">
+      <change afterPath="$PROJECT_DIR$/ProjectManagement.API/PMLocalDatabase.db-shm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectManagement.API/PMLocalDatabase.db-wal" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjectManagement/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjectManagement/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagement.API/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.API/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/src/components/ProjectsCRUD.js" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/src/components/ProjectsCRUD.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagement.API/PMLocalDatabase.db" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.API/PMLocalDatabase.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagement.API/PMLocalDatabase.db-shm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagement.API/PMLocalDatabase.db-wal" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagement.BAL/Repositories/ProjectRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.BAL/Repositories/ProjectRepository.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +34,8 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/bcae882191178c8bf44c9add4cdeffa874a7afe629e3e56e9280f5896e953425/Monitor.CoreCLR.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ProjectManagement.API/ClientApp/package-lock.json" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/cariander/RiderProjects/ProjectManagement-master/ProjectManagement.BAL/Models/Project/CreateProjectModel.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/cariander/RiderProjects/ProjectManagement-master/ProjectManagement.BAL/Repositories/ProjectRepository.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/cariander/RiderProjects/ProjectManagement-master/ProjectManagement.BAL/Services/ProjectService.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -183,35 +182,7 @@
       <workItem from="1686567774969" duration="197000" />
       <workItem from="1686567977332" duration="10256000" />
       <workItem from="1686748041257" duration="6249000" />
-      <workItem from="1686843846517" duration="23538000" />
-    </task>
-    <task id="LOCAL-00003" summary="Delete unused directories and files">
-      <created>1677924963632</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1677924963632</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Create Project, Employee and base models">
-      <created>1677929612339</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1677929612339</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Create n-tier project hierarchy">
-      <created>1678014481927</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1678014481927</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Create entities: employee, project and base">
-      <created>1678014521451</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1678014521451</updated>
+      <workItem from="1686843846517" duration="27373000" />
     </task>
     <task id="LOCAL-00007" summary="Create repositories for existing entities">
       <created>1678014567984</created>
@@ -528,7 +499,35 @@
       <option name="project" value="LOCAL" />
       <updated>1686910838932</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="Change name filtering from equals to contains">
+      <created>1686917336756</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1686917336756</updated>
+    </task>
+    <task id="LOCAL-00053" summary="Implement UI to filter projects">
+      <created>1686917382408</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1686917382408</updated>
+    </task>
+    <task id="LOCAL-00054" summary="Improve project sort by immediate returning after sort">
+      <created>1686921855699</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1686921855699</updated>
+    </task>
+    <task id="LOCAL-00055" summary="Improve employee GetAllFilteredAndSorted method by immediate return after sort">
+      <created>1686921927315</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1686921927315</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -550,10 +549,6 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Add filter and sorting options for project entities&#10;Reformat code" />
-    <MESSAGE value="Refactor repository and service classes and add missing method: 'GetAllAsync'&#10;Delete WeatherForecast class and controller" />
-    <MESSAGE value="Create .db file" />
-    <MESSAGE value="Add unit test project" />
     <MESSAGE value="Create BaseServiceTestConfiguration" />
     <MESSAGE value="Add project service unit tests" />
     <MESSAGE value="Change variable names to more appropriate ones" />
@@ -575,7 +570,11 @@
     <MESSAGE value="Implement UI to delete projects" />
     <MESSAGE value="Refactor project addition and decreased number of states" />
     <MESSAGE value="Change Show functions so that employees state is filled after call" />
-    <option name="LAST_COMMIT_MESSAGE" value="Change Show functions so that employees state is filled after call" />
+    <MESSAGE value="Change name filtering from equals to contains" />
+    <MESSAGE value="Implement UI to filter projects" />
+    <MESSAGE value="Improve project GetAllFilteredAndSorted method by immediate return after sort" />
+    <MESSAGE value="Improve employee GetAllFilteredAndSorted method by immediate return after sort" />
+    <option name="LAST_COMMIT_MESSAGE" value="Improve employee GetAllFilteredAndSorted method by immediate return after sort" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -592,6 +591,32 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/ProjectManagement.API/Controllers/ProjectsController.cs</url>
+          <line>21</line>
+          <properties documentPath="$PROJECT_DIR$/ProjectManagement.API/Controllers/ProjectsController.cs" initialLine="21" containingFunctionPresentation="method 'GetAllFilteredAndSorted'">
+            <startOffsets>
+              <option value="646" />
+            </startOffsets>
+            <endOffsets>
+              <option value="808" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/ProjectManagement.BAL/Repositories/ProjectRepository.cs</url>
+          <line>21</line>
+          <properties documentPath="$PROJECT_DIR$/ProjectManagement.BAL/Repositories/ProjectRepository.cs" initialLine="21" containingFunctionPresentation="method 'SortBy'">
+            <startOffsets>
+              <option value="645" />
+            </startOffsets>
+            <endOffsets>
+              <option value="683" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -29,6 +29,11 @@ const ProjectsCRUD = () => {
         startDateTo: null,
         orderBy: ""
     });
+    const [sort, setSort] = useState({
+        name: true,
+        priority: true,
+        startDate: true,
+    });
     const [employees, setEmployees] = useState(null);
 
     const handleClose = () => setShow(false);
@@ -118,7 +123,7 @@ const ProjectsCRUD = () => {
         const {name, value} = e.target;
         setFilter(prev => ({...prev, [name]: value}));
     };
-
+    
     const handleAdd = (e) => {
         e.preventDefault()
         axios.post('api/projects', form)
@@ -138,6 +143,7 @@ const ProjectsCRUD = () => {
         const dataTo = filter.startDateTo == null ? "" : `&startDateTo=${filter.startDateTo}`;
         const priority = filter.priority == null ? "" : `&priority=${filter.priority}`;
         const url = `api/projects?name=${filter.name}` + priority + dataFrom + dataTo + `&orderBy=${filter.orderBy}`;
+        console.log(url)
         await axios(url)
             .then((result) => {
                 setData(result.data.result);
@@ -145,7 +151,14 @@ const ProjectsCRUD = () => {
                 toast.error(error)
             })
     }
-
+    
+    const handleSort = (e, name, value) => {
+        setSort(prev => ({...prev, [name]: !value}));
+        const sortState = name + (value ? "Asc" : "Desc")
+        setFilter(prev => ({...prev, orderBy: sortState}));
+        handleFilter(e).catch(() => console.log());
+    }
+    
     const clear = () => {
         setForm({name: "", clientCompanyName: "", executorCompanyName: "", priority: 0, managerId: 0})
     }
@@ -197,7 +210,9 @@ const ProjectsCRUD = () => {
                             <thead>
                             <tr>
                                 <th>Id</th>
-                                <th>Name</th>
+                                <th onClick={(e) => handleSort(e, "name", sort.name)}>Name</th>
+                                <th onClick={(e) => handleSort(e, "priority", sort.priority)}>Priority</th>
+                                <th onClick={(e) => handleSort(e, "startDate", sort.startDate)}>Start Date</th>
                                 <th>Actions</th>
                             </tr>
                             </thead>
@@ -206,6 +221,8 @@ const ProjectsCRUD = () => {
                                 <td>{project.id}</td>
                                 <td><Link tag={Link} className="text-dark"
                                           to={`/getById/${project.id}`}>{project.name}</Link></td>
+                                <td>{project.priority}</td>
+                                <td>{project.startDate}</td>
                                 <td>
                                     <button className="btn btn-primary px-4 me-2"
                                             onClick={() => handleEditShow(project.id)}>Edit

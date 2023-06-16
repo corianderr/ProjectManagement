@@ -2,6 +2,7 @@ import { Counter } from "./components/Counter";
 import { Home } from "./components/Home";
 import ProjectDetails from "./components/ProjectDetails";
 import ProjectsCRUD from "./components/ProjectsCRUD";
+import EmployeesCRUD from "./components/EmployeesCRUD";
 
 const AppRoutes = [
   {
@@ -19,6 +20,10 @@ const AppRoutes = [
   {
     path: '/getById/:id',
     element: <ProjectDetails/>
+  },
+  {
+    path: '/employees',
+    element: <EmployeesCRUD />
   }
 ];
 

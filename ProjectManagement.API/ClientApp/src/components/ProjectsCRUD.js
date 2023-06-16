@@ -8,7 +8,7 @@ import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
 import {ToastContainer, toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'
-import dayjs from "dayjs";
+import {NavLink} from "reactstrap";
 
 const ProjectsCRUD = () => {
     const [loading, setLoading] = useState(true)
@@ -241,37 +241,41 @@ const ProjectsCRUD = () => {
                     <Modal.Title>Add Project</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                    <form onSubmit={(e) => handleAdd(e)}>
-                        <div className="pb-3">
-                            <input value={form.name} name="name" type="text" className="form-control"
-                                   placeholder="Enter name" onChange={onChange} required/>
-                        </div>
-                        <div className="pb-3">
-                            <input value={form.clientCompanyName} name="clientCompanyName" type="text"
-                                   className="form-control"
-                                   placeholder="Enter client's company name" onChange={onChange} required/>
-                        </div>
-                        <div className="pb-3">
-                            <input value={form.executorCompanyName} name="executorCompanyName" type="text"
-                                   className="form-control" placeholder="Enter executor's company name"
-                                   onChange={onChange} required/>
-                        </div>
-                        <div className="pb-3">
-                            <input value={form.priority} name="priority" type="number" min={0} max={3}
-                                   className="form-control" placeholder="Enter priority" onChange={onChange} required/>
-                        </div>
-                        <div className="pb-3">
-                            {
-                                employees != null ?
-                                    <Form.Select name="managerId" onChange={onChange}>{
+                    {
+                        employees != null ?
+                            <form onSubmit={(e) => handleAdd(e)}>
+                                <div className="pb-3">
+                                    <input value={form.name} name="name" type="text" className="form-control"
+                                           placeholder="Enter name" onChange={onChange} required/>
+                                </div>
+                                <div className="pb-3">
+                                    <input value={form.clientCompanyName} name="clientCompanyName" type="text"
+                                           className="form-control"
+                                           placeholder="Enter client's company name" onChange={onChange} required/>
+                                </div>
+                                <div className="pb-3">
+                                    <input value={form.executorCompanyName} name="executorCompanyName" type="text"
+                                           className="form-control" placeholder="Enter executor's company name"
+                                           onChange={onChange} required/>
+                                </div>
+                                <div className="pb-3">
+                                    <label htmlFor="priorityAdd" className="ps-2">Priority</label>
+                                    <input value={form.priority} name="priority" id="priorityAdd" type="number" min={0}
+                                           max={3}
+                                           className="form-control" placeholder="Enter priority" onChange={onChange}
+                                           required/>
+                                </div>
+                                <div className="pb-3">
+                                    <label htmlFor="managerAdd" className="ps-2">Manager Id</label>
+                                    <Form.Select id="managerAdd" name="managerId" onChange={onChange}>{
                                         employees.map((id) =>
                                             <option key={id} value={id}>{id}</option>)
                                     }</Form.Select>
-                                    : <p></p>
-                            }
-                        </div>
-                        <button type="submit" className="btn btn-primary">Submit</button>
-                    </form>
+                                </div>
+                                <button type="submit" className="btn btn-primary">Submit</button>
+                            </form>
+                            : <p>No employees yet. Go and create one: <Link tag={Link} className="text-dark d-inline" to="/employees">here</Link></p>
+                    }
                 </Modal.Body>
             </Modal>
             <Modal show={editShow} onHide={handleEditClose}>

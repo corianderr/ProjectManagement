@@ -17,8 +17,8 @@ public class EmployeesController : ApiController
 
     // GET: api/Employees
     [HttpGet]
-    public IActionResult GetAllFilteredAndSortedAsync(int id, string name,
-        string surname, string email, string orderBy)
+    public IActionResult GetAllFilteredAndSortedAsync(int id, string? name,
+        string? surname, string? email, string? orderBy)
     {
         return Ok(ApiResult<IEnumerable<EmployeeResponseModel>>.Success(_employeeService.GetAllFilteredAndSorted(id, name, surname, email, orderBy)));
     }

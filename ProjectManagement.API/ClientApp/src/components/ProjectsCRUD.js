@@ -37,9 +37,15 @@ const ProjectsCRUD = () => {
     const [employees, setEmployees] = useState(null);
     const [isVisible, setIsVisible] = useState(false);
 
-    const handleClose = () => setShow(false);
+    const handleClose = () => {
+        setShow(false);
+        clear()
+    }
 
-    const handleEditClose = () => setEditShow(false);
+    const handleEditClose = () => {
+        setEditShow(false);
+        clear()
+    }
 
     useEffect(() => {
         try {
@@ -195,7 +201,7 @@ const ProjectsCRUD = () => {
                             </Col>
                             <Col>
                                 <div className="h-100 d-flex">
-                                    <Button className="mt-auto mb-2 px-4" variant="secondary" onClick={(e) => handleFilter(e)}>Filter</Button>
+                                    <Button className="mt-auto mb-1 px-4" variant="secondary" onClick={(e) => handleFilter(e)}>Filter</Button>
                                 </div>
                             </Col>
                             <Col>

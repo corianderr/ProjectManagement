@@ -9,10 +9,8 @@
     <projectFile profileName="fetch_app">fetch-app/fetch-app.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bf9bc920-d33b-431b-a24c-09a2feb1005c" name="Changes" comment="Change acceptable priority range">
+    <list default="true" id="bf9bc920-d33b-431b-a24c-09a2feb1005c" name="Changes" comment="Implement UI to add projects">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjectManagement/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjectManagement/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/src/components/ProjectsCRUD.js" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/src/components/ProjectsCRUD.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectManagement.API/PMLocalDatabase.db" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.API/PMLocalDatabase.db" afterDir="false" />
     </list>
@@ -179,7 +177,7 @@
       <workItem from="1686567774969" duration="197000" />
       <workItem from="1686567977332" duration="10256000" />
       <workItem from="1686748041257" duration="6249000" />
-      <workItem from="1686843846517" duration="9610000" />
+      <workItem from="1686843846517" duration="10195000" />
     </task>
     <task id="LOCAL-00001" summary="Add .gitignore">
       <created>1677924192878</created>
@@ -510,7 +508,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686900212383</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="Implement UI to add projects">
+      <created>1686900602162</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1686900602162</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -532,7 +537,6 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Add DataAccessDependencyInjection class" />
     <MESSAGE value="Implement logic for CRUD operations in ProjectsController&#10;Add base controller ApiController" />
     <MESSAGE value="Implement logic for CRUD operations in EmployeesController&#10;Change names of methods to &quot;...Async&quot;" />
     <MESSAGE value="Delete &quot;Name&quot; prop value of httpGet attributes" />
@@ -557,7 +561,8 @@
     <MESSAGE value="Add ProjectDetails component and implement logic for displaying one project by id" />
     <MESSAGE value="Add react-bootstrap package" />
     <MESSAGE value="Change acceptable priority range" />
-    <option name="LAST_COMMIT_MESSAGE" value="Change acceptable priority range" />
+    <MESSAGE value="Implement UI to add projects" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement UI to add projects" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

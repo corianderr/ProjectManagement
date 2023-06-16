@@ -26,6 +26,7 @@ const ProjectsCRUD = () => {
     const [priority, setPriority] = useState(0);
     const [managerId, setManagerId] = useState(0);
     
+    
     useEffect(() => {
         try {
             fetchData().catch((e) => console.log())
@@ -47,10 +48,19 @@ const ProjectsCRUD = () => {
 
     const handleDelete = (id) => {
         if (window.confirm("Are you sure you want to delete this project?")) {
-            alert('Project was deleted')
+            axios.delete(`api/projects/${id}`)
+                .then((result) => {
+                    if (result.status === 200){
+                        toast.success('Project has been deleted');
+                        fetchData();
+                    }
+                })
+                .catch((error) => {
+                    toast.error(error)
+                })
         }
     }
-    
+
     const handleAdd = (e) => {
         e.preventDefault()
         const url = 'api/projects';

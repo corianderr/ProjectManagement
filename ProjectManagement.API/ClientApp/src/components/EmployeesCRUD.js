@@ -33,7 +33,11 @@ const EmployeesCrud = () => {
             toast.error(error)
             setLoading(false)
         }
-    }, [])
+    }, []);
+    
+    useEffect(() => {
+        handleFilter().catch(() => console.log());
+    }, [filter])
 
     const fetchData = async () => {
         const {data} = await axios('api/employees');
@@ -46,8 +50,7 @@ const EmployeesCrud = () => {
         setFilter(prev => ({...prev, [name]: value}));
     };
 
-    const handleFilter = async (e) => {
-        e.preventDefault();
+    const handleFilter = async () => {
         const url = `api/employees?name=${filter.name}&surname=${filter.surname}&email=${filter.email}&orderBy=${filter.orderBy}`;
         await axios(url)
             .then((result) => {
@@ -56,7 +59,27 @@ const EmployeesCrud = () => {
                 toast.error(error)
             })
     }
+
+    const handleSort = (name, value) => {
+        setSort(prev => ({...prev, [name]: !value}));
+        const sortState = name + (value ? "Asc" : "Desc")
+        setFilter(prev => ({...prev, orderBy: sortState}));
+    }
     
+    const getArrow = (condition) => {
+        if (condition) {
+            return (<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                 className="bi bi-arrow-up" viewBox="0 0 16 16">
+                <path fillRule="evenodd"
+                      d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
+            </svg>)
+        }
+        return (<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+             className="bi bi-arrow-down" viewBox="0 0 16 16">
+            <path fillRule="evenodd"
+                  d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"/>
+        </svg>)
+    }
 
     return (
         <div>
@@ -89,15 +112,19 @@ const EmployeesCrud = () => {
                             <thead>
                             <tr>
                                 <th>Id</th>
-                                <th>Full Name</th>
-                                <th>Email</th>
+                                <th onClick={() => handleSort( "surname", sort.surname)}>Surname {getArrow(sort.surname)}</th>
+                                <th onClick={() => handleSort("name", sort.name)}>Name</th>
+                                <th>Patronymic</th>
+                                <th onClick={() => handleSort("email", sort.email)}>Email</th>
                                 <th>Actions</th>
                             </tr>
                             </thead>
                             <tbody>
                             {data.map((employee, index) => <tr key={index}>
                                 <td>{employee.id}</td>
-                                <td>{employee.name} {employee.surname} {employee.patronymic}</td>
+                                <td>{employee.surname}</td>
+                                <td>{employee.name}</td>
+                                <td>{employee.patronymic}</td>
                                 <td>{employee.email}</td>
                                 <td>
                                     <button className="btn btn-primary px-4 me-2">Edit

@@ -56,6 +56,9 @@ const ProjectsCRUD = () => {
         }
     }, [])
 
+    useEffect(() => {
+        handleFilter().catch(() => console.log());
+    }, [sort])
 
     const handleShow = () => {
         setShow(true)
@@ -146,8 +149,7 @@ const ProjectsCRUD = () => {
         })
     }
 
-    const handleFilter = async (e) => {
-        e.preventDefault();
+    const handleFilter = async () => {
         const dataFrom = filter.startDateFrom == null ? "" : `&startDateFrom=${filter.startDateFrom}`;
         const dataTo = filter.startDateTo == null ? "" : `&startDateTo=${filter.startDateTo}`;
         const priority = filter.priority == null ? "" : `&priority=${filter.priority}`;
@@ -160,11 +162,10 @@ const ProjectsCRUD = () => {
             })
     }
 
-    const handleSort = (e, name, value) => {
+    const handleSort = (name, value) => {
         setSort(prev => ({...prev, [name]: !value}));
         const sortState = name + (value ? "Asc" : "Desc")
         setFilter(prev => ({...prev, orderBy: sortState}));
-        handleFilter(e).catch(() => console.log());
     }
 
     const clear = () => {
@@ -218,9 +219,9 @@ const ProjectsCRUD = () => {
                             <thead>
                             <tr>
                                 <th>Id</th>
-                                <th onClick={(e) => handleSort(e, "name", sort.name)}>Name</th>
-                                <th onClick={(e) => handleSort(e, "priority", sort.priority)}>Priority</th>
-                                <th onClick={(e) => handleSort(e, "startDate", sort.startDate)}>Start Date</th>
+                                <th onClick={() => handleSort("name", sort.name)}>Name</th>
+                                <th onClick={() => handleSort( "priority", sort.priority)}>Priority</th>
+                                <th onClick={() => handleSort( "startDate", sort.startDate)}>Start Date</th>
                                 <th>Actions</th>
                             </tr>
                             </thead>

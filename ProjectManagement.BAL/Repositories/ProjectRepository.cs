@@ -34,7 +34,7 @@ public class ProjectRepository : BaseRepository<Project>, IProjectRepository
         DateTime startDateTo)
     {
         var projects = GetAll();
-        if (!string.IsNullOrWhiteSpace(name)) projects = projects.Where(p => p.Name == name);
+        if (!string.IsNullOrWhiteSpace(name)) projects = projects.Where(p => p.Name.Contains(name));
         if (id != 0) projects = projects.Where(p => p.Id == id);
         if (priority != 0) projects = projects.Where(p => p.Priority == priority);
         if (!startDateFrom.Equals(DateTime.MinValue)) projects = projects.Where(p => p.StartDate >= startDateFrom);

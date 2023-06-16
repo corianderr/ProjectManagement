@@ -9,12 +9,15 @@
     <projectFile profileName="fetch_app">fetch-app/fetch-app.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bf9bc920-d33b-431b-a24c-09a2feb1005c" name="Changes" comment="Refactor project addition and decreased number of states">
+    <list default="true" id="bf9bc920-d33b-431b-a24c-09a2feb1005c" name="Changes" comment="Change Show functions so that employees state is filled after call">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjectManagement/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjectManagement/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/src/components/ProjectsCRUD.js" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/src/components/ProjectsCRUD.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/src/setupProxy.js" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/src/setupProxy.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagement.API/Controllers/EmployeesController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.API/Controllers/EmployeesController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectManagement.API/PMLocalDatabase.db" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.API/PMLocalDatabase.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagement.API/PMLocalDatabase.db-shm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagement.API/PMLocalDatabase.db-wal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagement.BAL/Repositories/ProjectRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.BAL/Repositories/ProjectRepository.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -180,14 +183,7 @@
       <workItem from="1686567774969" duration="197000" />
       <workItem from="1686567977332" duration="10256000" />
       <workItem from="1686748041257" duration="6249000" />
-      <workItem from="1686843846517" duration="17479000" />
-    </task>
-    <task id="LOCAL-00002" summary="Create project hierarchy">
-      <created>1677924583723</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1677924583723</updated>
+      <workItem from="1686843846517" duration="23538000" />
     </task>
     <task id="LOCAL-00003" summary="Delete unused directories and files">
       <created>1677924963632</created>
@@ -525,7 +521,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686904790510</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="Change Show functions so that employees state is filled after call">
+      <created>1686910838932</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1686910838932</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -547,7 +550,6 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Delete &quot;Name&quot; prop value of httpGet attributes" />
     <MESSAGE value="Add filter and sorting options for project entities&#10;Reformat code" />
     <MESSAGE value="Refactor repository and service classes and add missing method: 'GetAllAsync'&#10;Delete WeatherForecast class and controller" />
     <MESSAGE value="Create .db file" />
@@ -572,37 +574,12 @@
     <MESSAGE value="Implement UI to add projects" />
     <MESSAGE value="Implement UI to delete projects" />
     <MESSAGE value="Refactor project addition and decreased number of states" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor project addition and decreased number of states" />
+    <MESSAGE value="Change Show functions so that employees state is filled after call" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change Show functions so that employees state is filled after call" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/ProjectManagement.API/Controllers/ProjectsController.cs</url>
-          <line>34</line>
-          <properties documentPath="$PROJECT_DIR$/ProjectManagement.API/Controllers/ProjectsController.cs" initialLine="34" containingFunctionPresentation="method 'PostAsync'">
-            <startOffsets>
-              <option value="1191" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1192" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/ProjectManagement.API/Controllers/ProjectsController.cs</url>
-          <line>35</line>
-          <properties documentPath="$PROJECT_DIR$/ProjectManagement.API/Controllers/ProjectsController.cs" initialLine="35" containingFunctionPresentation="method 'PostAsync'">
-            <startOffsets>
-              <option value="1201" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1304" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/ProjectManagement.API/Controllers/ProjectsController.cs</url>
           <line>50</line>

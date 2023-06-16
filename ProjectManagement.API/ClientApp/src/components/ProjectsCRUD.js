@@ -131,7 +131,7 @@ const ProjectsCRUD = () => {
         const {name, value} = e.target;
         setFilter(prev => ({...prev, [name]: value}));
     };
-    
+
     const handleAdd = (e) => {
         e.preventDefault()
         axios.post('api/projects', form)
@@ -152,7 +152,6 @@ const ProjectsCRUD = () => {
         const dataTo = filter.startDateTo == null ? "" : `&startDateTo=${filter.startDateTo}`;
         const priority = filter.priority == null ? "" : `&priority=${filter.priority}`;
         const url = `api/projects?name=${filter.name}` + priority + dataFrom + dataTo + `&orderBy=${filter.orderBy}`;
-        console.log(url)
         await axios(url)
             .then((result) => {
                 setData(result.data.result);
@@ -160,18 +159,18 @@ const ProjectsCRUD = () => {
                 toast.error(error)
             })
     }
-    
+
     const handleSort = (e, name, value) => {
         setSort(prev => ({...prev, [name]: !value}));
         const sortState = name + (value ? "Asc" : "Desc")
         setFilter(prev => ({...prev, orderBy: sortState}));
         handleFilter(e).catch(() => console.log());
     }
-    
+
     const clear = () => {
         setForm({name: "", clientCompanyName: "", executorCompanyName: "", priority: 0, managerId: 0})
     }
-    
+
     return (
         <div>
             <ToastContainer/>
@@ -192,7 +191,7 @@ const ProjectsCRUD = () => {
                                 <Form.Label>Start Date From</Form.Label>
                                 <Form.Control name="startDateFrom" type="date"
                                               onChange={onChangeFilter}/>
-                                {isVisible && <Confetti />}
+                                {isVisible && <Confetti/>}
                             </Col>
                             <Col>
                                 <Form.Label>Start Date To</Form.Label>
@@ -201,7 +200,8 @@ const ProjectsCRUD = () => {
                             </Col>
                             <Col>
                                 <div className="h-100 d-flex">
-                                    <Button className="mt-auto mb-1 px-4" variant="secondary" onClick={(e) => handleFilter(e)}>Filter</Button>
+                                    <Button className="mt-auto mb-1 px-4" variant="secondary"
+                                            onClick={(e) => handleFilter(e)}>Filter</Button>
                                 </div>
                             </Col>
                             <Col>
@@ -282,7 +282,8 @@ const ProjectsCRUD = () => {
                                 </div>
                                 <button type="submit" className="btn btn-primary">Submit</button>
                             </form>
-                            : <p>No employees yet. Go and create one: <Link tag={Link} className="text-dark d-inline" to="/employees">here</Link></p>
+                            : <p>No employees yet. Go and create one: <Link tag={Link} className="text-dark d-inline"
+                                                                            to="/employees">here</Link></p>
                     }
                 </Modal.Body>
             </Modal>

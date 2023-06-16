@@ -29,8 +29,7 @@ public class EmployeeService : IEmployeeService
         string surname, string email, string orderBy, CancellationToken cancellationToken = default)
     {
         var employees = _employeeRepository.GetAllFilteredBy(id, name, surname, email);
-        _employeeRepository.SortBy(orderBy, employees);
-        return _mapper.Map<IEnumerable<EmployeeResponseModel>>(employees.ToList());
+        return _mapper.Map<IEnumerable<EmployeeResponseModel>>(_employeeRepository.SortBy(orderBy, employees).ToList());
     }
 
     public async Task<EmployeeResponseModel> GetByIdAsync(int id, CancellationToken cancellationToken = default)

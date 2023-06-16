@@ -30,8 +30,7 @@ public class ProjectService : IProjectService
         DateTime startDateFrom, DateTime startDateTo, string orderBy, CancellationToken cancellationToken = default)
     {
         var projects = _projectRepository.GetAllFilteredBy(id, name, priority, startDateFrom, startDateTo);
-        _projectRepository.SortBy(orderBy, projects);
-        return _mapper.Map<IEnumerable<ProjectResponseModel>>(projects.ToList());
+        return _mapper.Map<IEnumerable<ProjectResponseModel>>(_projectRepository.SortBy(orderBy, projects).ToList());
     }
 
     public async Task<ProjectResponseModel> GetByIdAsync(int id, CancellationToken cancellationToken = default)

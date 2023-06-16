@@ -9,10 +9,13 @@
     <projectFile profileName="fetch_app">fetch-app/fetch-app.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bf9bc920-d33b-431b-a24c-09a2feb1005c" name="Changes" comment="Change route to project details file">
+    <list default="true" id="bf9bc920-d33b-431b-a24c-09a2feb1005c" name="Changes" comment="Change sort logic so it changes right after click">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjectManagement/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjectManagement/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/src/components/EmployeesCRUD.js" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/src/components/EmployeesCRUD.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/src/components/ProjectsCRUD.js" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/src/components/ProjectsCRUD.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectManagement.API/PMLocalDatabase.db" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.API/PMLocalDatabase.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagement.API/PMLocalDatabase.db-shm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagement.API/PMLocalDatabase.db-wal" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +35,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/bcae882191178c8bf44c9add4cdeffa874a7afe629e3e56e9280f5896e953425/Monitor.CoreCLR.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ProjectManagement.API/ClientApp/package-lock.json" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/cariander/RiderProjects/ProjectManagement-master/ProjectManagement.BAL/Models/Project/CreateProjectModel.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/cariander/RiderProjects/ProjectManagement-master/ProjectManagement.BAL/Repositories/EmployeeRepository.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/cariander/RiderProjects/ProjectManagement-master/ProjectManagement.BAL/Repositories/ProjectRepository.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/cariander/RiderProjects/ProjectManagement-master/ProjectManagement.BAL/Services/ProjectService.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -180,49 +184,7 @@
       <workItem from="1686567774969" duration="197000" />
       <workItem from="1686567977332" duration="10256000" />
       <workItem from="1686748041257" duration="6249000" />
-      <workItem from="1686843846517" duration="30669000" />
-    </task>
-    <task id="LOCAL-00013" summary="Add dependency injection and automapping">
-      <created>1678106527718</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1678106527718</updated>
-    </task>
-    <task id="LOCAL-00014" summary="Add parameterless method GetAll">
-      <created>1678106564681</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1678106564681</updated>
-    </task>
-    <task id="LOCAL-00015" summary="Update SaveChangesMethod of context class">
-      <created>1678107062535</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1678107062535</updated>
-    </task>
-    <task id="LOCAL-00016" summary="Implement logic to all EmployeeService methods">
-      <created>1678111262321</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1678111262321</updated>
-    </task>
-    <task id="LOCAL-00017" summary="Add employee and project profiles for automapping">
-      <created>1678111287849</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1678111287849</updated>
-    </task>
-    <task id="LOCAL-00018" summary="Implement logic to all ProjectService methods&#10;Add AddEmployeeToProject method to ProjectRepository&#10;Change some little inconsistencies">
-      <created>1678113675179</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1678113675179</updated>
+      <workItem from="1686843846517" duration="34370000" />
     </task>
     <task id="LOCAL-00019" summary="Add ResourceNotFoundException, ValidateModelAttribute and ApiResult classes">
       <created>1678187207616</created>
@@ -525,7 +487,49 @@
       <option name="project" value="LOCAL" />
       <updated>1686925850780</updated>
     </task>
-    <option name="localTasksCounter" value="62" />
+    <task id="LOCAL-00062" summary="Add form cleaning after forms hiding">
+      <created>1686926142942</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1686926142943</updated>
+    </task>
+    <task id="LOCAL-00063" summary="Create js component for Employees CRUD logic and implement UI to see all employees">
+      <created>1686926234503</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1686926234503</updated>
+    </task>
+    <task id="LOCAL-00064" summary="Change string filtering from equals to contains">
+      <created>1686926900783</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1686926900783</updated>
+    </task>
+    <task id="LOCAL-00065" summary="Refactor by deleting unnecessary logs and formatting code">
+      <created>1686927087583</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1686927087583</updated>
+    </task>
+    <task id="LOCAL-00066" summary="Implement UI to filter employees">
+      <created>1686927103909</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1686927103909</updated>
+    </task>
+    <task id="LOCAL-00067" summary="Change sort logic so it changes right after click">
+      <created>1686933334767</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1686933334767</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -547,12 +551,6 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Remove Id field in create models and implement validation attributes in Employee model" />
-    <MESSAGE value="Add project's model validation" />
-    <MESSAGE value="Add update project's model validation" />
-    <MESSAGE value="Add duplicated email validation" />
-    <MESSAGE value="Delete fetch-app and create API project with Client side on React" />
-    <MESSAGE value="Add default React project files and import axios" />
     <MESSAGE value="Create a ProjectsCRUD js file and implement logic for displaying projects data based on hooks" />
     <MESSAGE value="Rewrite App.js from class based to hook based component" />
     <MESSAGE value="Add ProjectDetails component and implement logic for displaying one project by id" />
@@ -572,7 +570,13 @@
     <MESSAGE value="Add confetti after successful project addition" />
     <MESSAGE value="Delete counter page" />
     <MESSAGE value="Change route to project details file" />
-    <option name="LAST_COMMIT_MESSAGE" value="Change route to project details file" />
+    <MESSAGE value="Add form cleaning after forms hiding" />
+    <MESSAGE value="Create js component for Employees CRUD logic and implement UI to see all employees" />
+    <MESSAGE value="Change string filtering from equals to contains" />
+    <MESSAGE value="Refactor by deleting unnecessary logs and formatting code" />
+    <MESSAGE value="Implement UI to filter employees" />
+    <MESSAGE value="Change sort logic so it changes right after click" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change sort logic so it changes right after click" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

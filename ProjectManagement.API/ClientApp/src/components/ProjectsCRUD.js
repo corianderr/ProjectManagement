@@ -172,6 +172,21 @@ const ProjectsCRUD = () => {
         setForm({name: "", clientCompanyName: "", executorCompanyName: "", priority: 0, managerId: 0})
     }
 
+    const getArrow = (condition) => {
+        if (!condition) {
+            return (<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                         className="bi bi-arrow-up" viewBox="0 0 16 16">
+                <path fillRule="evenodd"
+                      d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
+            </svg>)
+        }
+        return (<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                     className="bi bi-arrow-down" viewBox="0 0 16 16">
+            <path fillRule="evenodd"
+                  d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"/>
+        </svg>)
+    }
+
     return (
         <div>
             <ToastContainer/>
@@ -219,9 +234,9 @@ const ProjectsCRUD = () => {
                             <thead>
                             <tr>
                                 <th>Id</th>
-                                <th onClick={() => handleSort("name", sort.name)}>Name</th>
-                                <th onClick={() => handleSort( "priority", sort.priority)}>Priority</th>
-                                <th onClick={() => handleSort( "startDate", sort.startDate)}>Start Date</th>
+                                <th onClick={() => handleSort("name", sort.name)}>Name {getArrow(sort.name)}</th>
+                                <th onClick={() => handleSort( "priority", sort.priority)}>Priority {getArrow(sort.priority)}</th>
+                                <th onClick={() => handleSort( "startDate", sort.startDate)}>Start Date {getArrow(sort.startDate)}</th>
                                 <th>Actions</th>
                             </tr>
                             </thead>

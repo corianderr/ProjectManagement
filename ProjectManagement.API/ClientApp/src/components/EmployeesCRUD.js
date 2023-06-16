@@ -67,7 +67,7 @@ const EmployeesCrud = () => {
     }
     
     const getArrow = (condition) => {
-        if (condition) {
+        if (!condition) {
             return (<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                  className="bi bi-arrow-up" viewBox="0 0 16 16">
                 <path fillRule="evenodd"
@@ -113,9 +113,9 @@ const EmployeesCrud = () => {
                             <tr>
                                 <th>Id</th>
                                 <th onClick={() => handleSort( "surname", sort.surname)}>Surname {getArrow(sort.surname)}</th>
-                                <th onClick={() => handleSort("name", sort.name)}>Name</th>
+                                <th onClick={() => handleSort("name", sort.name)}>Name {getArrow(sort.name)}</th>
                                 <th>Patronymic</th>
-                                <th onClick={() => handleSort("email", sort.email)}>Email</th>
+                                <th onClick={() => handleSort("email", sort.email)}>Email {getArrow(sort.email)}</th>
                                 <th>Actions</th>
                             </tr>
                             </thead>

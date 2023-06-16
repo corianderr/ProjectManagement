@@ -10,7 +10,7 @@ public class CreateProjectModel
     public string ClientCompanyName { get; set; }
     [Required(ErrorMessage = "Please enter executor company's name."), StringLength(50)]
     public string ExecutorCompanyName { get; set; }
-    [Range(1, 4, ErrorMessage = "Priority value must be between 1 and 3")]
+    [Range(0, 3, ErrorMessage = "Priority value must be between 0 and 3")]
     [Required(ErrorMessage = "Please enter priority.")]
     public int Priority { get; set; }
     [Required(ErrorMessage = "Please enter manager's id.")]

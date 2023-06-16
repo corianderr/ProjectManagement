@@ -30,9 +30,9 @@ public class EmployeeRepository : BaseRepository<Employee>, IEmployeeRepository
     public IQueryable<Employee> GetAllFilteredBy(int id, string name, string surname, string email)
     {
         var employees = GetAll();
-        if (!string.IsNullOrWhiteSpace(name)) employees = employees.Where(p => p.Name == name);
-        if (!string.IsNullOrWhiteSpace(surname)) employees = employees.Where(p => p.Surname == surname);
-        if (!string.IsNullOrWhiteSpace(email)) employees = employees.Where(p => p.Email == email);
+        if (!string.IsNullOrWhiteSpace(name)) employees = employees.Where(p => p.Name.Contains(name));
+        if (!string.IsNullOrWhiteSpace(surname)) employees = employees.Where(p => p.Surname.Contains(surname));
+        if (!string.IsNullOrWhiteSpace(email)) employees = employees.Where(p => p.Email.Contains(email));
         if (id != 0) employees = employees.Where(p => p.Id == id);
         return employees;
     }

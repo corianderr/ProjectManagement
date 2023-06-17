@@ -56,7 +56,9 @@ public class EmployeesController : ApiController
         catch (ArgumentException ex)
         {
             ModelState.AddModelError("Email", ex.Message);
-            return StatusCode(404, ModelState);
+            return NotFound(ApiResult<ObjectResult>.Failure(ModelState.Values
+                .SelectMany(v => v.Errors)
+                .Select(e => e.ErrorMessage)));
         }
         return Ok(ApiResult<CreateEmployeeModel>.Success(employee));
     }

@@ -9,12 +9,8 @@
     <projectFile profileName="fetch_app">fetch-app/fetch-app.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bf9bc920-d33b-431b-a24c-09a2feb1005c" name="Changes" comment="Change axios requests in EmployeesCRUD file based on new configuration">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjectManagement/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjectManagement/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/src/axiosApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/src/axiosApi.js" afterDir="false" />
+    <list default="true" id="bf9bc920-d33b-431b-a24c-09a2feb1005c" name="Changes" comment="Change all axios requests based on axiosApi configuration and refactor code">
       <change beforePath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/src/components/EmployeesCRUD.js" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/src/components/EmployeesCRUD.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/src/components/ProjectDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/src/components/ProjectDetails.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/src/components/ProjectsCRUD.js" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/src/components/ProjectsCRUD.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectManagement.API/PMLocalDatabase.db" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.API/PMLocalDatabase.db" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -187,21 +183,7 @@
       <workItem from="1686567774969" duration="197000" />
       <workItem from="1686567977332" duration="10256000" />
       <workItem from="1686748041257" duration="6249000" />
-      <workItem from="1686843846517" duration="46352000" />
-    </task>
-    <task id="LOCAL-00027" summary="Add filter and sorting options for project entities&#10;Reformat code">
-      <created>1678211818562</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1678211818562</updated>
-    </task>
-    <task id="LOCAL-00028" summary="Refactor repository and service classes and add missing method: 'GetAllAsync'&#10;Delete WeatherForecast class and controller">
-      <created>1678273362214</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1678273362214</updated>
+      <workItem from="1686843846517" duration="46845000" />
     </task>
     <task id="LOCAL-00029" summary="Create .db file">
       <created>1678273588350</created>
@@ -532,7 +514,21 @@
       <option name="project" value="LOCAL" />
       <updated>1687000640141</updated>
     </task>
-    <option name="localTasksCounter" value="76" />
+    <task id="LOCAL-00076" summary="Add message on internal server error">
+      <created>1687002087562</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1687002087563</updated>
+    </task>
+    <task id="LOCAL-00077" summary="Change all axios requests based on axiosApi configuration and refactor code">
+      <created>1687002134072</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1687002134072</updated>
+    </task>
+    <option name="localTasksCounter" value="78" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -554,8 +550,6 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Change Show functions so that employees state is filled after call" />
-    <MESSAGE value="Change name filtering from equals to contains" />
     <MESSAGE value="Implement UI to filter projects" />
     <MESSAGE value="Improve project GetAllFilteredAndSorted method by immediate return after sort" />
     <MESSAGE value="Improve employee GetAllFilteredAndSorted method by immediate return after sort" />
@@ -579,7 +573,9 @@
     <MESSAGE value="Add configuration file for axios" />
     <MESSAGE value="Delete unnecessary logs" />
     <MESSAGE value="Change axios requests in EmployeesCRUD file based on new configuration" />
-    <option name="LAST_COMMIT_MESSAGE" value="Change axios requests in EmployeesCRUD file based on new configuration" />
+    <MESSAGE value="Add message on internal server error" />
+    <MESSAGE value="Change all axios requests based on axiosApi configuration and refactor code" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change all axios requests based on axiosApi configuration and refactor code" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

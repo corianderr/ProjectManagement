@@ -15,6 +15,7 @@ const EmployeesCrud = () => {
     const [data, setData] = useState([]);
     const [isVisible, setIsVisible] = useState(false);
     const [show, setShow] = useState(false);
+    const [editShow, setEditShow] = useState(false);
     const [filter, setFilter] = useState({
         name: "",
         surname: "",
@@ -51,8 +52,20 @@ const EmployeesCrud = () => {
         clear();
     };
 
+    const handleEditClose = () => {
+        setEditShow(false);
+        clear();
+    };
+
     const handleShow = () => {
         setShow(true);
+        setIsVisible(false);
+    };
+
+    const handleEditShow = async (id) => {
+        const result = await axiosApi.get(`employees/getById/${id}`);
+        setForm(result.data.result);
+        setEditShow(true);
         setIsVisible(false);
     };
 
@@ -77,6 +90,15 @@ const EmployeesCrud = () => {
         await fetchData();
         handleClose();
         toast.success('Employee has been added');
+        setIsVisible(true);
+    };
+
+    const handleEdit = async (e, id) => {
+        e.preventDefault();
+        await axiosApi.put(`employees/${id}`, form);
+        await fetchData();
+        handleEditClose();
+        toast.success('Employee has been updated');
         setIsVisible(true);
     };
 
@@ -167,7 +189,7 @@ const EmployeesCrud = () => {
                                 <td>{employee.patronymic}</td>
                                 <td>{employee.email}</td>
                                 <td>
-                                    <button className="btn btn-primary px-4 me-2">Edit
+                                    <button className="btn btn-primary px-4 me-2" onClick={() => handleEditShow(employee.id)}>Edit
                                     </button>
                                     <button className="btn btn-danger px-4 ms-2">Delete
                                     </button>
@@ -183,6 +205,35 @@ const EmployeesCrud = () => {
                 </Modal.Header>
                 <Modal.Body>
                     <form onSubmit={(e) => handleAdd(e)}>
+                        <div className="pb-3">
+                            <input value={form.name} name="name" type="text" className="form-control"
+                                   placeholder="Enter name" onChange={onChange}/>
+                        </div>
+                        <div className="pb-3">
+                            <input value={form.surname} name="surname" type="text"
+                                   className="form-control"
+                                   placeholder="Enter surname" onChange={onChange} required/>
+                        </div>
+                        <div className="pb-3">
+                            <input value={form.patronymic} name="patronymic" type="text"
+                                   className="form-control" placeholder="Enter patronymic"
+                                   onChange={onChange} required/>
+                        </div>
+                        <div className="pb-3">
+                            <input value={form.email} name="email" type="text"
+                                   className="form-control" placeholder="Enter email"
+                                   onChange={onChange} required/>
+                        </div>
+                        <button type="submit" className="btn btn-primary">Submit</button>
+                    </form>
+                </Modal.Body>
+            </Modal>
+            <Modal show={editShow} onHide={handleEditClose}>
+                <Modal.Header closeButton>
+                    <Modal.Title>Update Employee</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    <form onSubmit={(e) => handleEdit(e, form.id)}>
                         <div className="pb-3">
                             <input value={form.name} name="name" type="text" className="form-control"
                                    placeholder="Enter name" onChange={onChange}/>

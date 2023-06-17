@@ -58,7 +58,7 @@ const ProjectsCRUD = () => {
 
     useEffect(() => {
         handleFilter().catch(() => console.log());
-    }, [sort])
+    }, [filter])
 
     const handleShow = () => {
         setShow(true)

@@ -46,7 +46,7 @@ const ProjectDetails = () => {
                                     <div>Executors:<br/>
                                         {
                                             executors.map((employee) =>
-                                                <span key={employee.id}>{employee.name} {employee.surname}<br/></span>)
+                                                <span key={employee.id}>{employee.name} {employee.surname} (id: {employee.id})<br/></span>)
                                         }
                                     </div>}
                             </div> : null

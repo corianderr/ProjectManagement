@@ -15,6 +15,11 @@ const ProjectsCRUD = () => {
     const [data, setData] = useState([]);
     const [show, setShow] = useState(false);
     const [editShow, setEditShow] = useState(false);
+    const [executorsShow, setExecutorsShow] = useState(false);
+    const [addExecutor, setAddExecutor] = useState({
+        projectId: 0,
+        employeeId: 0
+    });
     const [form, setForm] = useState({
         name: "",
         clientCompanyName: "",
@@ -46,6 +51,14 @@ const ProjectsCRUD = () => {
         setEditShow(false);
         clear();
     };
+    
+    const handleExecutorsClose = () => {
+        setExecutorsShow(false);
+        setAddExecutor({
+            projectId: 0,
+            employeeId: 0
+        });
+    }
 
     useEffect(() => {
         try {
@@ -69,8 +82,27 @@ const ProjectsCRUD = () => {
     const handleEditShow = async (id) => {
         const result = await axiosApi.get(`projects/getById/${id}`);
         await getEmployees();
+        setIsVisible(false);
         setForm(result.data.result);
         setEditShow(true);
+    };
+
+    const handleExecutorsShow = async (id) => {
+        await getEmployees();
+        setExecutorsShow(true);
+        setAddExecutor(prev => ({...prev, projectId: id}));
+    };
+
+    const handleAddExecutor = async (e) => {
+        e.preventDefault();
+        await axiosApi.put(`projects/addEmployee/${addExecutor.projectId}/${addExecutor.employeeId}`);
+        handleExecutorsClose();
+        toast.success("Executor was successfully added");
+    }
+
+    const onChangeExecutor = e => {
+        const {name, value} = e.target;
+        setAddExecutor(prev => ({...prev, [name]: value}));
     };
 
     const getEmployees = async () => {
@@ -92,6 +124,7 @@ const ProjectsCRUD = () => {
         await fetchData();
         handleEditClose();
         toast.success('Project has been updated');
+        setIsVisible(true);
     };
 
     const handleDelete = async (id) => {
@@ -106,7 +139,7 @@ const ProjectsCRUD = () => {
         const {name, value} = e.target;
         setForm(prev => ({...prev, [name]: value}));
     };
-
+    
     const onChangeFilter = e => {
         const {name, value} = e.target;
         setFilter(prev => ({...prev, [name]: value}));
@@ -217,12 +250,17 @@ const ProjectsCRUD = () => {
                                 <td>{project.priority}</td>
                                 <td>{project.startDate}</td>
                                 <td>
-                                    <button className="btn btn-primary px-4 me-2"
+                                    <div className="btn-group">
+                                        <button className="btn btn-secondary px-4"
+                                                onClick={() => handleExecutorsShow(project.id)}>Add executor
+                                        </button>
+                                    <button className="btn btn-primary px-4"
                                             onClick={() => handleEditShow(project.id)}>Edit
                                     </button>
-                                    <button className="btn btn-danger px-4 ms-2"
+                                    <button className="btn btn-danger px-4"
                                             onClick={() => handleDelete(project.id)}>Delete
                                     </button>
+                                    </div>
                                 </td>
                             </tr>)}
                             </tbody>
@@ -307,6 +345,27 @@ const ProjectsCRUD = () => {
                             }
                         </div>
                         <button type="submit" className="btn btn-primary">Submit</button>
+                    </form>
+                </Modal.Body>
+            </Modal>
+            <Modal show={executorsShow} onHide={handleExecutorsClose}>
+                <Modal.Header closeButton>
+                    <Modal.Title>Add executor to project #{addExecutor.projectId}</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    <form onSubmit={(e) => handleAddExecutor(e)}>
+                        <div className="pb-3">
+                            <Form.Label htmlFor="executorId">Choose executor's id</Form.Label>
+                            {
+                                employees != null ?
+                                    <Form.Select id="executorId" name="employeeId" onChange={onChangeExecutor}>{
+                                        employees.map((id) =>
+                                            <option key={id} value={id}>{id}</option>)
+                                    }</Form.Select>
+                                    : <p></p>
+                            }
+                        </div>
+                        <button type="submit" className="btn btn-primary">Add</button>
                     </form>
                 </Modal.Body>
             </Modal>

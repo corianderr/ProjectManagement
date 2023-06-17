@@ -1,7 +1,9 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 using ProjectManagement.DAL.Contracts;
 using ProjectManagement.DAL.Data;
 using ProjectManagement.DAL.Models;
@@ -12,6 +14,11 @@ public class ProjectRepository : BaseRepository<Project>, IProjectRepository
 {
     public ProjectRepository(ApplicationContext context) : base(context)
     {
+    }
+    
+    public async Task<Project> GetFirstWithExecutorsAsync(Expression<Func<Project, bool>> predicate)
+    {
+        return await DbSet.Include(p => p.ExecutiveEmployees).Where(predicate).FirstOrDefaultAsync();
     }
 
     public IEnumerable<Project> SortBy(string orderBy, IEnumerable<Project> projects)
@@ -44,6 +51,8 @@ public class ProjectRepository : BaseRepository<Project>, IProjectRepository
 
     public async Task<Project> AddEmployeeToProject(Employee employee, Project project)
     {
+        if (project.ExecutiveEmployees.Exists(e => e.Id == employee.Id))
+            throw new ArgumentException("An employee has already been added.");
         project.ExecutiveEmployees.Add(employee);
         await UpdateAsync(project);
         await Context.SaveChangesAsync();

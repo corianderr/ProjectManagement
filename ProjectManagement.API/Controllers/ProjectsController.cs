@@ -13,15 +13,16 @@ public class ProjectsController : ApiController
     {
         _projectService = projectService;
     }
-    
+
     // // GET: api/Projects
     [HttpGet]
     public IActionResult GetAllFilteredAndSorted(int id, string? name, int priority,
         DateTime startDateFrom, DateTime startDateTo, string? orderBy)
     {
-        return Ok(ApiResult<IEnumerable<ProjectResponseModel>>.Success(_projectService.GetAllFilteredAndSorted(id, name, priority, startDateFrom, startDateTo, orderBy)));
+        return Ok(ApiResult<IEnumerable<ProjectResponseModel>>.Success(
+            _projectService.GetAllFilteredAndSorted(id, name, priority, startDateFrom, startDateTo, orderBy)));
     }
-    
+
     // GET: api/Projects/GetById/5
     [HttpGet("GetById/{id:int}")]
     public async Task<IActionResult> GetByIdAsync(int id)
@@ -36,12 +37,19 @@ public class ProjectsController : ApiController
         return Ok(ApiResult<BaseResponseModel>.Success(await _projectService.CreateAsync(createProjectModel)));
     }
 
-    // PUT: api/Projects/AddEmployeeByProjectId/3
+    // PUT: api/Projects/AddEmployee/3/1
     [HttpPut("AddEmployee/{projectId:int}/{employeeId:int}")]
     public async Task<IActionResult> AddEmployeeToProjectByIdAsync(int projectId, int employeeId)
     {
-        return Ok(ApiResult<BaseResponseModel>.Success(
-            await _projectService.AddEmployeeToProjectByIdAsync(employeeId, projectId)));
+        try
+        {
+            return Ok(ApiResult<BaseResponseModel>.Success(
+                await _projectService.AddEmployeeToProjectByIdAsync(employeeId, projectId)));
+        }
+        catch (ArgumentException ex)
+        {
+            return NotFound(ApiResult<ObjectResult>.Failure(new[] { ex.Message }));
+        }
     }
 
     // PUT: api/Projects/5

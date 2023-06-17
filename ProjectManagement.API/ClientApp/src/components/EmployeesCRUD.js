@@ -211,7 +211,7 @@ const EmployeesCrud = () => {
                     <form onSubmit={(e) => handleAdd(e)}>
                         <div className="pb-3">
                             <input value={form.name} name="name" type="text" className="form-control"
-                                   placeholder="Enter name" onChange={onChange}/>
+                                   placeholder="Enter name" onChange={onChange} required/>
                         </div>
                         <div className="pb-3">
                             <input value={form.surname} name="surname" type="text"

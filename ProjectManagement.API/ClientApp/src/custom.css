@@ -12,3 +12,19 @@ code {
     background-color: #1b6ec2;
     border-color: #1861ac;
 }
+
+ul {
+    text-align: start;
+}
+
+ul.technologies, ul.front-technologies {
+    list-style: none;
+}
+
+ul.technologies li::before {
+    content: "⚙️";
+}
+
+ul.front-technologies li::before {
+    content: "🎉";
+}

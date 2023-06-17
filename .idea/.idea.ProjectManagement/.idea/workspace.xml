@@ -10,15 +10,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bf9bc920-d33b-431b-a24c-09a2feb1005c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/ProjectManagement.BAL/Data/ApplicationContext.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjectManagement/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjectManagement/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagement.API/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.API/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagement.BAL/Migrations/20230305152736_Initial.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.BAL/Migrations/20230305152736_Initial.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagement.BAL/Migrations/20230306061339_AddManagerToProject.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.BAL/Migrations/20230306061339_AddManagerToProject.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagement.BAL/Migrations/ApplicationContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.BAL/Migrations/ApplicationContextModelSnapshot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagement.BAL/Repositories/BaseRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.BAL/Repositories/BaseRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagement.BAL/Repositories/EmployeeRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.BAL/Repositories/EmployeeRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagement.BAL/Repositories/ProjectRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.BAL/Repositories/ProjectRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/src/components/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/src/components/Home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/src/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/src/custom.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +36,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
+    <option name="selectedTabId" value="SWEA" />
   </component>
   <component name="ProjectId" id="2MXpxxhSJoQoUwEqMJ8ScdDFnL7" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -184,14 +178,7 @@
       <workItem from="1686567977332" duration="10256000" />
       <workItem from="1686748041257" duration="6249000" />
       <workItem from="1686843846517" duration="58733000" />
-      <workItem from="1687034533841" duration="314000" />
-    </task>
-    <task id="LOCAL-00043" summary="Create a ProjectsCRUD js file and implement logic for displaying projects data based on hooks">
-      <created>1686749666847</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1686749666847</updated>
+      <workItem from="1687034533841" duration="2115000" />
     </task>
     <task id="LOCAL-00044" summary="Rewrite App.js from class based to hook based component">
       <created>1686749955466</created>
@@ -529,7 +516,14 @@
       <option name="project" value="LOCAL" />
       <updated>1687033706977</updated>
     </task>
-    <option name="localTasksCounter" value="92" />
+    <task id="LOCAL-00092" summary="Change ApplicationContext file's path and update all connected usings">
+      <created>1687034918891</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1687034918892</updated>
+    </task>
+    <option name="localTasksCounter" value="93" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -551,7 +545,6 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Change sort logic so it changes right after click" />
     <MESSAGE value="Add arrows near column names for sort display" />
     <MESSAGE value="Add useEffect to filter state to have dynamic sort" />
     <MESSAGE value="Add intermediate variable to check a null value" />
@@ -576,7 +569,8 @@
     <MESSAGE value="Add required attribute to the name input in add form" />
     <MESSAGE value="Add default disabled value in select list" />
     <MESSAGE value="Optimize, reformat and cleanup all files in solution" />
-    <option name="LAST_COMMIT_MESSAGE" value="Optimize, reformat and cleanup all files in solution" />
+    <MESSAGE value="Change ApplicationContext file's path and update all connected usings" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change ApplicationContext file's path and update all connected usings" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

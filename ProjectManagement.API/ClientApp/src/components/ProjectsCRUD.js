@@ -39,7 +39,7 @@ const ProjectsCRUD = () => {
         priority: true,
         startDate: true,
     });
-    const [employees, setEmployees] = useState(null);
+    const [employees, setEmployees] = useState([]);
     const [isVisible, setIsVisible] = useState(false);
 
     const handleClose = () => {
@@ -267,7 +267,7 @@ const ProjectsCRUD = () => {
                 </Modal.Header>
                 <Modal.Body>
                     {
-                        employees != null ?
+                        employees.length > 0 ?
                             <form onSubmit={(e) => handleAdd(e)}>
                                 <div className="pb-3">
                                     <input value={form.name} name="name" type="text" className="form-control"

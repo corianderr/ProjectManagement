@@ -9,7 +9,11 @@
     <projectFile profileName="fetch_app">fetch-app/fetch-app.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bf9bc920-d33b-431b-a24c-09a2feb1005c" name="Changes" comment="Change return type in post method from StatusCode to NoyFound">
+    <list default="true" id="bf9bc920-d33b-431b-a24c-09a2feb1005c" name="Changes" comment="Delete unnecessary logs">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjectManagement/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjectManagement/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/src/components/EmployeesCRUD.js" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/src/components/EmployeesCRUD.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectManagement.API/PMLocalDatabase.db" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.API/PMLocalDatabase.db" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -182,28 +186,7 @@
       <workItem from="1686567774969" duration="197000" />
       <workItem from="1686567977332" duration="10256000" />
       <workItem from="1686748041257" duration="6249000" />
-      <workItem from="1686843846517" duration="43934000" />
-    </task>
-    <task id="LOCAL-00023" summary="Add DataAccessDependencyInjection class">
-      <created>1678194055741</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1678194055741</updated>
-    </task>
-    <task id="LOCAL-00024" summary="Implement logic for CRUD operations in ProjectsController&#10;Add base controller ApiController">
-      <created>1678194131057</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1678194131058</updated>
-    </task>
-    <task id="LOCAL-00025" summary="Implement logic for CRUD operations in EmployeesController&#10;Change names of methods to &quot;...Async&quot;">
-      <created>1678194972790</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1678194972790</updated>
+      <workItem from="1686843846517" duration="44725000" />
     </task>
     <task id="LOCAL-00026" summary="Delete &quot;Name&quot; prop value of httpGet attributes">
       <created>1678195236365</created>
@@ -527,7 +510,28 @@
       <option name="project" value="LOCAL" />
       <updated>1686999516530</updated>
     </task>
-    <option name="localTasksCounter" value="72" />
+    <task id="LOCAL-00072" summary="Change return type in post method from StatusCode to NotFound">
+      <created>1686999792982</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1686999792982</updated>
+    </task>
+    <task id="LOCAL-00073" summary="Add configuration file for axios">
+      <created>1686999833583</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1686999833583</updated>
+    </task>
+    <task id="LOCAL-00074" summary="Delete unnecessary logs">
+      <created>1686999890877</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1686999890878</updated>
+    </task>
+    <option name="localTasksCounter" value="75" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -549,9 +553,6 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Change acceptable priority range" />
-    <MESSAGE value="Implement UI to add projects" />
-    <MESSAGE value="Implement UI to delete projects" />
     <MESSAGE value="Refactor project addition and decreased number of states" />
     <MESSAGE value="Change Show functions so that employees state is filled after call" />
     <MESSAGE value="Change name filtering from equals to contains" />
@@ -574,7 +575,10 @@
     <MESSAGE value="Add useEffect to filter state to have dynamic sort" />
     <MESSAGE value="Add intermediate variable to check a null value" />
     <MESSAGE value="Change return type in post method from StatusCode to NoyFound" />
-    <option name="LAST_COMMIT_MESSAGE" value="Change return type in post method from StatusCode to NoyFound" />
+    <MESSAGE value="Change return type in post method from StatusCode to NotFound" />
+    <MESSAGE value="Add configuration file for axios" />
+    <MESSAGE value="Delete unnecessary logs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Delete unnecessary logs" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

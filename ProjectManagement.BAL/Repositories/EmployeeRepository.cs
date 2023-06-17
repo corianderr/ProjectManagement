@@ -1,5 +1,3 @@
-using System.Collections.Generic;
-using System.Linq;
 using ProjectManagement.DAL.Contracts;
 using ProjectManagement.DAL.Data;
 using ProjectManagement.DAL.Models;
@@ -11,6 +9,7 @@ public class EmployeeRepository : BaseRepository<Employee>, IEmployeeRepository
     public EmployeeRepository(ApplicationContext context) : base(context)
     {
     }
+
     public IEnumerable<Employee> SortBy(string orderBy, IEnumerable<Employee> employees)
     {
         if (string.IsNullOrWhiteSpace(orderBy)) return employees;

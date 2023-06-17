@@ -20,12 +20,13 @@ public class ProjectService : IProjectService
         _projectRepository = projectRepository;
         _mapper = mapper;
     }
+
     public async Task<IEnumerable<ProjectResponseModel>> GetAllAsync(Expression<Func<Project, bool>> predicate)
     {
         var projects = await _projectRepository.GetAll(predicate);
         return _mapper.Map<IEnumerable<ProjectResponseModel>>(projects);
     }
-    
+
     public IEnumerable<ProjectResponseModel> GetAllFilteredAndSorted(int id, string name, int priority,
         DateTime startDateFrom, DateTime startDateTo, string orderBy, CancellationToken cancellationToken = default)
     {
@@ -74,6 +75,17 @@ public class ProjectService : IProjectService
         };
     }
 
+    public async Task<BaseResponseModel> UpdateAsync(int id, UpdateProjectModel updateProjectModel,
+        CancellationToken cancellationToken = default)
+    {
+        var project = await _projectRepository.GetFirstAsync(e => e.Id == id);
+        _mapper.Map(updateProjectModel, project);
+        return new BaseResponseModel
+        {
+            Id = (await _projectRepository.UpdateAsync(project)).Id
+        };
+    }
+
     public async Task<IEnumerable<ProjectResponseModel>> GetAllByManagerIdAsync(int id,
         CancellationToken cancellationToken = default)
     {
@@ -86,16 +98,5 @@ public class ProjectService : IProjectService
     {
         return _mapper.Map<IEnumerable<ProjectResponseModel>>(
             await _projectRepository.GetAll(p => p.ExecutiveEmployees.Any(e => e.Id == id)));
-    }
-
-    public async Task<BaseResponseModel> UpdateAsync(int id, UpdateProjectModel updateProjectModel,
-        CancellationToken cancellationToken = default)
-    {
-        var project = await _projectRepository.GetFirstAsync(e => e.Id == id);
-        _mapper.Map(updateProjectModel, project);
-        return new BaseResponseModel
-        {
-            Id = (await _projectRepository.UpdateAsync(project)).Id
-        };
     }
 }

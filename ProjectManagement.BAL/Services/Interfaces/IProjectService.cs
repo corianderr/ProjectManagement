@@ -12,7 +12,7 @@ public interface IProjectService
     IEnumerable<ProjectResponseModel> GetAllFilteredAndSorted(int id, string name = "", int priority = 0,
         DateTime startDateFrom = default, DateTime startDateTo = default, string orderBy = "nameAsc",
         CancellationToken cancellationToken = default);
-    
+
     Task<ProjectResponseModel>
         GetByIdAsync(int id, CancellationToken cancellationToken = default);
 

@@ -1,5 +1,4 @@
 using System.Linq.Expressions;
-using AutoMapper;
 using FizzWare.NBuilder;
 using FluentAssertions;
 using NSubstitute;
@@ -33,7 +32,7 @@ public class ProjectServiceTests : BaseServiceTestConfiguration
         result.Should().HaveCount(10);
         await ProjectRepository.Received().GetAll(Arg.Any<Expression<Func<Project, bool>>>());
     }
-    
+
     [Fact]
     public async Task CreateAsync_Should_Add_New_Entity_To_Database()
     {
@@ -72,7 +71,7 @@ public class ProjectServiceTests : BaseServiceTestConfiguration
         await ProjectRepository.Received().GetFirstAsync(Arg.Any<Expression<Func<Project, bool>>>());
         await ProjectRepository.Received().UpdateAsync(Arg.Any<Project>());
     }
-    
+
     [Fact]
     public async Task DeleteAsync_Should_Delete_Entity_From_Database()
     {
@@ -82,7 +81,7 @@ public class ProjectServiceTests : BaseServiceTestConfiguration
 
         ProjectRepository.GetFirstAsync(Arg.Any<Expression<Func<Project, bool>>>()).Returns(project);
         ProjectRepository.DeleteAsync(Arg.Any<Project>()).Returns(project);
-        
+
         //Act
         var result = await _sut.DeleteAsync(projectId);
 

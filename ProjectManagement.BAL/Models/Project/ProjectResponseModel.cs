@@ -1,5 +1,3 @@
-using ProjectManagement.BAL.Models.Employee;
-
 namespace ProjectManagement.BAL.Models.Project;
 
 public class ProjectResponseModel : BaseResponseModel

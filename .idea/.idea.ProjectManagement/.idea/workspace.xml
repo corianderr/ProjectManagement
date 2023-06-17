@@ -9,12 +9,7 @@
     <projectFile profileName="fetch_app">fetch-app/fetch-app.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bf9bc920-d33b-431b-a24c-09a2feb1005c" name="Changes" comment="Add required attribute to the name input in add form">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjectManagement/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjectManagement/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/src/components/ProjectsCRUD.js" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/src/components/ProjectsCRUD.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagement.API/PMLocalDatabase.db-shm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagement.API/PMLocalDatabase.db-wal" beforeDir="false" />
-    </list>
+    <list default="true" id="bf9bc920-d33b-431b-a24c-09a2feb1005c" name="Changes" comment="Add default disabled value in select list" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -192,14 +187,7 @@
       <workItem from="1686567774969" duration="197000" />
       <workItem from="1686567977332" duration="10256000" />
       <workItem from="1686748041257" duration="6249000" />
-      <workItem from="1686843846517" duration="57375000" />
-    </task>
-    <task id="LOCAL-00041" summary="Delete fetch-app and create API project with Client side on React">
-      <created>1686568359426</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1686568359426</updated>
+      <workItem from="1686843846517" duration="57745000" />
     </task>
     <task id="LOCAL-00042" summary="Add default React project files and import axios">
       <created>1686748821983</created>
@@ -537,7 +525,14 @@
       <option name="project" value="LOCAL" />
       <updated>1687031371155</updated>
     </task>
-    <option name="localTasksCounter" value="90" />
+    <task id="LOCAL-00090" summary="Add default disabled value in select list">
+      <created>1687033126140</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1687033126140</updated>
+    </task>
+    <option name="localTasksCounter" value="91" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -559,7 +554,6 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Refactor by deleting unnecessary logs and formatting code" />
     <MESSAGE value="Implement UI to filter employees" />
     <MESSAGE value="Change sort logic so it changes right after click" />
     <MESSAGE value="Add arrows near column names for sort display" />
@@ -584,7 +578,8 @@
     <MESSAGE value="Change initial employee state value and update project add form check" />
     <MESSAGE value="Add EFCore Design and Web.CodeGeneration Design NuGet packages and update Newtonsoft.Json package" />
     <MESSAGE value="Add required attribute to the name input in add form" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add required attribute to the name input in add form" />
+    <MESSAGE value="Add default disabled value in select list" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add default disabled value in select list" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

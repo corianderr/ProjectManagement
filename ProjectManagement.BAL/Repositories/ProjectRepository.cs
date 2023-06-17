@@ -1,8 +1,4 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Linq.Expressions;
-using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using ProjectManagement.DAL.Contracts;
 using ProjectManagement.DAL.Data;
@@ -15,7 +11,7 @@ public class ProjectRepository : BaseRepository<Project>, IProjectRepository
     public ProjectRepository(ApplicationContext context) : base(context)
     {
     }
-    
+
     public async Task<Project> GetFirstWithExecutorsAsync(Expression<Func<Project, bool>> predicate)
     {
         return await DbSet.Include(p => p.ExecutiveEmployees).Where(predicate).FirstOrDefaultAsync();

@@ -1,10 +1,8 @@
 using System.Linq.Expressions;
-using AutoMapper;
 using FizzWare.NBuilder;
 using FluentAssertions;
 using NSubstitute;
 using ProjectManagement.BAL.Models.Employee;
-using ProjectManagement.BAL.Models.Project;
 using ProjectManagement.BAL.Services;
 using ProjectManagement.DAL.Models;
 
@@ -34,7 +32,7 @@ public class EmployeeServiceTests : BaseServiceTestConfiguration
         result.Should().HaveCount(10);
         await EmployeeRepository.Received().GetAll(Arg.Any<Expression<Func<Employee, bool>>>());
     }
-    
+
     [Fact]
     public async Task CreateAsync_Should_Add_New_Entity_To_Database()
     {
@@ -73,7 +71,7 @@ public class EmployeeServiceTests : BaseServiceTestConfiguration
         await EmployeeRepository.Received().GetFirstAsync(Arg.Any<Expression<Func<Employee, bool>>>());
         await EmployeeRepository.Received().UpdateAsync(Arg.Any<Employee>());
     }
-    
+
     [Fact]
     public async Task DeleteAsync_Should_Delete_Entity_From_Database()
     {
@@ -83,7 +81,7 @@ public class EmployeeServiceTests : BaseServiceTestConfiguration
 
         EmployeeRepository.GetFirstAsync(Arg.Any<Expression<Func<Employee, bool>>>()).Returns(employee);
         EmployeeRepository.DeleteAsync(Arg.Any<Employee>()).Returns(employee);
-        
+
         //Act
         var result = await _sut.DeleteAsync(employeeId);
 

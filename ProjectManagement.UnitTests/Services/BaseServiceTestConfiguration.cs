@@ -9,9 +9,9 @@ namespace ProjectManagement.UnitTests.Services;
 public class BaseServiceTestConfiguration
 {
     protected readonly IConfiguration Configuration;
+    protected readonly IEmployeeRepository EmployeeRepository;
     protected readonly IMapper Mapper;
     protected readonly IProjectRepository ProjectRepository;
-    protected readonly IEmployeeRepository EmployeeRepository;
 
     protected BaseServiceTestConfiguration()
     {

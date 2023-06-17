@@ -293,10 +293,11 @@ const ProjectsCRUD = () => {
                                 <div className="pb-3">
                                     <label htmlFor="managerAdd" className="ps-2">Manager Id</label>
                                     <Form.Select id="managerAdd" name="managerId" onChange={onChange} required>
-                                        <option selected="true" disabled="disabled" value="">Choose id</option>{
-                                        employees.map((id) =>
-                                            <option key={id} value={id}>{id}</option>)
-                                    }</Form.Select>
+                                        <option selected="true" disabled="disabled" value="">Choose id</option>
+                                        {
+                                            employees.map((id) =>
+                                                <option key={id} value={id}>{id}</option>)
+                                        }</Form.Select>
                                 </div>
                                 <button type="submit" className="btn btn-primary">Submit</button>
                             </form>
@@ -354,10 +355,12 @@ const ProjectsCRUD = () => {
                             {
                                 employees.length > 0 ?
                                     <Form.Select id="executorId" name="employeeId" onChange={onChangeExecutor} required>
-                                        <option selected="true" typeof="number" disabled="disabled" value="">Choose id</option>{
-                                        employees.map((id) =>
-                                            <option key={id} value={id}>{id}</option>)
-                                    }</Form.Select>
+                                        <option selected="true" typeof="number" disabled="disabled" value="">Choose id
+                                        </option>
+                                        {
+                                            employees.map((id) =>
+                                                <option key={id} value={id}>{id}</option>)
+                                        }</Form.Select>
                                     : <p></p>
                             }
                         </div>

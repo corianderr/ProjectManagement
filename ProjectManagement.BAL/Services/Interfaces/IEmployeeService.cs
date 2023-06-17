@@ -8,6 +8,7 @@ namespace ProjectManagement.BAL.Services.Interfaces;
 public interface IEmployeeService
 {
     Task<IEnumerable<EmployeeResponseModel>> GetAllAsync(Expression<Func<Employee, bool>> predicate);
+
     IEnumerable<EmployeeResponseModel> GetAllFilteredAndSorted(int id, string name,
         string surname, string email, string orderBy, CancellationToken cancellationToken = default);
 

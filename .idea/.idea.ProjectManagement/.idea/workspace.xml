@@ -9,13 +9,11 @@
     <projectFile profileName="fetch_app">fetch-app/fetch-app.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bf9bc920-d33b-431b-a24c-09a2feb1005c" name="Changes" comment="Reformat and cleanup API project">
+    <list default="true" id="bf9bc920-d33b-431b-a24c-09a2feb1005c" name="Changes" comment="Add required attribute to the name input in add form">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjectManagement/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjectManagement/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/src/components/ProjectsCRUD.js" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/src/components/ProjectsCRUD.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagement.API/PMLocalDatabase.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagement.API/PMLocalDatabase.db-shm" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.API/PMLocalDatabase.db-shm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagement.API/PMLocalDatabase.db-wal" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.API/PMLocalDatabase.db-wal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagement.API/ProjectManagement.API.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.API/ProjectManagement.API.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagement.API/PMLocalDatabase.db-shm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagement.API/PMLocalDatabase.db-wal" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -194,28 +192,7 @@
       <workItem from="1686567774969" duration="197000" />
       <workItem from="1686567977332" duration="10256000" />
       <workItem from="1686748041257" duration="6249000" />
-      <workItem from="1686843846517" duration="55436000" />
-    </task>
-    <task id="LOCAL-00038" summary="Add project's model validation">
-      <created>1686485691680</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1686485691680</updated>
-    </task>
-    <task id="LOCAL-00039" summary="Add update project's model validation">
-      <created>1686485743292</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1686485743292</updated>
-    </task>
-    <task id="LOCAL-00040" summary="Add duplicated email validation">
-      <created>1686487458030</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1686487458030</updated>
+      <workItem from="1686843846517" duration="57375000" />
     </task>
     <task id="LOCAL-00041" summary="Delete fetch-app and create API project with Client side on React">
       <created>1686568359426</created>
@@ -539,7 +516,28 @@
       <option name="project" value="LOCAL" />
       <updated>1687008998156</updated>
     </task>
-    <option name="localTasksCounter" value="87" />
+    <task id="LOCAL-00087" summary="Change initial employee state value and update project add form check">
+      <created>1687031175824</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1687031175824</updated>
+    </task>
+    <task id="LOCAL-00088" summary="Add EFCore Design and Web.CodeGeneration Design NuGet packages and update Newtonsoft.Json package">
+      <created>1687031303518</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1687031303518</updated>
+    </task>
+    <task id="LOCAL-00089" summary="Add required attribute to the name input in add form">
+      <created>1687031371155</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1687031371155</updated>
+    </task>
+    <option name="localTasksCounter" value="90" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -561,9 +559,6 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Add form cleaning after forms hiding" />
-    <MESSAGE value="Create js component for Employees CRUD logic and implement UI to see all employees" />
-    <MESSAGE value="Change string filtering from equals to contains" />
     <MESSAGE value="Refactor by deleting unnecessary logs and formatting code" />
     <MESSAGE value="Implement UI to filter employees" />
     <MESSAGE value="Change sort logic so it changes right after click" />
@@ -586,7 +581,10 @@
     <MESSAGE value="Add check and error handling for duplicates in executor list. Throw an error if executor already exists." />
     <MESSAGE value="Implement UI to add executor to a project" />
     <MESSAGE value="Reformat and cleanup API project" />
-    <option name="LAST_COMMIT_MESSAGE" value="Reformat and cleanup API project" />
+    <MESSAGE value="Change initial employee state value and update project add form check" />
+    <MESSAGE value="Add EFCore Design and Web.CodeGeneration Design NuGet packages and update Newtonsoft.Json package" />
+    <MESSAGE value="Add required attribute to the name input in add form" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add required attribute to the name input in add form" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -603,6 +601,19 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/ProjectManagement.API/Controllers/ProjectsController.cs</url>
+          <line>36</line>
+          <properties documentPath="$PROJECT_DIR$/ProjectManagement.API/Controllers/ProjectsController.cs" initialLine="36" containingFunctionPresentation="method 'PostAsync'">
+            <startOffsets>
+              <option value="1206" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1309" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="28" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

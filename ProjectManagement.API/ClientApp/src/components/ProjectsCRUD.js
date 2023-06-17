@@ -292,7 +292,8 @@ const ProjectsCRUD = () => {
                                 </div>
                                 <div className="pb-3">
                                     <label htmlFor="managerAdd" className="ps-2">Manager Id</label>
-                                    <Form.Select id="managerAdd" name="managerId" onChange={onChange}>{
+                                    <Form.Select id="managerAdd" name="managerId" onChange={onChange} required>
+                                        <option selected="true" disabled="disabled" value="">Choose id</option>{
                                         employees.map((id) =>
                                             <option key={id} value={id}>{id}</option>)
                                     }</Form.Select>
@@ -330,7 +331,7 @@ const ProjectsCRUD = () => {
                         </div>
                         <div className="pb-3">
                             {
-                                employees != null ?
+                                employees.length > 0 ?
                                     <Form.Select name="managerId" onChange={onChange}>{
                                         employees.map((id) =>
                                             <option key={id} value={id}>{id}</option>)
@@ -351,8 +352,9 @@ const ProjectsCRUD = () => {
                         <div className="pb-3">
                             <Form.Label htmlFor="executorId">Choose executor's id</Form.Label>
                             {
-                                employees != null ?
-                                    <Form.Select id="executorId" name="employeeId" onChange={onChangeExecutor}>{
+                                employees.length > 0 ?
+                                    <Form.Select id="executorId" name="employeeId" onChange={onChangeExecutor} required>
+                                        <option selected="true" typeof="number" disabled="disabled" value="">Choose id</option>{
                                         employees.map((id) =>
                                             <option key={id} value={id}>{id}</option>)
                                     }</Form.Select>

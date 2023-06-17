@@ -40,21 +40,21 @@ const ProjectDetails = () => {
                         <p className="card-text">Executor company name: {data.executorCompanyName}</p>
                         <p className="card-text">Priority: {data.priority}</p>
                         <p className="card-text">Manager Id: {data.managerId}</p>
-                        <p className="card-text"><small className="text-muted">Creation
-                            date: {new Date(data.startDate).toString()}</small></p>
                         {showResults ?
-                            <p id="executorsBlock">
+                            <div id="executorsBlock">
                                 {executors.length === 0 ? <span>No executors yet.</span> :
-                                    <div>Executors:
+                                    <div>Executors:<br/>
                                         {
                                             executors.map((employee) =>
-                                                <span>{employee.name} {employee.surname}; </span>)
+                                                <span key={employee.id}>{employee.name} {employee.surname}<br/></span>)
                                         }
                                     </div>}
-                            </p> : null
+                            </div> : null
                         }
                         <Button className="card-text" onClick={() => showExecutors(data.id)}>
                             {showResults ? <span>Hide</span> : <span>Show</span>} executors</Button>
+                        <div className="card-text"><small className="text-muted">Creation
+                            date: {new Date(data.startDate).toString()}</small></div>
                     </div>
                 </div>
             }

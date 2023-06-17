@@ -9,7 +9,17 @@
     <projectFile profileName="fetch_app">fetch-app/fetch-app.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bf9bc920-d33b-431b-a24c-09a2feb1005c" name="Changes" comment="Add default disabled value in select list" />
+    <list default="true" id="bf9bc920-d33b-431b-a24c-09a2feb1005c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/ProjectManagement.BAL/Data/ApplicationContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjectManagement/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjectManagement/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagement.API/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.API/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagement.BAL/Migrations/20230305152736_Initial.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.BAL/Migrations/20230305152736_Initial.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagement.BAL/Migrations/20230306061339_AddManagerToProject.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.BAL/Migrations/20230306061339_AddManagerToProject.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagement.BAL/Migrations/ApplicationContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.BAL/Migrations/ApplicationContextModelSnapshot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagement.BAL/Repositories/BaseRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.BAL/Repositories/BaseRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagement.BAL/Repositories/EmployeeRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.BAL/Repositories/EmployeeRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagement.BAL/Repositories/ProjectRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.BAL/Repositories/ProjectRepository.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,20 +37,6 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/7262732eee179af215faab36a7f3c3cfac93ba12af52a3888d839fe7e53420/ActionMethodExecutor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/bcae882191178c8bf44c9add4cdeffa874a7afe629e3e56e9280f5896e953425/Monitor.CoreCLR.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ProjectManagement.API/ClientApp/package-lock.json" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/cariander/RiderProjects/ProjectManagement-master/ProjectManagement.API/Controllers/EmployeesController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/cariander/RiderProjects/ProjectManagement-master/ProjectManagement.API/Controllers/EmployeesController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/cariander/RiderProjects/ProjectManagement-master/ProjectManagement.API/Controllers/ProjectsController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/cariander/RiderProjects/ProjectManagement-master/ProjectManagement.API/Controllers/ProjectsController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/cariander/RiderProjects/ProjectManagement-master/ProjectManagement.API/Controllers/ProjectsController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/cariander/RiderProjects/ProjectManagement-master/ProjectManagement.BAL/Models/Project/CreateProjectModel.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/cariander/RiderProjects/ProjectManagement-master/ProjectManagement.BAL/Repositories/EmployeeRepository.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/cariander/RiderProjects/ProjectManagement-master/ProjectManagement.BAL/Repositories/ProjectRepository.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/cariander/RiderProjects/ProjectManagement-master/ProjectManagement.BAL/Repositories/ProjectRepository.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/cariander/RiderProjects/ProjectManagement-master/ProjectManagement.BAL/Repositories/ProjectRepository.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/cariander/RiderProjects/ProjectManagement-master/ProjectManagement.BAL/Services/EmployeeService.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/cariander/RiderProjects/ProjectManagement-master/ProjectManagement.BAL/Services/ProjectService.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/cariander/RiderProjects/ProjectManagement-master/ProjectManagement.BAL/Services/ProjectService.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/cariander/RiderProjects/ProjectManagement-master/ProjectManagement.DAL/Contracts/IProjectRepository.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -187,14 +183,8 @@
       <workItem from="1686567774969" duration="197000" />
       <workItem from="1686567977332" duration="10256000" />
       <workItem from="1686748041257" duration="6249000" />
-      <workItem from="1686843846517" duration="57745000" />
-    </task>
-    <task id="LOCAL-00042" summary="Add default React project files and import axios">
-      <created>1686748821983</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1686748821983</updated>
+      <workItem from="1686843846517" duration="58733000" />
+      <workItem from="1687034533841" duration="314000" />
     </task>
     <task id="LOCAL-00043" summary="Create a ProjectsCRUD js file and implement logic for displaying projects data based on hooks">
       <created>1686749666847</created>
@@ -532,7 +522,14 @@
       <option name="project" value="LOCAL" />
       <updated>1687033126140</updated>
     </task>
-    <option name="localTasksCounter" value="91" />
+    <task id="LOCAL-00091" summary="Optimize, reformat and cleanup all files in solution">
+      <created>1687033706977</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1687033706977</updated>
+    </task>
+    <option name="localTasksCounter" value="92" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -554,7 +551,6 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Implement UI to filter employees" />
     <MESSAGE value="Change sort logic so it changes right after click" />
     <MESSAGE value="Add arrows near column names for sort display" />
     <MESSAGE value="Add useEffect to filter state to have dynamic sort" />
@@ -579,7 +575,8 @@
     <MESSAGE value="Add EFCore Design and Web.CodeGeneration Design NuGet packages and update Newtonsoft.Json package" />
     <MESSAGE value="Add required attribute to the name input in add form" />
     <MESSAGE value="Add default disabled value in select list" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add default disabled value in select list" />
+    <MESSAGE value="Optimize, reformat and cleanup all files in solution" />
+    <option name="LAST_COMMIT_MESSAGE" value="Optimize, reformat and cleanup all files in solution" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

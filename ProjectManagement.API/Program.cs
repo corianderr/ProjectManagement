@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using ProjectManagement.BAL;
-using ProjectManagement.DAL.Data;
+using ProjectManagement.BAL.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 

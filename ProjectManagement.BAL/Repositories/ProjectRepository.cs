@@ -1,7 +1,7 @@
 using System.Linq.Expressions;
 using Microsoft.EntityFrameworkCore;
+using ProjectManagement.BAL.Data;
 using ProjectManagement.DAL.Contracts;
-using ProjectManagement.DAL.Data;
 using ProjectManagement.DAL.Models;
 
 namespace ProjectManagement.BAL.Repositories;

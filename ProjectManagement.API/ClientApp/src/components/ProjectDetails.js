@@ -1,26 +1,34 @@
 import React, {useEffect, useState} from 'react';
 import {useParams} from "react-router-dom";
 import axiosApi from "../axiosApi";
+import Button from "react-bootstrap/Button";
 
 const ProjectDetails = () => {
     const [loading, setLoading] = useState(true)
     const [data, setData] = useState();
     const id = useParams().id;
+    const [executors, setExecutors] = useState([]);
+    const [showResults, setShowResults] = useState(false);
 
     useEffect(() => {
         try {
             const fetchData = async () => {
-                const {data} = await axiosApi.get(`projects/getById/${id}`);
-                setData(data.result);
-                setLoading(false);
+                const {data} = await axiosApi(`projects/getById/${id}`);
+                setData(data.result)
+                setLoading(false)
             }
-            fetchData();
+            fetchData().catch((e) => console.log())
         } catch (e) {
             console.log(e.message)
             setLoading(false)
         }
     }, [])
 
+    const showExecutors = async (id) => {
+        const result = await axiosApi(`employees/getExecutorsByProjectId/${id}`);
+        setExecutors(result.data.result);
+        setShowResults(!showResults);
+    }
 
     return (
         <div>
@@ -34,6 +42,19 @@ const ProjectDetails = () => {
                         <p className="card-text">Manager Id: {data.managerId}</p>
                         <p className="card-text"><small className="text-muted">Creation
                             date: {new Date(data.startDate).toString()}</small></p>
+                        {showResults ?
+                            <p id="executorsBlock">
+                                {executors.length === 0 ? <span>No executors yet.</span> :
+                                    <div>Executors:
+                                        {
+                                            executors.map((employee) =>
+                                                <span>{employee.name} {employee.surname}; </span>)
+                                        }
+                                    </div>}
+                            </p> : null
+                        }
+                        <Button className="card-text" onClick={() => showExecutors(data.id)}>
+                            {showResults ? <span>Hide</span> : <span>Show</span>} executors</Button>
                     </div>
                 </div>
             }

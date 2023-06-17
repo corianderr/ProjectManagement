@@ -9,9 +9,12 @@
     <projectFile profileName="fetch_app">fetch-app/fetch-app.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bf9bc920-d33b-431b-a24c-09a2feb1005c" name="Changes" comment="Change all axios requests based on axiosApi configuration and refactor code">
-      <change beforePath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/src/components/EmployeesCRUD.js" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/src/components/EmployeesCRUD.js" afterDir="false" />
+    <list default="true" id="bf9bc920-d33b-431b-a24c-09a2feb1005c" name="Changes" comment="Implement UI to delete employees">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjectManagement/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjectManagement/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/src/components/ProjectDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/src/components/ProjectDetails.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectManagement.API/PMLocalDatabase.db" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.API/PMLocalDatabase.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagement.API/PMLocalDatabase.db-shm" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.API/PMLocalDatabase.db-shm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagement.API/PMLocalDatabase.db-wal" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.API/PMLocalDatabase.db-wal" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -183,21 +186,7 @@
       <workItem from="1686567774969" duration="197000" />
       <workItem from="1686567977332" duration="10256000" />
       <workItem from="1686748041257" duration="6249000" />
-      <workItem from="1686843846517" duration="46845000" />
-    </task>
-    <task id="LOCAL-00029" summary="Create .db file">
-      <created>1678273588350</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1678273588350</updated>
-    </task>
-    <task id="LOCAL-00030" summary="Add unit test project">
-      <created>1678274931703</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1678274931703</updated>
+      <workItem from="1686843846517" duration="49644000" />
     </task>
     <task id="LOCAL-00031" summary="Create BaseServiceTestConfiguration">
       <created>1678274950635</created>
@@ -528,7 +517,21 @@
       <option name="project" value="LOCAL" />
       <updated>1687002134072</updated>
     </task>
-    <option name="localTasksCounter" value="78" />
+    <task id="LOCAL-00078" summary="Implement UI to edit employees">
+      <created>1687002544235</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1687002544235</updated>
+    </task>
+    <task id="LOCAL-00079" summary="Implement UI to delete employees">
+      <created>1687002653908</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1687002653909</updated>
+    </task>
+    <option name="localTasksCounter" value="80" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -550,8 +553,6 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Implement UI to filter projects" />
-    <MESSAGE value="Improve project GetAllFilteredAndSorted method by immediate return after sort" />
     <MESSAGE value="Improve employee GetAllFilteredAndSorted method by immediate return after sort" />
     <MESSAGE value="Implement Ui to sort projects" />
     <MESSAGE value="Delete unnecessary links and add link to EmployeeCRUD" />
@@ -575,7 +576,9 @@
     <MESSAGE value="Change axios requests in EmployeesCRUD file based on new configuration" />
     <MESSAGE value="Add message on internal server error" />
     <MESSAGE value="Change all axios requests based on axiosApi configuration and refactor code" />
-    <option name="LAST_COMMIT_MESSAGE" value="Change all axios requests based on axiosApi configuration and refactor code" />
+    <MESSAGE value="Implement UI to edit employees" />
+    <MESSAGE value="Implement UI to delete employees" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement UI to delete employees" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

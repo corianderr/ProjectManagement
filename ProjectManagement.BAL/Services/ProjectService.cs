@@ -53,7 +53,11 @@ public class ProjectService : IProjectService
         CancellationToken cancellationToken = default)
     {
         var employee = await _employeeRepository.GetFirstAsync(e => e.Id == employeeId);
-        var project = await _projectRepository.GetFirstAsync(p => p.Id == projectId);
+        var project = await _projectRepository.GetFirstWithExecutorsAsync(p => p.Id == projectId);
+        if (employee == null)
+            throw new ArgumentException("An employee does not exist.");
+        if (project == null)
+            throw new ArgumentException("A project does not exist.");
         await _projectRepository.AddEmployeeToProject(employee, project);
         return new BaseResponseModel
         {

@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef } from 'react';
+import {useCallback, useEffect, useRef} from 'react';
 
 import ReactCanvasConfetti from 'react-canvas-confetti';
 
@@ -13,7 +13,7 @@ export default function Confetti() {
         refAnimationInstance.current &&
         refAnimationInstance.current({
             ...opts,
-            origin: { y: 0.7 },
+            origin: {y: 0.7},
             particleCount: Math.floor(200 * particleRatio)
         });
     }, []);

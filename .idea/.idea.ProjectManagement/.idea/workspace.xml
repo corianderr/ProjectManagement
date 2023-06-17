@@ -9,8 +9,8 @@
     <projectFile profileName="fetch_app">fetch-app/fetch-app.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bf9bc920-d33b-431b-a24c-09a2feb1005c" name="Changes" comment="Add check and error handling for duplicates in executor list. Throw an error if executor already exists.">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjectManagement/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjectManagement/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="bf9bc920-d33b-431b-a24c-09a2feb1005c" name="Changes" comment="Implement UI to add executor to a project">
+      <change beforePath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/src/components/EmployeesCRUD.js" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/src/components/EmployeesCRUD.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/src/components/ProjectsCRUD.js" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.API/ClientApp/src/components/ProjectsCRUD.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectManagement.API/PMLocalDatabase.db" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.API/PMLocalDatabase.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectManagement.API/PMLocalDatabase.db-shm" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagement.API/PMLocalDatabase.db-shm" afterDir="false" />
@@ -193,14 +193,7 @@
       <workItem from="1686567774969" duration="197000" />
       <workItem from="1686567977332" duration="10256000" />
       <workItem from="1686748041257" duration="6249000" />
-      <workItem from="1686843846517" duration="52681000" />
-    </task>
-    <task id="LOCAL-00036" summary="Change return type in post methods to BaseResponseModel">
-      <created>1686469903104</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1686469903104</updated>
+      <workItem from="1686843846517" duration="53063000" />
     </task>
     <task id="LOCAL-00037" summary="Remove Id field in create models">
       <created>1686474477128</created>
@@ -538,7 +531,14 @@
       <option name="project" value="LOCAL" />
       <updated>1687008235964</updated>
     </task>
-    <option name="localTasksCounter" value="85" />
+    <task id="LOCAL-00085" summary="Implement UI to add executor to a project">
+      <created>1687008497704</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1687008497704</updated>
+    </task>
+    <option name="localTasksCounter" value="86" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -560,7 +560,6 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Delete counter page" />
     <MESSAGE value="Change route to project details file" />
     <MESSAGE value="Add form cleaning after forms hiding" />
     <MESSAGE value="Create js component for Employees CRUD logic and implement UI to see all employees" />
@@ -585,24 +584,12 @@
     <MESSAGE value="Add executors' id display" />
     <MESSAGE value="Add method that gets project by id and includes executor's list" />
     <MESSAGE value="Add check and error handling for duplicates in executor list. Throw an error if executor already exists." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add check and error handling for duplicates in executor list. Throw an error if executor already exists." />
+    <MESSAGE value="Implement UI to add executor to a project" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement UI to add executor to a project" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/ProjectManagement.API/Controllers/ProjectsController.cs</url>
-          <line>58</line>
-          <properties documentPath="$PROJECT_DIR$/ProjectManagement.API/Controllers/ProjectsController.cs" initialLine="50" containingFunctionPresentation="method 'PutAsync'">
-            <startOffsets>
-              <option value="2018" />
-            </startOffsets>
-            <endOffsets>
-              <option value="2125" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/ProjectManagement.API/Controllers/EmployeesController.cs</url>
           <line>53</line>

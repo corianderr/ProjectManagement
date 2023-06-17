@@ -1,12 +1,10 @@
-import React, {useCallback, useEffect, useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {toast, ToastContainer} from "react-toastify";
-import axios from "axios";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import Confetti from "./Confetti";
 import Button from "react-bootstrap/Button";
-import {Link} from "react-router-dom";
 import Modal from "react-bootstrap/Modal";
 import axiosApi from "../axiosApi";
 
@@ -163,12 +161,6 @@ const EmployeesCrud = () => {
                                 {isVisible && <Confetti/>}
                             </Col>
                             <Col>
-                                <div className="h-100 d-flex">
-                                    <Button className="mt-auto px-4" variant="secondary"
-                                            onClick={(e) => handleFilter(e)}>Filter</Button>
-                                </div>
-                            </Col>
-                            <Col>
                                 <Button className="ms-auto w-100 opacity-25" variant="none" onClick={handleShow}>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60"
                                          fill="currentColor" className="bi bi-plus-circle-fill" viewBox="0 0 16 16">
@@ -197,12 +189,14 @@ const EmployeesCrud = () => {
                                 <td>{employee.patronymic}</td>
                                 <td>{employee.email}</td>
                                 <td>
-                                    <button className="btn btn-primary px-4 me-2"
-                                            onClick={() => handleEditShow(employee.id)}>Edit
-                                    </button>
-                                    <button className="btn btn-danger px-4 ms-2"
-                                            onClick={() => handleDelete(employee.id)}>Delete
-                                    </button>
+                                    <div className="btn-group">
+                                        <button className="btn btn-primary px-4"
+                                                onClick={() => handleEditShow(employee.id)}>Edit
+                                        </button>
+                                        <button className="btn btn-danger px-4"
+                                                onClick={() => handleDelete(employee.id)}>Delete
+                                        </button>
+                                    </div>
                                 </td>
                             </tr>)}
                             </tbody>

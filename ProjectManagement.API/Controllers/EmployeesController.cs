@@ -1,7 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using ProjectManagement.BAL.Models;
 using ProjectManagement.BAL.Models.Employee;
-using ProjectManagement.BAL.Models.Project;
 using ProjectManagement.BAL.Services.Interfaces;
 
 namespace ProjectManagement.API.Controllers;
@@ -20,7 +19,8 @@ public class EmployeesController : ApiController
     public IActionResult GetAllFilteredAndSortedAsync(int id, string? name,
         string? surname, string? email, string? orderBy)
     {
-        return Ok(ApiResult<IEnumerable<EmployeeResponseModel>>.Success(_employeeService.GetAllFilteredAndSorted(id, name, surname, email, orderBy)));
+        return Ok(ApiResult<IEnumerable<EmployeeResponseModel>>.Success(
+            _employeeService.GetAllFilteredAndSorted(id, name, surname, email, orderBy)));
     }
 
     // GET: api/Employees/GetById/5
@@ -29,14 +29,15 @@ public class EmployeesController : ApiController
     {
         return Ok(ApiResult<EmployeeResponseModel>.Success(await _employeeService.GetByIdAsync(id)));
     }
-    
+
     // GET: api/Employees/GetExecutorsByProjectId/5
     [HttpGet("GetExecutorsByProjectId/{id:int}")]
     public async Task<IActionResult> GetAllByProjectIdAsync(int id)
     {
-        return Ok(ApiResult<IEnumerable<EmployeeResponseModel>>.Success(await _employeeService.GetAllByProjectIdAsync(id)));
+        return Ok(ApiResult<IEnumerable<EmployeeResponseModel>>.Success(
+            await _employeeService.GetAllByProjectIdAsync(id)));
     }
-    
+
     // GET: api/Employees/GetManagerByProjectId/5
     [HttpGet("GetManagerByProjectId/{id:int}")]
     public async Task<IActionResult> GetManagerByProjectIdAsync(int id)
@@ -60,6 +61,7 @@ public class EmployeesController : ApiController
                 .SelectMany(v => v.Errors)
                 .Select(e => e.ErrorMessage)));
         }
+
         return Ok(ApiResult<CreateEmployeeModel>.Success(employee));
     }
 

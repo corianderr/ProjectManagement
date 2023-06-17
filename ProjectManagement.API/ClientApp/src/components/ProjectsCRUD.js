@@ -5,7 +5,7 @@ import Modal from 'react-bootstrap/Modal';
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
-import {ToastContainer, toast} from 'react-toastify';
+import {toast, ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'
 import Confetti from './Confetti';
 import axiosApi from "../axiosApi";
@@ -51,7 +51,7 @@ const ProjectsCRUD = () => {
         setEditShow(false);
         clear();
     };
-    
+
     const handleExecutorsClose = () => {
         setExecutorsShow(false);
         setAddExecutor({
@@ -139,7 +139,7 @@ const ProjectsCRUD = () => {
         const {name, value} = e.target;
         setForm(prev => ({...prev, [name]: value}));
     };
-    
+
     const onChangeFilter = e => {
         const {name, value} = e.target;
         setFilter(prev => ({...prev, [name]: value}));
@@ -216,12 +216,6 @@ const ProjectsCRUD = () => {
                                               onChange={onChangeFilter}/>
                             </Col>
                             <Col>
-                                <div className="h-100 d-flex">
-                                    <Button className="mt-auto mb-1 px-4" variant="secondary"
-                                            onClick={(e) => handleFilter(e)}>Filter</Button>
-                                </div>
-                            </Col>
-                            <Col>
                                 <Button className="ms-auto w-100 opacity-25" variant="none" onClick={handleShow}>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60"
                                          fill="currentColor" className="bi bi-plus-circle-fill" viewBox="0 0 16 16">
@@ -254,12 +248,12 @@ const ProjectsCRUD = () => {
                                         <button className="btn btn-secondary px-4"
                                                 onClick={() => handleExecutorsShow(project.id)}>Add executor
                                         </button>
-                                    <button className="btn btn-primary px-4"
-                                            onClick={() => handleEditShow(project.id)}>Edit
-                                    </button>
-                                    <button className="btn btn-danger px-4"
-                                            onClick={() => handleDelete(project.id)}>Delete
-                                    </button>
+                                        <button className="btn btn-primary px-4"
+                                                onClick={() => handleEditShow(project.id)}>Edit
+                                        </button>
+                                        <button className="btn btn-danger px-4"
+                                                onClick={() => handleDelete(project.id)}>Delete
+                                        </button>
                                     </div>
                                 </td>
                             </tr>)}

@@ -13,7 +13,7 @@ axiosApi.interceptors.response.use(
             if (error.response.status >= 400 && error.response.status < 500) {
                 toast.error(JSON.stringify(error.response.data.errors).replace(/[{}[\]"]/g, ' '));
             } else if (error.response.status >= 500) {
-                toast.error('test test');
+                toast.error('Internal server error');
             }
             throw error;
         }

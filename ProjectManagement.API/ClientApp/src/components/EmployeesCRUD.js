@@ -11,7 +11,7 @@ import Modal from "react-bootstrap/Modal";
 import axiosApi from "../axiosApi";
 
 const EmployeesCrud = () => {
-    const [loading, setLoading] = useState(true)
+    const [loading, setLoading] = useState(true);
     const [data, setData] = useState([]);
     const [isVisible, setIsVisible] = useState(false);
     const [show, setShow] = useState(false);
@@ -44,17 +44,17 @@ const EmployeesCrud = () => {
 
     useEffect(() => {
         handleFilter().catch(() => console.log());
-    }, [filter])
+    }, [filter]);
 
     const handleClose = () => {
         setShow(false);
-        clear()
-    }
+        clear();
+    };
 
     const handleShow = () => {
-        setShow(true)
-        setIsVisible(false)
-    }
+        setShow(true);
+        setIsVisible(false);
+    };
 
     const onChange = e => {
         const {name, value} = e.target;
@@ -62,24 +62,24 @@ const EmployeesCrud = () => {
     };
 
     const clear = () => {
-        setForm({name: "", surname: "", patronymic: "", email: ""})
-    }
+        setForm({name: "", surname: "", patronymic: "", email: ""});
+    };
 
     const fetchData = async () => {
         const {data} = await axiosApi.get('employees');
-        setData(data.result)
-        setLoading(false)
-    }
+        setData(data.result);
+        setLoading(false);
+    };
 
     const handleAdd = async (e) => {
-        e.preventDefault()
+        e.preventDefault();
         await axiosApi.post('employees', form);
-        fetchData().catch(() => console.log())
-        handleClose()
+        await fetchData();
+        handleClose();
         toast.success('Employee has been added');
-        setIsVisible(true)
-    }
-    
+        setIsVisible(true);
+    };
+
     const onChangeFilter = e => {
         const {name, value} = e.target;
         setFilter(prev => ({...prev, [name]: value}));
@@ -88,14 +88,14 @@ const EmployeesCrud = () => {
     const handleFilter = async () => {
         const url = `employees?name=${filter.name}&surname=${filter.surname}&email=${filter.email}&orderBy=${filter.orderBy}`;
         const result = await axiosApi.get(url);
-        setData(result.data.result)
-    }
+        setData(result.data.result);
+    };
 
     const handleSort = (name, value) => {
         setSort(prev => ({...prev, [name]: !value}));
-        const sortState = name + (value ? "Asc" : "Desc")
+        const sortState = name + (value ? "Asc" : "Desc");
         setFilter(prev => ({...prev, orderBy: sortState}));
-    }
+    };
 
     const getArrow = (condition) => {
         if (!condition) {
@@ -103,14 +103,14 @@ const EmployeesCrud = () => {
                          className="bi bi-arrow-up" viewBox="0 0 16 16">
                 <path fillRule="evenodd"
                       d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
-            </svg>)
+            </svg>);
         }
         return (<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                      className="bi bi-arrow-down" viewBox="0 0 16 16">
             <path fillRule="evenodd"
                   d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"/>
-        </svg>)
-    }
+        </svg>);
+    };
 
     return (
         <div>
@@ -185,7 +185,7 @@ const EmployeesCrud = () => {
                     <form onSubmit={(e) => handleAdd(e)}>
                         <div className="pb-3">
                             <input value={form.name} name="name" type="text" className="form-control"
-                                   placeholder="Enter name" onChange={onChange} />
+                                   placeholder="Enter name" onChange={onChange}/>
                         </div>
                         <div className="pb-3">
                             <input value={form.surname} name="surname" type="text"

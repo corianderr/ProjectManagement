@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from 'react';
 import {Link} from "react-router-dom";
-import axios from "axios";
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import Col from 'react-bootstrap/Col';
@@ -9,9 +8,10 @@ import Row from 'react-bootstrap/Row';
 import {ToastContainer, toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'
 import Confetti from './Confetti';
+import axiosApi from "../axiosApi";
 
 const ProjectsCRUD = () => {
-    const [loading, setLoading] = useState(true)
+    const [loading, setLoading] = useState(true);
     const [data, setData] = useState([]);
     const [show, setShow] = useState(false);
     const [editShow, setEditShow] = useState(false);
@@ -24,7 +24,7 @@ const ProjectsCRUD = () => {
     });
     const [filter, setFilter] = useState({
         name: "",
-        priority: null,
+        priority: "",
         startDateFrom: null,
         startDateTo: null,
         orderBy: ""
@@ -39,91 +39,68 @@ const ProjectsCRUD = () => {
 
     const handleClose = () => {
         setShow(false);
-        clear()
-    }
+        clear();
+    };
 
     const handleEditClose = () => {
         setEditShow(false);
-        clear()
-    }
+        clear();
+    };
 
     useEffect(() => {
         try {
-            fetchData().catch((e) => console.log())
+            fetchData().catch((e) => console.log());
         } catch (error) {
-            toast.error(error)
-            setLoading(false)
+            toast.error(error);
+            setLoading(false);
         }
-    }, [])
+    }, []);
 
     useEffect(() => {
         handleFilter().catch(() => console.log());
-    }, [filter])
+    }, [filter]);
 
     const handleShow = () => {
-        setShow(true)
-        setIsVisible(false)
+        setShow(true);
+        setIsVisible(false);
         getEmployees().catch((e) => console.log());
-    }
+    };
 
     const handleEditShow = async (id) => {
-        await axios(`api/projects/getById/${id}`)
-            .then((result) => {
-                getEmployees();
-                setForm(result.data.result);
-                setEditShow(true)
-            })
-            .catch(error => {
-                toast.error(error)
-            })
-    }
+        const result = await axiosApi.get(`projects/getById/${id}`);
+        await getEmployees();
+        setForm(result.data.result);
+        setEditShow(true);
+    };
 
     const getEmployees = async () => {
-        await axios('api/employees')
-            .then((result) => {
-                const a = result.data.result.map(item => {
-                    return item.id
-                })
-                setEmployees(a)
-            })
-            .catch(error => {
-                toast.error(error)
-            })
-    }
+        const result = await axiosApi.get('employees');
+        setEmployees(result.data.result.map(item => {
+            return item.id
+        }));
+    };
 
     const fetchData = async () => {
-        const {data} = await axios('api/projects');
-        setData(data.result)
-        setLoading(false)
-    }
+        const {data} = await axiosApi.get('projects');
+        setData(data.result);
+        setLoading(false);
+    };
 
-    const handleEdit = (e, id) => {
-        e.preventDefault()
-        axios.put(`api/projects/${id}`, form)
-            .then((result) => {
-                fetchData().catch(() => console.log())
-                handleEditClose()
-                clear()
-                toast.success('Project has been updated');
-            }).catch(error => {
-            toast.error(error)
-        })
-    }
+    const handleEdit = async (e, id) => {
+        e.preventDefault();
+        await axiosApi.put(`projects/${id}`, form);
+        await fetchData();
+        handleEditClose();
+        toast.success('Project has been updated');
+    };
 
-    const handleDelete = (id) => {
+    const handleDelete = async (id) => {
         if (window.confirm("Are you sure you want to delete this project?")) {
-            axios.delete(`api/projects/${id}`)
-                .then((result) => {
-                    if (result.status === 200) {
-                        toast.success('Project has been deleted');
-                        fetchData().catch(() => console.log());
-                    }
-                })
-                .catch((error) => {
-                    toast.error(error)
-                })
+            await axiosApi.delete(`projects/${id}`);
+            toast.success('Project has been deleted');
+            await fetchData();
         }
-    }
+    };
 
     const onChange = e => {
         const {name, value} = e.target;
@@ -135,38 +112,29 @@ const ProjectsCRUD = () => {
         setFilter(prev => ({...prev, [name]: value}));
     };
 
-    const handleAdd = (e) => {
-        e.preventDefault()
-        axios.post('api/projects', form)
-            .then((result) => {
-                fetchData().catch(() => console.log())
-                handleClose()
-                clear()
-                toast.success('Project has been added');
-                setIsVisible(true)
-            }).catch(error => {
-            toast.error(error)
-        })
-    }
+    const handleAdd = async (e) => {
+        e.preventDefault();
+        await axiosApi.post('projects', form);
+        await fetchData();
+        handleClose();
+        toast.success('Project has been added');
+        setIsVisible(true);
+    };
 
     const handleFilter = async () => {
         const dataFrom = filter.startDateFrom == null ? "" : `&startDateFrom=${filter.startDateFrom}`;
         const dataTo = filter.startDateTo == null ? "" : `&startDateTo=${filter.startDateTo}`;
-        const priority = filter.priority == null ? "" : `&priority=${filter.priority}`;
-        const url = `api/projects?name=${filter.name}` + priority + dataFrom + dataTo + `&orderBy=${filter.orderBy}`;
-        await axios(url)
-            .then((result) => {
-                setData(result.data.result);
-            }).catch((error) => {
-                toast.error(error)
-            })
-    }
+        const priority = filter.priority === "" ? "" : `&priority=${filter.priority}`;
+        const url = `projects?name=${filter.name}` + priority + dataFrom + dataTo + `&orderBy=${filter.orderBy}`;
+        const result = await axiosApi.get(url);
+        setData(result.data.result);
+    };
 
     const handleSort = (name, value) => {
         setSort(prev => ({...prev, [name]: !value}));
-        const sortState = name + (value ? "Asc" : "Desc")
+        const sortState = name + (value ? "Asc" : "Desc");
         setFilter(prev => ({...prev, orderBy: sortState}));
-    }
+    };
 
     const clear = () => {
         setForm({name: "", clientCompanyName: "", executorCompanyName: "", priority: 0, managerId: 0})
@@ -178,14 +146,14 @@ const ProjectsCRUD = () => {
                          className="bi bi-arrow-up" viewBox="0 0 16 16">
                 <path fillRule="evenodd"
                       d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
-            </svg>)
+            </svg>);
         }
         return (<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                      className="bi bi-arrow-down" viewBox="0 0 16 16">
             <path fillRule="evenodd"
                   d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"/>
-        </svg>)
-    }
+        </svg>);
+    };
 
     return (
         <div>
@@ -235,8 +203,9 @@ const ProjectsCRUD = () => {
                             <tr>
                                 <th>Id</th>
                                 <th onClick={() => handleSort("name", sort.name)}>Name {getArrow(sort.name)}</th>
-                                <th onClick={() => handleSort( "priority", sort.priority)}>Priority {getArrow(sort.priority)}</th>
-                                <th onClick={() => handleSort( "startDate", sort.startDate)}>Start Date {getArrow(sort.startDate)}</th>
+                                <th onClick={() => handleSort("priority", sort.priority)}>Priority {getArrow(sort.priority)}</th>
+                                <th onClick={() => handleSort("startDate", sort.startDate)}>Start
+                                    Date {getArrow(sort.startDate)}</th>
                                 <th>Actions</th>
                             </tr>
                             </thead>
@@ -342,6 +311,6 @@ const ProjectsCRUD = () => {
                 </Modal.Body>
             </Modal>
         </div>);
-}
+};
 
 export default ProjectsCRUD;

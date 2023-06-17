@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {useParams} from "react-router-dom";
-import axios from "axios";
+import axiosApi from "../axiosApi";
 
 const ProjectDetails = () => {
     const [loading, setLoading] = useState(true)
@@ -10,17 +10,17 @@ const ProjectDetails = () => {
     useEffect(() => {
         try {
             const fetchData = async () => {
-                const {data} = await axios(`api/projects/getById/${id}`);
-                setData(data.result)
-                setLoading(false)
+                const {data} = await axiosApi.get(`projects/getById/${id}`);
+                setData(data.result);
+                setLoading(false);
             }
-            fetchData().catch((e) => console.log())
+            fetchData();
         } catch (e) {
             console.log(e.message)
             setLoading(false)
         }
     }, [])
-    
+
 
     return (
         <div>

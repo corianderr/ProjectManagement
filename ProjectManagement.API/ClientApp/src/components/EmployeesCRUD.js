@@ -102,6 +102,14 @@ const EmployeesCrud = () => {
         setIsVisible(true);
     };
 
+    const handleDelete = async (id) => {
+        if (window.confirm("Are you sure you want to delete this employee?")) {
+            await axiosApi.delete(`employees/${id}`);
+            toast.success('Employee has been deleted');
+            await fetchData();
+        }
+    };
+
     const onChangeFilter = e => {
         const {name, value} = e.target;
         setFilter(prev => ({...prev, [name]: value}));
@@ -189,9 +197,11 @@ const EmployeesCrud = () => {
                                 <td>{employee.patronymic}</td>
                                 <td>{employee.email}</td>
                                 <td>
-                                    <button className="btn btn-primary px-4 me-2" onClick={() => handleEditShow(employee.id)}>Edit
+                                    <button className="btn btn-primary px-4 me-2"
+                                            onClick={() => handleEditShow(employee.id)}>Edit
                                     </button>
-                                    <button className="btn btn-danger px-4 ms-2">Delete
+                                    <button className="btn btn-danger px-4 ms-2"
+                                            onClick={() => handleDelete(employee.id)}>Delete
                                     </button>
                                 </td>
                             </tr>)}
